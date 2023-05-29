@@ -1,25 +1,24 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
+
 <template>
+  <h1>SKIPP</h1>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
+    <nav>
+        <RouterLink to="/">Hone</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/news">News</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
+        <router-link to="/profile/:id">Profile</router-link>
+        <RouterLink to="/login">Login</RouterLink>
       </nav>
-    </div>
   </header>
-
-  <RouterView />
+  <div class="mt-3">
+    <RouterView />
+  </div>
 </template>
-
 <style scoped>
 header {
   line-height: 1.5;
