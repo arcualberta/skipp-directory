@@ -4,25 +4,63 @@ import { RouterLink, RouterView } from 'vue-router'
 
 
 <template>
-  <h1>SKIPP</h1>
-  <header>
-    <nav>
-        <RouterLink to="/">Hone</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/news">News</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
-        <router-link to="/profile/:id">Profile</router-link>
-        <RouterLink to="/login">Login</RouterLink>
-      </nav>
-  </header>
-  <div class="mt-3">
-    <RouterView />
+  <div class="top-layer">
+    <div class="row header-panel">
+      <div class="col-sm-5">
+        <img  src="./assets/images/UA-logo.png" class="ua-logo"/>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-8">
+            <header>
+              <nav class="nav-bar">
+                <router-link to="/about">About Us</router-link>
+                <router-link to="/join">Join Our Directory</router-link>
+                <router-link to="/news">Latest News & Events</router-link>
+                <router-link to="/contact">Contact</router-link>
+              </nav>
+            </header>
+          </div>
+          <div class="col-sm-4">
+            <span class="btn btn-success login"><router-link to="/login"></router-link>Login</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="banner">
+    <img  src="./assets/images/banner.JPG" />
+  </div>
+    <RouterView />
 </template>
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.top-layer{
+  background: #DBDBDB;
+}
+.ua-logo{
+  margin-left: 160px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login{
+  margin-top: 20px;
+  width: 140px;
+  margin-right: 120px;
+  background-color: #327D49;
+}
+.header-panel {
+  background: white;
+    border-radius: 40px 40px 0px 0px ;
+}
+.nav-bar {
+height: 18px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 18px;
+color: #000000;
+
 }
 
 .logo {
@@ -38,7 +76,10 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: #327D49;
+  font-weight: 700;
+  padding-bottom: 10px;
+  border-bottom: #327D49 solid 2px;
 }
 
 nav a.router-link-exact-active:hover {
@@ -46,31 +87,17 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
+  text-decoration: none;
   display: inline-block;
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  color: #000000;
 }
 
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
   .logo {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
 
   nav {
     text-align: left;
@@ -80,5 +107,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+
 </style>
