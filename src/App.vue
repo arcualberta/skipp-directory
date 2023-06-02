@@ -29,8 +29,8 @@ import Footer from './components/Footer.vue'
       </div>
     </div>
   </div>
-  <div class="banner">
-    <img  src="./assets/images/banner.JPG" />
+  <div >
+    <img  src="./assets/images/banner.JPG" class="banner"/>
   </div>
     <RouterView />
     <Footer></Footer>
@@ -50,9 +50,12 @@ import Footer from './components/Footer.vue'
   margin-right: 120px;
   background-color: #327D49;
 }
+.banner{
+  width: 100%;
+}
 .header-panel {
   background: white;
-    border-radius: 40px 40px 0px 0px ;
+    border-radius: 50px 50px 0px 0px ;
 }
 .nav-bar {
 height: 18px;
