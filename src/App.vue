@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import Footer from './components/Footer.vue'
 </script>
 
 
@@ -32,6 +33,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <img  src="./assets/images/banner.JPG" />
   </div>
     <RouterView />
+    <Footer></Footer>
 </template>
 <style scoped>
 .top-layer{
