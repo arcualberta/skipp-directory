@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Footer from './components/Footer.vue'
+import Banner from './components/Banner.vue'
 </script>
 
 
@@ -30,7 +31,12 @@ import Footer from './components/Footer.vue'
     </div>
   </div>
   <div >
-    <img  src="./assets/images/banner.JPG" class="banner"/>
+    <Banner>
+      <template #image>
+        <img  src="./assets/images/banner.JPG" />
+      </template>
+    </Banner>
+    
   </div>
     <RouterView />
     <Footer></Footer>
