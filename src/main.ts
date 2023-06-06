@@ -8,9 +8,29 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-const app = createApp(App)
+/* Import Google Login */
+import vue3GoogleLogin from 'vue3-google-login'
 
+import * as CatfishUI from 'applets'
+
+import {default as config} from './appsettings'
+
+const app = createApp(App)
 app.use(createPinia())
 app.use(router)
+app.use(vue3GoogleLogin, {
+    //refer to https://docs.google.com/document/d/1N_y4aQupxPKPGh2eaxpOqCmc_75QionPp4U_MoY3gZQ/edit#heading=h.4zlex6l80fxx
+    clientId: config.googleLoginClientId
+})
 
+
+for (const entry of Object.entries({ 
+    ...CatfishUI
+   })) { 
+      if(entry[0] === 'Components')
+      app.component("Login", entry[1].Login)
+      app.component("FontAwesomeIcon",  entry[1].FontAwesomeIcon)
+      
+   }
+   
 app.mount('#app')
