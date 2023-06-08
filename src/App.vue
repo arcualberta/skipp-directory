@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Footer from './components/Footer.vue'
-import Banner from './components/Banner.vue'
+
 </script>
 
 
@@ -20,23 +20,14 @@ import Banner from './components/Banner.vue'
                 <router-link to="/join">Join Our Directory</router-link>
                 <router-link to="/news">Latest News & Events</router-link>
                 <router-link to="/contact">Contact</router-link>
+                <router-link to="/login" class="btn btn-success login">Login</router-link>
               </nav>
             </header>
           </div>
-          <div class="col-sm-4">
-            <span class="btn btn-success login"><router-link to="/login"></router-link>Login</span>
-          </div>
+          
         </div>
       </div>
     </div>
-  </div>
-  <div >
-    <Banner>
-      <template #image>
-        <img  src="./assets/images/banner.JPG" />
-      </template>
-    </Banner>
-    
   </div>
     <RouterView />
     <Footer></Footer>
