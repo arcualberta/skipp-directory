@@ -1,7 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { computed, onMounted, ref, watch } from 'vue';
+import { RouterLink, RouterView, useRouter } from 'vue-router'
+import { LoginResult, useLoginStore} from 'applets';
 import Footer from './components/Footer.vue'
 
+const authorizationStore = useLoginStore();
+const router = useRouter();
+
+    let loginRes = computed(() => authorizationStore.loginResult)
+    let jwtToken = computed(() => authorizationStore.jwtToken);
+    const logout = () => {
+        authorizationStore.loginResult = {} as LoginResult
+        authorizationStore.jwtToken = ""
+
+        router.push("/");
+    }
 </script>
 
 
@@ -13,14 +26,20 @@ import Footer from './components/Footer.vue'
       </div>
       <div class="col-sm-7">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-12">
             <header>
               <nav class="nav-bar">
                 <router-link to="/about">About Us</router-link>
                 <router-link to="/join">Join Our Directory</router-link>
                 <router-link to="/news">Latest News & Events</router-link>
                 <router-link to="/contact">Contact</router-link>
-                <router-link to="/login" class="btn btn-success login">Login</router-link>
+                {{loginRes?.success}}
+        <router-link to="/" class="navigation-menu-box">Home</router-link> | 
+        <span v-if="loginRes?.success" class="user-info">
+            <span class="welcome">Welcome {{loginRes?.name}}! </span>
+            <a @click="logout" class="navigation-menu-box logout">Logout</a>
+        </span>
+        <router-link v-else to="/login" class="navigation-menu-box">Login</router-link>
               </nav>
             </header>
           </div>

@@ -29,6 +29,8 @@ for (const entry of Object.entries({
    })) { 
       if(entry[0] === 'Components')
       app.component("Login", entry[1].Login)
+      app.component("useLoginStore", entry[1].Login)
+      app.component("LoginResult", entry[1].Login)
       app.component("FontAwesomeIcon",  entry[1].FontAwesomeIcon)
       
    }
