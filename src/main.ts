@@ -23,16 +23,18 @@ app.use(vue3GoogleLogin, {
     clientId: config.googleLoginClientId
 })
 
+app.component("Login", CatfishUI.Components.Login)
+app.component("FontAwesomeIcon", CatfishUI.Components.FontAwesomeIcon)
 
+/*
 for (const entry of Object.entries({ 
     ...CatfishUI
    })) { 
-      if(entry[0] === 'Components')
-      app.component("Login", entry[1].Login)
-      app.component("useLoginStore", entry[1].Login)
-      app.component("LoginResult", entry[1].Login)
-      app.component("FontAwesomeIcon",  entry[1].FontAwesomeIcon)
-      
+      if(entry[0] === 'Components'){
+        app.component("Login", entry[1].Login)
+        app.component("FontAwesomeIcon",  entry[1].FontAwesomeIcon)
+      }
    }
+*/
    
 app.mount('#app')

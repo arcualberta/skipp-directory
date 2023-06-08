@@ -4,9 +4,9 @@ export default {
     maxEvents: 10,
     initialView: 'dayGridMonth',
     googleLoginClientId:"589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
-    authorizationApiRoot:"https://localhost:5010/",
+    //authorizationApiRoot:"https://localhost:5010/",
     dataRepositoryApiRoot: "https://localhost:5020",
-    //authorizationApiRoot: "https://catfish-test.artsrn.ualberta.ca/authorization",
+    authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
     //dataRepositoryApiRoot: "https://catfish-test.artsrn.ualberta.ca/repository"
 }
 

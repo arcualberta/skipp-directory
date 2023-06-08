@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
 import { RouterLink, RouterView, useRouter } from 'vue-router'
-import { LoginResult, useLoginStore} from 'applets';
+import { LoginResult } from 'applets';
+import { Components as cmp} from 'applets';
 import Footer from './components/Footer.vue'
 
-const authorizationStore = useLoginStore();
+const authorizationStore = cmp.useLoginStore();
 const router = useRouter();
 
     let loginRes = computed(() => authorizationStore.loginResult)
@@ -15,6 +16,7 @@ const router = useRouter();
 
         router.push("/");
     }
+   
 </script>
 
 
@@ -49,6 +51,9 @@ const router = useRouter();
     </div>
   </div>
     <RouterView />
+    <div>
+      {{ authorizationStore.jwtToken }}
+    </div>
     <Footer></Footer>
 </template>
 <style scoped>
