@@ -24,6 +24,7 @@ app.use(vue3GoogleLogin, {
 })
 
 app.component("Login", CatfishUI.Components.Login)
+app.component("FormSubmission", CatfishUI.Components.FormSubmission)
 app.component("FontAwesomeIcon", CatfishUI.Components.FontAwesomeIcon)
 
 /*
