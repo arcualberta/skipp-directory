@@ -14,10 +14,5 @@
 <template>
   <div class="row">
     <FormSubmission :repository-root="apiRoot" :piniaInstance="getActivePinia()" :form-id="config.joinUsFormId"></FormSubmission>
-    
   </div>
 </template>
-
-<style>
-
-</style>
