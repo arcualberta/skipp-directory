@@ -14,7 +14,7 @@ export default {
 }
 export const SolrFields: SearchFieldDefinition[] = [
     { name: "name_t", label: "Name", type: eFieldType.Text, options: [], entryGuid: "d46250e9-4940-41da-8734-16926ce69698" },
-    { name: "email_t", label: "Email Address", type: eFieldType.Text, options: [], entryGuid: "4b906eb5-6bb4-4cf2-981e-257de92d4f3d" },
+    { name: "email_ss", label: "Email Address", type: eFieldType.Email, options: [], entryGuid: "4b906eb5-6bb4-4cf2-981e-257de92d4f3d" },
     { name: "position_t", label: "Position", type: eFieldType.Radio, options: ["Professor", "Research assistant", "Associate professor", "Assistant professor", "Graduate student", "Academic teaching staff", "Postdoctoral fellow"], entryGuid: "b7862a8d-a675-4803-a133-6c7c7c4d970a" },
     { name: "faculty_t", label: "Faculty or Organizational Affiliation", type: eFieldType.Text, options: [], entryGuid: "5c8bde1d-0732-42e3-be47-6fc060a80bed" },
     { name: "additional_faculty_t", label: "Additional Faculties or Organizations", type: eFieldType.Text, options: [], entryGuid: "9d79c715-dbcb-4aa6-8a34-27ee3e18b8b5" },

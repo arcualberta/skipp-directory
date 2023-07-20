@@ -52,7 +52,7 @@ const router = useRouter();
   </div>
     <RouterView />
     <div>
-      {{ authorizationStore.jwtToken }}
+      <!--{{ authorizationStore.jwtToken }}-->
     </div>
     <Footer></Footer>
 </template>

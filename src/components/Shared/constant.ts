@@ -13,5 +13,5 @@ export interface SearchFieldDefinition{
     label: string,
     type: eFieldType,
     options: string[],
-    entryType: number | number[]
+    entryGuid: string
 }
