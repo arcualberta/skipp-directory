@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { useSearchStore } from '@/stores/SearchStore';
 import Banner from '../components/Banner.vue'
 import Filter from '../components/Shared/Filter.vue'
 import Results from '../components/Shared/Results.vue'
+
+const searchStore = useSearchStore();
+
 </script>
 
 <template>
@@ -63,6 +67,7 @@ import Results from '../components/Shared/Results.vue'
       </div>
       <div class="col-sm-8">
         <Results></Results>
+        {{ JSON.stringify(searchStore) }}
       </div>
     </div>
     <div class="contact-link">
@@ -127,3 +132,4 @@ import Results from '../components/Shared/Results.vue'
   background-color: transparent;
 }
 </style>
+@/stores/searchStore

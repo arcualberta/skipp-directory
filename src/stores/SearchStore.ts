@@ -1,14 +1,15 @@
 import { defineStore } from 'pinia';
 import { Guid } from 'guid-typescript';
-import * as CatfishUI from 'applets'
+//import * as CatfishUI from 'applets'
 import { baseState, fetchQuery } from './common';
 import { createSearchQueryModel } from '../helpers/createSearchQueryModel';
 
 export const useSearchStore = defineStore('SearchStore', {
     state: () => ({
-        ...baseState,
+        //...baseState,
         solrQueryModel: createSearchQueryModel(),
     }),
+    /*
     getters: {
         keywords(): CatfishUI.Search.SolrQuery.ValueConstraint[] { return (this.solrQueryModel.queryConstraints.find(qc => qc.internalId === "keywords") as CatfishUI.Search.SolrQuery.FieldConstraint).valueConstraints },
         resultCount: state => state.searchResult?.items?.length,
@@ -65,4 +66,5 @@ export const useSearchStore = defineStore('SearchStore', {
             this.fetchData();
         },
     }
+    */
 });
