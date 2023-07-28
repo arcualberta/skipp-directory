@@ -11,7 +11,7 @@ export default {
     //authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
     //dataRepositoryApiRoot: "https://catfish-test.artsrn.ualberta.ca/repository"
     joinUsFormId:"43FF5214-B6A6-9F16-E7FD-A2337B97A949"
-}
+};
 
 export enum SearchResultFieldMapping {
     NATIONORCOMMUNITY = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_af27cd1f-4df1-fc15-4ef4-286eb2002816_ss",
@@ -40,4 +40,21 @@ export enum SearchResultFieldMapping {
     CONSENT = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_ts",
     STATE = "status_s",
     KEYWORDS = "_keywords__ss",
+};
+export const QueryCategoryValues = {
+    publicVisibleStates: ["654d0e93-0d14-4e6c-8f4a-98884bc7Fb0e"],
+    adminVisibleStates: ["e952e454-73f8-4c54-92d9-d11f84ac3985", "654d0e93-0d14-4e6c-8f4a-98884bc7Fb0e"],
+    Keywords: ["Activism", "Age", "Black studies", "Body", "Canada", "Class", "Colonialism", "Culture", " Decolonization", "Disability",
+        "Diversity", "Environment", "Ethics", "Family", "Feminism", "Feminist Theory", "Film", "Gender", "Genderqueer", "Government",
+        "Health", "History", "Human Rights", "Identity", "Immigration", "Indigenous", "Inequality", " International", "Intersectionality", "Language", "Law", "Literature", "Marginalized population", "Masculinities", "Media", "Mental health", " Mothering",
+        "Pedagogy", "Policy", "Politics", "Qualitative", "Research", " Queer", "Quare", "Race", "Relation", "Religion", "Sex", "Sexuality",
+        "Science", "Sport", "Social justice", "Transgender", " Two-spirit", "Violence", "Work"],
+    Positions: ["Assistant Professor", "Assistant Clinical Professor", "Associate Professor", "Professor", "Academic Teaching Staff", "Professor Emerit/a/us", "Retired"],
+    Faculties: ["Arts", "Education", "Native Studies", "Agricultural, Life and Environmental Sciences", "Nursing"],
+    SelfIdentification: {
+        Disability: ["Deaf", "Neurodivergent", "Experiencing disability", "Not living with a disability", "Another"],
+        Race: ["Indigenous", "Black", "Person of Colour", "White", "Another"],
+        Ethnicity: ["Japanese-American", "European"],
+        GenderIdentity: ["Two-Spirit", "Gender non-binary", "Genderfluid", "Transgender", "Woman", "Man", "Another"]
+    }
 }

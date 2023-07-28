@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="filter">
-    Filter Data
+  <div class="Results">
+    Results View
   </div>
   
 </template>

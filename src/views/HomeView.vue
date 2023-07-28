@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Banner from '../components/Banner.vue'
+import Filter from '../components/Shared/Filter.vue'
+import Results from '../components/Shared/Results.vue'
 </script>
 
 <template>
@@ -57,8 +59,10 @@ import Banner from '../components/Banner.vue'
     </div>
     <div class="row">
       <div class="col-sm-4">
+        <Filter></Filter>
       </div>
       <div class="col-sm-8">
+        <Results></Results>
       </div>
     </div>
     <div class="contact-link">
