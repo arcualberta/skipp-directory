@@ -29,7 +29,7 @@ export const baseState: BaseState = {
 }
 export const fetchQuery = (
     templateId: Guid,
-    queryModel: CatfishUI.search.SolrQuery.QueryModel,
+    queryModel: CatfishUI.Components.SolrQuery.QueryModel,
     searchText: string,
     offset: number,
     pageSize: number,
