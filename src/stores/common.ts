@@ -10,7 +10,7 @@ export interface BaseState {
     pageSize: number;
     queryApiUrl: null | string;
     searchText: null | string;
-    searchResult: CatfishUI.SearchOutput;
+    searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
 }
 export const baseState: BaseState = {
     templateId: null,
@@ -29,7 +29,7 @@ export const baseState: BaseState = {
 }
 export const fetchQuery = (
     templateId: Guid,
-    queryModel: CatfishUI.Components.SolrQuery.QueryModel,
+    queryModel: CatfishUI.Components.SolrQuery.solrQueryModel,
     searchText: string,
     offset: number,
     pageSize: number,
@@ -41,7 +41,7 @@ export const fetchQuery = (
     if (isAdmin) {
         //Update the visibleStates property in the query model such that the admin can see
         //both submitted and approved entries
-        const visibilityConstraint = queryModel.queryConstraints.filter(q => q.internalId === "visibleStates")[0] as CatfishUI.SolrQuery.FieldConstraint;
+        const visibilityConstraint = queryModel.queryConstraints.filter(q => q.internalId === "visibleStates")[0] as CatfishUI.Components.SolrQuery.FieldConstraint;
         if (visibilityConstraint)
             visibilityConstraint.setValueConstraints(config.QueryCategoryValues.adminVisibleStates, true);
     }
