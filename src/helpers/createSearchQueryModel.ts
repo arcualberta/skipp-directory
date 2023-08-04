@@ -21,7 +21,7 @@ export const createSearchQueryModel = () =>{
         CatfishUI.Components.SolrQuery.AggregationOperator.OR,
         "positions");
 
-    //Faculty constraint
+    //Faculty constr
     queryModel.appendNewFieldConstraint(
         config.SearchResultFieldMapping.FACULTY,
         config.QueryCategoryValues.Faculties,

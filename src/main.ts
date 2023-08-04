@@ -2,9 +2,10 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import App from './App.vue'
 import router from './router'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -15,9 +16,21 @@ import * as CatfishUI from 'applets'
 
 import {default as config} from './appsettings'
 
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import * as faIcons from '@fortawesome/free-solid-svg-icons'
+
+/* add icons to the library */
+
+library.add(faIcons.faQuestionCircle)
 const app = createApp(App)
 app.use(createPinia())
 app.use(router)
+app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(vue3GoogleLogin, {
     //refer to https://docs.google.com/document/d/1N_y4aQupxPKPGh2eaxpOqCmc_75QionPp4U_MoY3gZQ/edit#heading=h.4zlex6l80fxx
     clientId: config.googleLoginClientId
