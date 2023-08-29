@@ -11,7 +11,7 @@ export const useSearchStore = defineStore('SearchStore', {
     }),
     
     getters: {
-        keywords(): CatfishUI.Components.SolrQuery.ValueConstraint[] { return (this.solrQueryModel.queryConstraints.find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints },
+        keywords(): CatfishUI.Components.SolrQuery.ValueConstraint[] { return ((this.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints },
         resultCount: state => state.searchResult?.items?.length,
         selectedKeywords(): CatfishUI.Components.SolrQuery.ValueConstraint[] {
             return this.keywords.filter(keyword => keyword.selected)

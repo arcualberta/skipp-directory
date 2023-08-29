@@ -1,6 +1,7 @@
 import { eFieldType, type SearchFieldDefinition } from "./components/Shared/constant";
 
 export default {
+    dataServiceApiRoot: "/server/applets/api/",
     googleApiKey: "AIzaSyBgCnBy-LbHAqbB8PbQhNID68vZ8f8_j_Q",
     googleCalendarIds: ["ualberta.ca_kdp9enkplai8s5ipu2efknjels@group.calendar.google.com","c_1netqe2n16i5o9su69ft5c8f8c@group.calendar.google.com"],
     maxEvents: 10,

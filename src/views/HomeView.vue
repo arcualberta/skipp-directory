@@ -2,16 +2,17 @@
 import { useSearchStore } from '@/stores/SearchStore';
 import Banner from '../components/Banner.vue'
 import CheckboxList from '../components/CheckboxList.vue'
-import Filter from '../components/Shared/Filter.vue'
-import Results from '../components/Shared/Results.vue'
+import Filter from '../components/Filter.vue'
+import  ProfileListEntry  from '../components/ProfileListEntry.vue'
+import Results from '../components/Results.vue'
 import * as CatfishUI from 'applets'
 import { ref, computed, watch} from 'vue';
 
 const searchStore = useSearchStore();
 const selectedButtons = ref([] as string[]);
-const keyOptions = (searchStore.solrQueryModel.queryConstraints.find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
-const posOptions = (searchStore.solrQueryModel.queryConstraints.find(qc => qc.internalId === "positions") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
-const facOptions = (searchStore.solrQueryModel.queryConstraints.find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
+const keyOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
+const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
+const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 
 
 const setAccordion = (Id : string) => {
@@ -132,10 +133,10 @@ const setAccordion = (Id : string) => {
 </div></div>
       </div>
       <div class="col-sm-8">
-        <Results></Results>
-        {{ JSON.stringify(searchStore) }}
+        <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
       </div>
     </div>
+    {{ JSON.stringify(searchStore) }}
     <div class="contact-link">
       Have a question? Want to share a story? Tell us how we’re doing? Contact us at <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a>
     </div>

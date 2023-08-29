@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineComponent, type PropType } from "vue";
 import * as CatfishUI from 'applets'
-import { useSearchStore } from '../../stores/SearchStore'
+import { useSearchStore } from '../stores/SearchStore'
 
 const props = defineProps<{ 
   options: CatfishUI.Components.SolrQuery.ValueConstraint[]

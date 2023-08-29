@@ -1,6 +1,7 @@
 import { eFieldType, type SearchFieldDefinition } from "./components/Shared/constant";
 
 export default {
+    dataServiceApiRoot: "/server/applets/api/",
     googleApiKey: "AIzaSyBgCnBy-LbHAqbB8PbQhNID68vZ8f8_j_Q",
     googleCalendarIds: ["ualberta.ca_kdp9enkplai8s5ipu2efknjels@group.calendar.google.com","c_1netqe2n16i5o9su69ft5c8f8c@group.calendar.google.com"],
     maxEvents: 10,
@@ -8,15 +9,27 @@ export default {
     googleLoginClientId:"589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
     authorizationApiRoot:"https://localhost:5010/",
     dataRepositoryApiRoot: "https://localhost:5020",
+    solrServiceApiRoot: "https://localhost:8983/SKIPP",
     //authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
     //dataRepositoryApiRoot: "https://catfish-test.artsrn.ualberta.ca/repository"
-    joinUsFormId:"43FF5214-B6A6-9F16-E7FD-A2337B97A949"
+    joinUsFormId:"43FF5214-B6A6-9F16-E7FD-A2337B97A949",
+    dataAttributes: {
+        templateId: "bd35d406-3399-40af-bc72-c7b5813ee9b1",
+        formId: "49a7a1d3-0194-4703-b3d8-747acbf3bbfa",
+        collectionId: "79e652d7-bc9e-4a96-c76a-e8896825234a",
+        groupId: "08fd74b1-2207-4f7f-9a1c-8450ebc535c9",
+        permissibleStates: ["e952e454-73f8-4c54-92d9-d11f84ac3985","caca289d-a869-4847-9083-dd7f21e2fc11"],
+        submittedStatus: "e952e454-73f8-4c54-92d9-d11f84ac3985",
+        attachmentFieldId: "962b6d6d-e397-4f24-8096-ed1655880af2",
+        defaultProfileImage: "../assets/user-profile-icon.jpg",
+        excludeTerms: ["Another (specify)", "Another"]
+    },
 };
 export enum SearchResultFieldMapping {
     NATIONORCOMMUNITY = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_af27cd1f-4df1-fc15-4ef4-286eb2002816_ss",
     NAME = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_ts",
-    EMAIL = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_ss",
-    POSITION = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_ss",
+    EMAIL = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t",
+    POSITION = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_t",
     FACULTY = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_ts",
     ADDITIONAL_FACULTY = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_ts",
     PRONOUNS = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5ebts",

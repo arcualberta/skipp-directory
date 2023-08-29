@@ -1,5 +1,5 @@
 import { Guid } from 'guid-typescript';
-import * as CatfishUI from 'applets'
+import * as CatfishUI from 'applets';
 import * as config from '../appsettings';
 
 export interface BaseState {
@@ -41,20 +41,22 @@ export const fetchQuery = (
     if (isAdmin) {
         //Update the visibleStates property in the query model such that the admin can see
         //both submitted and approved entries
-        const visibilityConstraint = queryModel.queryConstraints.filter(q => q.internalId === "visibleStates")[0] as CatfishUI.Components.SolrQuery.FieldConstraint;
+        const visibilityConstraint = (queryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).filter(q => q.internalId === "visibleStates")[0] as CatfishUI.Components.SolrQuery.FieldConstraint;
         if (visibilityConstraint)
             visibilityConstraint.setValueConstraints(config.QueryCategoryValues.adminVisibleStates, true);
     }
-
+    queryApiUrl="https://localhost:5020/api/solr-search";
+    const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
-
     formData.append("templateId", templateId as unknown as string);
-    formData.append("query", queryModel?.buildQueryString());
-    formData.append("searchText", searchText);
+    formData.append("query", queryVal);
 
+    formData.append("searchText", searchText);
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());
-
+   
+    console.log("Query",queryModel?.buildQueryString())
+    console.log("queryApiUrl",queryApiUrl)
     fetch(queryApiUrl, {
         method: 'POST', // or 'PUT'
         body: formData
