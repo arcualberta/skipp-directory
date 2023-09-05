@@ -45,7 +45,7 @@ export const fetchQuery = (
         if (visibilityConstraint)
             visibilityConstraint.setValueConstraints(config.QueryCategoryValues.adminVisibleStates, true);
     }
-    queryApiUrl="https://localhost:5020/api/solr-search";
+    queryApiUrl="https://skipp-test.artsrn.ualberta.ca/api/solr-search";
     const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
     formData.append("templateId", templateId as unknown as string);

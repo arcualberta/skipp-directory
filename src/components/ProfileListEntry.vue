@@ -3,14 +3,19 @@ import { computed } from 'vue';
 import * as CatfishUI from 'applets'
 import * as itemHelper from '../helpers/itemHelper';
 import { useSearchStore } from './../stores/SearchStore'
+import {useRouter} from 'vue-router'
+import { Guid } from 'guid-typescript';
 
 const props = defineProps<{ 
   model: CatfishUI.Components.ResultItem | null
   }>();
+  const router = useRouter();
   const searchStore = useSearchStore();
   const name = "Jane Samson"//computed(() => itemHelper.getName(props.model))
   const position = "Professor"//computed(() => itemHelper.getPosition(props.model))
   const email = "jane.samson@ualberta.ca"//computed(() => itemHelper.getEmail(props.model))
+  const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })
+                }
 </script>
 <template>
   <div class="profile-component">
@@ -19,7 +24,7 @@ const props = defineProps<{
         <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
       </div>
       <div class="col-sm-6">
-        <div class="profile-name">{{ name }}</div>
+        <div class="profile-name"><a  @click="gotoProfile(model.id)">{{ name }}</a></div>
         <div class="profile-position">{{ position }}</div>
         <div class="research-interest-headding">Research Interests</div>
         <div class="research-interest-list">Indigenous explorers, Indigenous clergy, Colonialism</div>
@@ -45,6 +50,9 @@ const props = defineProps<{
   padding-top: 70px;
   font-size: 24px;
   font-weight: 500;
+}
+.profile-name:hover{
+  text-decoration: none;
 }
 .profile-position{
   font-size: 20px;
