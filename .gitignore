@@ -27,3 +27,5 @@ coverage
 *.sln
 *.sw?
 catfish.bat
+/src/appsettings.ts
+.vs
