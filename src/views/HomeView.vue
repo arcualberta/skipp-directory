@@ -136,7 +136,9 @@ const setAccordion = (Id : string) => {
         <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
       </div>
     </div>
-    {{ JSON.stringify(searchStore) }}
+    {{ JSON.stringify(searchStore.searchResult) }}<br/><br/>
+    {{ JSON.stringify(searchStore.solrQueryModel) }}<br/><br/>
+    <!--{{ JSON.stringify(searchStore) }}-->
     <div class="contact-link">
       Have a question? Want to share a story? Tell us how we’re doing? Contact us at <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a>
     </div>

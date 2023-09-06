@@ -11,9 +11,9 @@ const props = defineProps<{
   }>();
   const router = useRouter();
   const searchStore = useSearchStore();
-  const name = "Jane Samson"//computed(() => itemHelper.getName(props.model))
-  const position = "Professor"//computed(() => itemHelper.getPosition(props.model))
-  const email = "jane.samson@ualberta.ca"//computed(() => itemHelper.getEmail(props.model))
+  const name = computed(() => itemHelper.getName(props.model))
+  const position = computed(() => itemHelper.getPosition(props.model))
+  const email = computed(() => itemHelper.getEmail(props.model))
   const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })
                 }
 </script>

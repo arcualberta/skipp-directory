@@ -10,7 +10,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "applets": "file:../Catfish3.0/catfish-ui/applets-0.0.0.tgz",
+    "applets": "file:../Catfish-3.0/catfish-ui/applets-0.0.0.tgz",
     "bootstrap": "^5.3.1",
     "bootstrap-vue": "^2.23.1",
     "bootstrap-vue-3": "^0.5.1",

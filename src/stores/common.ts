@@ -8,7 +8,6 @@ export interface BaseState {
     queryParams: null | string;
     offset: number;
     pageSize: number;
-    queryApiUrl: null | string;
     searchText: null | string;
     searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
 }
@@ -18,7 +17,6 @@ export const baseState: BaseState = {
     queryParams: null,
     offset: 0,
     pageSize: 25,
-    queryApiUrl: null,
     searchText: null,
     searchResult: {
         first: 0,
@@ -27,17 +25,27 @@ export const baseState: BaseState = {
         items: [] 
     },
 }
+
+/**
+ * Fetches a list of search result objects that are corresponding to the query specified by the
+ *  query model from the solr search.
+ * 
+ * @param queryModel 
+ * @param searchText 
+ * @param offset 
+ * @param pageSize 
+ * @param resultCallback 
+ * @param isAdmin 
+ */
 export const fetchQuery = (
-    templateId: Guid,
     queryModel: CatfishUI.Components.SolrQuery.solrQueryModel,
-    searchText: string,
     offset: number,
     pageSize: number,
-    queryApiUrl: string,
     resultCallback: any,
     isAdmin: boolean
 ) => {
 
+    console.log("Query API: ", config.default.dataRepositoryApiRoot)
     if (isAdmin) {
         //Update the visibleStates property in the query model such that the admin can see
         //both submitted and approved entries
@@ -45,18 +53,25 @@ export const fetchQuery = (
         if (visibilityConstraint)
             visibilityConstraint.setValueConstraints(config.QueryCategoryValues.adminVisibleStates, true);
     }
-    queryApiUrl="https://skipp-test.artsrn.ualberta.ca/api/solr-search";
-    const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
+    
+    //const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
-    formData.append("templateId", templateId as unknown as string);
-    formData.append("query", queryVal);
 
-    formData.append("searchText", searchText);
+    const query = queryModel?.buildQueryString();
+    formData.append("query", query);
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());
+    formData.append("filterQuery", "");
+    formData.append("sortBy", "");
+    formData.append("fieldList", "");
+    formData.append("maxHiglightSnippets", "1");
+    
    
-    console.log("Query",queryModel?.buildQueryString())
+    const queryApiUrl = `${config.default.dataRepositoryApiRoot}/solr-search`
+
     console.log("queryApiUrl",queryApiUrl)
+    console.log("Query",query)
+
     fetch(queryApiUrl, {
         method: 'POST', // or 'PUT'
         body: formData

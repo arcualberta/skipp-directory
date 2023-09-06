@@ -1,14 +1,24 @@
 import * as CatfishUI from 'applets'
 import * as config from '../appsettings';
 
-export function getSolrFieldValue(item: CatfishUI.Components.ResultItem, solrFieldName: string) {
+type SolrFieldValueType = string | string[] | number | number[] | Date | Date[] | null
+
+export function getSolrFieldValue(item: CatfishUI.Components.ResultItem, solrFieldName: string): SolrFieldValueType {
     
     if (item?.data) {
-        console.log("solrFieldName", solrFieldName);
-        const index = Object.keys(item).indexOf(solrFieldName);
-        console.log("index", index);
-        if (index >= 0)
-            return Object.values(item.data)[index]
+        /* item.data is an array of key/value pairs. We need to select the key-value pair that has the
+          value of key same as the given solrFieldName. The value of this key value pair depends on the 
+          type of the solr field, which we can decide as follows depending on how the solr field name ends.
+          i.e. if filed name ends with:
+            _t or _s => single string
+            _ts or _ss => an array of strings
+            _i, _d => a single number
+            _is, _ds => an array of numbers
+            _dt => a single date
+            _dts => array of dates.
+        */
+        
+        return item.data.find((entry: { key: string; }) => entry.key === solrFieldName)?.value
     }
     return null;
 }
@@ -19,19 +29,17 @@ export function getStringArrayValue(item: CatfishUI.Components.ResultItem, solrF
 }
 
 export function getConcatenatedStringValue(item: CatfishUI.Components.ResultItem, solrFieldName: string): string | null {
-    return getStringArrayValue(item, solrFieldName).filter(val => !config.default.dataAttributes.excludeTerms.includes(val)).join(", ");
+    return getStringArrayValue(item, solrFieldName).join(", ");
 }
 
-export function getName(item: CatfishUI.Components.ResultItem) {
-    console.log("item", item);
-    console.log("solrFields", Object.keys(item));
+export function getName(item: CatfishUI.Components.ResultItem): string | null {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NAME)
 }
-export function getPosition(item: CatfishUI.Components.ResultItem) {
+export function getPosition(item: CatfishUI.Components.ResultItem): string| null {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.POSITION)
 }
-export function getKeywords(item: CatfishUI.Components.ResultItem) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.ADDITIONAL_KEYWORDS)
+export function getKeywords(item: CatfishUI.Components.ResultItem): string[] {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS)
 }
 export function getEmail(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.EMAIL).join(", ")

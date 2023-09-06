@@ -86,24 +86,18 @@ export const useProfileStore = defineStore('ProfileStore', {
             queryModel.excludeIds = [(this.activeProfile as CatfishUI.Components.ResultItem)?.id];
 
             fetchQuery(
-                this.templateId as Guid,
                 queryModel,
-                this.searchText as string,
                 this.offset,
                 this.pageSize,
-                this.queryApiUrl as string,
                 (result: CatfishUI.Components.SearchOutput) => { this.searchResult = result; },
                 this.isAdmin
             )
         },
         fetchNextPage() {
             fetchQuery(
-                this.templateId as Guid,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
-                this.searchText as string,
                 this.searchResult.last,
                 this.pageSize,
-                this.queryApiUrl as string,
                 (result: CatfishUI.Components.SearchOutput) => {
                     this.searchResult.items = this.searchResult.items.concat(result.items);
                     this.searchResult.last = result.last
