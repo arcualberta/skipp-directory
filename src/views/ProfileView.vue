@@ -50,6 +50,7 @@
 
     </div>
   </div>
+  Profile Store{{ profileStore }}
 </template>
 
 <style>

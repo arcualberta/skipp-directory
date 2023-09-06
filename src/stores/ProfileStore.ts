@@ -107,10 +107,10 @@ export const useProfileStore = defineStore('ProfileStore', {
         },
         setActiveProfile(profileId: Guid) {
             if (profileId) {
-                this.activeProfile = this.searchResult.items.filter(item => item.id === profileId)[0];
+                this.activeProfile = this.searchResult?.items?.filter((i: { id: Guid; }) => i.id === profileId)[0];
                 if (!this.activeProfile) {
 
-                    const apiUrl = this.queryApiUrl + '/' + profileId;
+                    const apiUrl = `${config.dataServiceApiRoot}` + profileId;
                     fetch(apiUrl)
                         .then(response => response.json())
                         .then(data =>

@@ -14,6 +14,7 @@ const props = defineProps<{
   const name = computed(() => itemHelper.getName(props.model))
   const position = computed(() => itemHelper.getPosition(props.model))
   const email = computed(() => itemHelper.getEmail(props.model))
+  const keywords = computed(() => itemHelper.getKeywords(props.model))
   const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })
                 }
 </script>
@@ -27,7 +28,7 @@ const props = defineProps<{
         <div class="profile-name"><a  @click="gotoProfile(model.id)">{{ name }}</a></div>
         <div class="profile-position">{{ position }}</div>
         <div class="research-interest-headding">Research Interests</div>
-        <div class="research-interest-list">Indigenous explorers, Indigenous clergy, Colonialism</div>
+        <div class="research-interest-list">{{keywords}}</div>
       </div>
       <div class="col-sm-3">
         <div class="email">

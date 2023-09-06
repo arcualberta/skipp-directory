@@ -29,21 +29,23 @@ export function getStringArrayValue(item: CatfishUI.Components.ResultItem, solrF
 }
 
 export function getConcatenatedStringValue(item: CatfishUI.Components.ResultItem, solrFieldName: string): string | null {
-    return getStringArrayValue(item, solrFieldName).join(", ");
+    return getStringArrayValue(item, solrFieldName)?.join(", ");
 }
 
 export function getName(item: CatfishUI.Components.ResultItem): string | null {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NAME)
 }
-export function getPosition(item: CatfishUI.Components.ResultItem): string| null {
-    return getConcatenatedStringValue(item, config.SearchResultFieldMapping.POSITION)
-}
-export function getKeywords(item: CatfishUI.Components.ResultItem): string[] {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS)
+export function getPosition(item: CatfishUI.Components.ResultItem){
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.POSITION)
 }
 export function getEmail(item: CatfishUI.Components.ResultItem) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.EMAIL).join(", ")
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.EMAIL)
 }
+
+export function getKeywords(item: CatfishUI.Components.ResultItem) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS).join(", ");
+}
+/*
 export function getFaculty(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.FACULTY).join(", ")
 }
@@ -70,7 +72,7 @@ export function getPronouns(item: CatfishUI.Components.ResultItem) {
 }
 export function getCommunitiesAndOrganizations(item: CatfishUI.Components.ResultItem) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS)
-}/*
+}
 export function getShowPronouns(item: CatfishUI.Components.ResultItem) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.SHOW_PRONOUNS)
 }
