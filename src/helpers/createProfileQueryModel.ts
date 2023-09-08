@@ -10,7 +10,7 @@ export const createProfileQueryModel = (keywordAggregator: CatfishUI.Components.
 
     //Related entries constraint
     queryModel.appendNewFieldConstraint(
-        config.SearchResultFieldMapping.ADDITIONAL_KEYWORDS,
+        config.SearchResultFieldMapping.KEYWORDS,
         [],
         false,
         keywordAggregator,

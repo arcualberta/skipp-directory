@@ -13,7 +13,16 @@ const selectedButtons = ref([] as string[]);
 const keyOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
-
+let selected ="";
+const selectLetter = (letter: string) => {
+  if(searchStore.selectedLetter===letter)
+  {
+    searchStore.selectedLetter="";
+    searchStore.fetchData();
+  }else{
+    searchStore.selectLetter(letter)}
+  }
+  
 
 const setAccordion = (Id : string) => {
         if(selectedButtons.value.includes(Id)){
@@ -41,32 +50,32 @@ const setAccordion = (Id : string) => {
         </div>
         <div class="col-sm-8">
           <span class="alpherbertical-search-letters">#</span>
-          <button class="btn-letters">A</button>
-          <button class="btn-letters">B</button>
-          <button class="btn-letters">C</button>
-          <button class="btn-letters">D</button>
-          <button class="btn-letters">E</button>
-          <button class="btn-letters">F</button>
-          <button class="btn-letters">G</button>
-          <button class="btn-letters">H</button>
-          <button class="btn-letters">I</button>
-          <button class="btn-letters">J</button>
-          <button class="btn-letters">K</button>
-          <button class="btn-letters">L</button>
-          <button class="btn-letters">M</button>
-          <button class="btn-letters">N</button>
-          <button class="btn-letters">O</button>
-          <button class="btn-letters">P</button>
-          <button class="btn-letters">Q</button>
-          <button class="btn-letters">R</button>
-          <button class="btn-letters">S</button>
-          <button class="btn-letters">T</button>
-          <button class="btn-letters">U</button>
-          <button class="btn-letters">V</button>
-          <button class="btn-letters">W</button>
-          <button class="btn-letters">X</button>
-          <button class="btn-letters">Y</button>
-          <button class="btn-letters">Z</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='A')?'btn-active':'btn-letters'" @click="selectLetter ('A')">A</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='B')?'btn-active':'btn-letters'" @click="selectLetter ('B')">B</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='C')?'btn-active':'btn-letters'" @click="selectLetter ('C')">C</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='D')?'btn-active':'btn-letters'" @click="selectLetter ('D')">D</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='E')?'btn-active':'btn-letters'" @click="selectLetter ('E')">E</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='F')?'btn-active':'btn-letters'" @click="selectLetter ('F')">F</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='G')?'btn-active':'btn-letters'" @click="selectLetter ('G')">G</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='H')?'btn-active':'btn-letters'" @click="selectLetter ('H')">H</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='I')?'btn-active':'btn-letters'" @click="selectLetter ('I')">I</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='J')?'btn-active':'btn-letters'" @click="selectLetter ('J')">J</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='K')?'btn-active':'btn-letters'" @click="selectLetter ('K')">K</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='L')?'btn-active':'btn-letters'" @click="selectLetter ('L')">L</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='M')?'btn-active':'btn-letters'" @click="selectLetter ('M')">M</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='N')?'btn-active':'btn-letters'" @click="selectLetter ('N')">N</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='O')?'btn-active':'btn-letters'" @click="selectLetter ('O')">O</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='P')?'btn-active':'btn-letters'" @click="selectLetter ('P')">P</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='Q')?'btn-active':'btn-letters'" @click="selectLetter ('Q')">Q</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='R')?'btn-active':'btn-letters'" @click="selectLetter ('R')">R</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='S')?'btn-active':'btn-letters'" @click="selectLetter ('S')">S</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='T')?'btn-active':'btn-letters'" @click="selectLetter ('T')">T</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='U')?'btn-active':'btn-letters'" @click="selectLetter ('U')">U</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='V')?'btn-active':'btn-letters'" @click="selectLetter ('V')">V</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='W')?'btn-active':'btn-letters'" @click="selectLetter ('W')">W</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='X')?'btn-active':'btn-letters'" @click="selectLetter ('X')">X</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='Y')?'btn-active':'btn-letters'" @click="selectLetter ('Y')">Y</button>
+          <button v-bind:class = "(searchStore.selectedLetter==='Z')?'btn-active':'btn-letters'" @click="selectLetter ('Z')">Z</button>
         </div>
       </div>
     </div>
@@ -136,9 +145,6 @@ const setAccordion = (Id : string) => {
         <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
       </div>
     </div>
-    {{ JSON.stringify(searchStore.searchResult) }}<br/><br/>
-    {{ JSON.stringify(searchStore.solrQueryModel) }}<br/><br/>
-    <!--{{ JSON.stringify(searchStore) }}-->
     <div class="contact-link">
       Have a question? Want to share a story? Tell us how we’re doing? Contact us at <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a>
     </div>
@@ -167,6 +173,12 @@ const setAccordion = (Id : string) => {
   border: none;
   background-color: transparent;
   color: white;
+  padding:0px 11px 0px 11px;
+}
+.btn-active{
+  border: none;
+  background-color: transparent;
+  color:rgb(5, 5, 5);
   padding:0px 11px 0px 11px;
 }
 .lbl-filters{

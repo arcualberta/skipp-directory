@@ -3,21 +3,17 @@ import * as CatfishUI from 'applets';
 import * as config from '../appsettings';
 
 export interface BaseState {
-    templateId: null | Guid;
-    stateIdRestrictions: Guid[];
+    selectedLetter: null | string;
     queryParams: null | string;
     offset: number;
     pageSize: number;
-    searchText: null | string;
     searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
 }
 export const baseState: BaseState = {
-    templateId: null,
-    stateIdRestrictions: [],
+    selectedLetter:null,
     queryParams: null,
     offset: 0,
     pageSize: 25,
-    searchText: null,
     searchResult: {
         first: 0,
         last: 0,
@@ -38,6 +34,7 @@ export const baseState: BaseState = {
  * @param isAdmin 
  */
 export const fetchQuery = (
+    selectedLetter:string,
     queryModel: CatfishUI.Components.SolrQuery.solrQueryModel,
     offset: number,
     pageSize: number,
@@ -56,8 +53,17 @@ export const fetchQuery = (
     
     //const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
-
-    const query = queryModel?.buildQueryString();
+    let query = "";
+    if(selectedLetter != null){
+        query = (config.SearchResultFieldMapping.NAME+":"+selectedLetter+"*")
+        if(queryModel?.buildQueryString()){
+            query = query + " AND "+queryModel?.buildQueryString();
+        }
+    }
+    else{
+        query = queryModel?.buildQueryString();
+    }
+    
     formData.append("query", query);
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());

@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import { Guid } from 'guid-typescript';
 import * as CatfishUI from 'applets'
+import * as config from '../appsettings';
 import { baseState, fetchQuery } from './common';
 import { createSearchQueryModel } from '../helpers/createSearchQueryModel';
 
@@ -20,6 +21,7 @@ export const useSearchStore = defineStore('SearchStore', {
     actions: {
         fetchData() {
             fetchQuery(
+                this.selectedLetter as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
@@ -29,6 +31,7 @@ export const useSearchStore = defineStore('SearchStore', {
         },
         fetchNextPage() {
             fetchQuery(
+                this.selectedLetter as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.searchResult.last,
                 this.pageSize,
@@ -57,6 +60,11 @@ export const useSearchStore = defineStore('SearchStore', {
             fieldConstraint.valueConstraints[0].value = "";
 
             this.fetchData();
+        },
+        selectLetter(letter: string) {
+            this.selectedLetter = letter,
+            this.fetchData();
+            
         },
     }
     
