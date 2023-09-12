@@ -53,8 +53,8 @@ export const fetchQuery = (
     
     //const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
-    let query = "";
-    if(selectedLetter != null){
+    let query = "*:*";
+    if(selectedLetter != ""){
         query = (config.SearchResultFieldMapping.NAME+":"+selectedLetter+"*")
         if(queryModel?.buildQueryString()){
             query = query + " AND "+queryModel?.buildQueryString();

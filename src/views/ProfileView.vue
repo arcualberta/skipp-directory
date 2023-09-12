@@ -1,15 +1,17 @@
 <script setup lang="ts">
-  import { defineComponent, computed, watch, onMounted } from 'vue';
+  import { defineComponent, computed, watch, ref } from 'vue';
   import { useRoute, useRouter } from 'vue-router'
   import { Guid } from 'guid-typescript';
 
   import * as CatfishUI from 'applets'
   import { default as config, SearchResultFieldMapping } from '../appsettings';
   import { useProfileStore } from '../stores/ProfileStore'
+  import { useSearchStore } from '../stores/SearchStore'
   import * as itemHelper from '../helpers/itemHelper';
   
   
   const profileStore = useProfileStore();
+  const searchStore = useProfileStore();
 
   const route = useRoute();
   const router = useRouter();
@@ -17,11 +19,21 @@
   const id = route.params.id as unknown as Guid;
   profileStore.setActiveProfile(id);
 
-  const profile = computed(() => profileStore.activeProfile as CatfishUI.Components.ResultItem);
-  const name = computed(() => itemHelper.getName(profile.value));
-  const position = computed(() => itemHelper.getPosition(profile.value));
-  const email = computed(() => itemHelper.getEmail(profile.value));
-  const keywords = computed(() => itemHelper.getKeywords(profile.value));
+  let name =  ref("")
+  let position =  ref("")
+  let email =  ref("")
+  watch(() => profileStore.activeProfile, async newProfile => {
+        if (newProfile.length>0){
+          console.log("Name",itemHelper.getName(profileStore.activeProfile.value))
+          //const profile = computed(() => profileStore.activeProfile as CatfishUI.Components.ResultItem);
+          name.value = computed(() => itemHelper.getName(profileStore.activeProfile.value)).value;
+          position.value = computed(() => itemHelper.getPosition(profileStore.activeProfile.value)).value;
+          email.value = computed(() => itemHelper.getEmail(profileStore.activeProfile.value)).value;
+          const keywords = computed(() => itemHelper.getKeywords(profileStore.activeProfile.value));
+        }
+    })
+  console.log("2",profileStore.activeProfile)
+  
   const pronounce = ""//computed(() => itemHelper.getShowPosition(profile.value));
   const organization = ""//computed(() => itemHelper.getOrganization(profile.value));
   const showDisability = ""//computed(() => itemHelper.getShowDisability(profile.value));
@@ -50,7 +62,7 @@
 
     </div>
   </div>
-  Profile Store{{ profileStore }}
+  Profile Store{{ profileStore.activeProfile }}
 </template>
 
 <style>

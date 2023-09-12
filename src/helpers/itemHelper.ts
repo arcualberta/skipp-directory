@@ -28,18 +28,18 @@ export function getStringArrayValue(item: CatfishUI.Components.ResultItem, solrF
     return val ? val as unknown as string[] : [];
 }
 
-export function getConcatenatedStringValue(item: CatfishUI.Components.ResultItem, solrFieldName: string): string | null {
+export function getConcatenatedStringValue(item: CatfishUI.Components.ResultItem, solrFieldName: string){
     return getStringArrayValue(item, solrFieldName)?.join(", ");
 }
 
-export function getName(item: CatfishUI.Components.ResultItem): string | null {
+export function getName(item: CatfishUI.Components.ResultItem){
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NAME)
 }
-export function getPosition(item: CatfishUI.Components.ResultItem){
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.POSITION)
+export function getPosition(item: CatfishUI.Components.ResultItem): string{
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.POSITION) as string
 }
-export function getEmail(item: CatfishUI.Components.ResultItem) {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.EMAIL)
+export function getEmail(item: CatfishUI.Components.ResultItem): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.EMAIL) as string
 }
 
 export function getKeywords(item: CatfishUI.Components.ResultItem) {
