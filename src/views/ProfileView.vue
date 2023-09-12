@@ -19,9 +19,9 @@
   const id = route.params.id as unknown as Guid;
   profileStore.setActiveProfile(id);
 
-  let name =  ref("")
-  let position =  ref("")
+    let position =  ref("")
   let email =  ref("")
+  /*
   watch(() => profileStore.activeProfile, async newProfile => {
         if (newProfile.length>0){
           console.log("Name",itemHelper.getName(profileStore.activeProfile.value))
@@ -31,9 +31,11 @@
           email.value = computed(() => itemHelper.getEmail(profileStore.activeProfile.value)).value;
           const keywords = computed(() => itemHelper.getKeywords(profileStore.activeProfile.value));
         }
-    })
-  console.log("2",profileStore.activeProfile)
+    })*/
+  //console.log("2",profileStore.activeProfile)
   
+  const name = computed(() => itemHelper.getName(profileStore.activeProfile));
+
   const pronounce = ""//computed(() => itemHelper.getShowPosition(profile.value));
   const organization = ""//computed(() => itemHelper.getOrganization(profile.value));
   const showDisability = ""//computed(() => itemHelper.getShowDisability(profile.value));
@@ -62,7 +64,7 @@
 
     </div>
   </div>
-  Profile Store{{ profileStore.activeProfile }}
+{{ profileStore.activeProfile }}
 </template>
 
 <style>

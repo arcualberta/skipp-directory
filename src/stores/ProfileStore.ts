@@ -75,8 +75,9 @@ export const useProfileStore = defineStore('ProfileStore', {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        //console.log("Search Results:\n", JSON.stringify(data));
-                        this.activeProfile = data;
+                        console.log("Search Results:\n", JSON.stringify(data));
+                        const entries = (data as CatfishUI.Components.ResultItem)?.resultEntries;
+                        this.activeProfile = entries?.length > 0 ? entries[0] : null;
                         
                     })
                     .catch((error) => {
