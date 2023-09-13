@@ -45,10 +45,17 @@ export function getEmail(item: CatfishUI.Components.ResultItem): string {
 export function getKeywords(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS).join(", ");
 }
-/*
-export function getFaculty(item: CatfishUI.Components.ResultItem) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.FACULTY).join(", ")
+export function getKeywordList(item: CatfishUI.Components.ResultItem) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS);
 }
+export function getFaculty(item: CatfishUI.Components.ResultItem) {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.FACULTY)
+}
+export function getPronouns(item: CatfishUI.Components.ResultItem) {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PRONOUNS)
+}
+/*
+
 export function getDisability(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.DISABILITY).join(", ")
 }
@@ -67,9 +74,7 @@ export function getInitiation(item: CatfishUI.Components.ResultItem) {
 export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
 }
-export function getPronouns(item: CatfishUI.Components.ResultItem) {
-    return getConcatenatedStringValue(item, config.SearchResultFieldMapping.PRONOUNS)
-}
+
 export function getCommunitiesAndOrganizations(item: CatfishUI.Components.ResultItem) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS)
 }

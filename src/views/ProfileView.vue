@@ -18,26 +18,13 @@
 
   const id = route.params.id as unknown as Guid;
   profileStore.setActiveProfile(id);
-
-    let position =  ref("")
-  let email =  ref("")
-  /*
-  watch(() => profileStore.activeProfile, async newProfile => {
-        if (newProfile.length>0){
-          console.log("Name",itemHelper.getName(profileStore.activeProfile.value))
-          //const profile = computed(() => profileStore.activeProfile as CatfishUI.Components.ResultItem);
-          name.value = computed(() => itemHelper.getName(profileStore.activeProfile.value)).value;
-          position.value = computed(() => itemHelper.getPosition(profileStore.activeProfile.value)).value;
-          email.value = computed(() => itemHelper.getEmail(profileStore.activeProfile.value)).value;
-          const keywords = computed(() => itemHelper.getKeywords(profileStore.activeProfile.value));
-        }
-    })*/
-  //console.log("2",profileStore.activeProfile)
   
   const name = computed(() => itemHelper.getName(profileStore.activeProfile));
-
-  const pronounce = ""//computed(() => itemHelper.getShowPosition(profile.value));
-  const organization = ""//computed(() => itemHelper.getOrganization(profile.value));
+  const position = computed(() => itemHelper.getPosition(profileStore.activeProfile))
+  const email = computed(() => itemHelper.getEmail(profileStore.activeProfile));
+  const keywords = computed(() => itemHelper.getKeywordList(profileStore.activeProfile));
+  const organization = computed(() => itemHelper.getFaculty(profileStore.activeProfile));
+  const pronounce = computed(() => itemHelper.getPronouns(profileStore.activeProfile));
   const showDisability = ""//computed(() => itemHelper.getShowDisability(profile.value));
   const disability = ""//computed(() => itemHelper.getDisability(profile.value));
   const showRace = ""//computed(() => itemHelper.getShowRace(profile.value));
@@ -57,32 +44,59 @@
       </div>
       <div class="col-sm-8">
         <div class="profile-name">{{ name }}</div>
-        <div class="profile-position">{{ position }}</div>
-        <div class="email">Email: {{ email }}</div>
-        <div class="pronounce">Pronounce: {{ pronounce }}</div>
+        <div class="psh">{{ position }} | {{ organization }}</div>
+        <div class="psh">Email: <span class="email-value">{{ email }}</span></div>
+        <div class="psh">Pronounce: <span class="pronounce-value">{{ pronounce }}</span></div>
       </div>
-
+    </div>
+    <div class="row">
+      <div class="Keywords">Keywords: <span v-for="keyword in keywords" class="keyword-block">{{ keyword }}</span></div>
     </div>
   </div>
-{{ profileStore.activeProfile }}
 </template>
 
 <style>
 .profile-name{
   padding-top: 70px;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 500;
 }
-.profile-position{
-  font-size: 20px;
-  font-weight: 400;
-  color:#7A7A7A;
+.psh{
+  font-size: 18px;
+  font-weight: 600;
+  color:#000000;
+  line-height: 50px;
 }
 .results-image{
-  width: 110px;
-  height: 110px;
+  width: 226px;
+  height: 226px;
   margin-left: 80px;
   margin-top: 70px;
   border: 2px solid #327D49;
+  border-radius: 5px;
+}
+.email-value{
+  font-size: 18px;
+  font-weight: 400;
+  color:#000000;
+  line-height: 50px;
+}
+.pronounce-value{
+  font-style: italic;
+}
+.Keywords{
+  font-size: 18px;
+  font-weight: 600;
+  color:#000000;
+  line-height: 50px;
+  margin-top: 100px;
+  margin-left: 80px;
+}
+.keyword-block{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding:  5px 15px;
+  border-radius: 10px;
+  background-color: #327D49;
 }
 </style>
