@@ -54,6 +54,9 @@ export function getFaculty(item: CatfishUI.Components.ResultItem) {
 export function getPronouns(item: CatfishUI.Components.ResultItem) {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.PRONOUNS)
 }
+export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
+}
 /*
 
 export function getDisability(item: CatfishUI.Components.ResultItem) {
@@ -71,9 +74,7 @@ export function getCurrentProjects(item: CatfishUI.Components.ResultItem) {
 export function getInitiation(item: CatfishUI.Components.ResultItem) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.INITIATION)
 }
-export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
-}
+
 
 export function getCommunitiesAndOrganizations(item: CatfishUI.Components.ResultItem) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS)

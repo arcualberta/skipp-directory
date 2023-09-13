@@ -25,7 +25,7 @@
   const keywords = computed(() => itemHelper.getKeywordList(profileStore.activeProfile));
   const organization = computed(() => itemHelper.getFaculty(profileStore.activeProfile));
   const pronounce = computed(() => itemHelper.getPronouns(profileStore.activeProfile));
-  const showDisability = ""//computed(() => itemHelper.getShowDisability(profile.value));
+  const websiteLinks = computed(() => itemHelper.getWebsiteLinks(profileStore.activeProfile));
   const disability = ""//computed(() => itemHelper.getDisability(profile.value));
   const showRace = ""//computed(() => itemHelper.getShowRace(profile.value));
   const race = ""//computed(() => itemHelper.getRace(profile.value));
@@ -53,9 +53,22 @@
       <div class="Keywords">Keywords: <span v-for="keyword in keywords" class="keyword-block">{{ keyword }}</span></div>
     </div>
   </div>
+  <div class="external-links">
+    <div class="container">
+      <div class="ch1">
+        Work links
+      </div>
+      <div v-for="link in websiteLinks">
+          <a target="_blank" :href="link" class="worklinks">{{link}}</a>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>
+.row{
+  margin-bottom: 100px;
+}
 .profile-name{
   padding-top: 70px;
   font-size: 40px;
@@ -66,6 +79,14 @@
   font-weight: 600;
   color:#000000;
   line-height: 50px;
+}
+.ch1{
+  font-size: 40px;
+  font-weight: 500;
+  color:#327D49;
+  line-height: 50px;
+  margin-left: 80px;
+  padding-top: 100px;
 }
 .results-image{
   width: 226px;
@@ -89,7 +110,6 @@
   font-weight: 600;
   color:#000000;
   line-height: 50px;
-  margin-top: 100px;
   margin-left: 80px;
 }
 .keyword-block{
@@ -98,5 +118,19 @@
   padding:  5px 15px;
   border-radius: 10px;
   background-color: #327D49;
+}
+.external-links{
+  background-color: #F4F9F6;
+  min-height: 400px;
+}
+.worklinks{
+  font-size: 18px;
+  font-weight: 400;
+  color:#000000;
+  line-height: 40px;
+  margin-left: 80px;
+}
+.worklinks:hover{
+  background-color: transparent;
 }
 </style>

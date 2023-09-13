@@ -67,6 +67,14 @@ const props = defineProps<{
 .research-interest-list{
   font-size: 16px;
   font-weight: 400;
+  max-lines: 3;
+  white-space:pre-line; 
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.research-interest-list:hover{
+  overflow:visible;
 }
 .results-image{
   width: 110px;

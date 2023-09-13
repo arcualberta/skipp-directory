@@ -33,8 +33,6 @@ export const useProfileStore = defineStore('ProfileStore', {
             if (!this.activeProfile)
                 return;
 
-            console.log("ProfileStore.fetchData called")
-
             let queryModel: CatfishUI.Components.SolrQuery.QueryModel | null = null;
             
                 queryModel = this.defaultQueryModel as CatfishUI.Components.SolrQuery.QueryModel;
@@ -43,7 +41,7 @@ export const useProfileStore = defineStore('ProfileStore', {
             queryModel.excludeIds = [(this.activeProfile as CatfishUI.Components.ResultItem)?.id];
 
             fetchQuery(
-                "",
+                null,
                 queryModel,
                 this.offset,
                 this.pageSize,
@@ -53,7 +51,6 @@ export const useProfileStore = defineStore('ProfileStore', {
         },
         
         setActiveProfile(profileId: Guid) {
-            console.log("ProfileStore.setActiveProfile called",profileId)
             if (profileId) {
                 let query = "id:"+profileId;
                 const formData = new FormData();
@@ -66,16 +63,12 @@ export const useProfileStore = defineStore('ProfileStore', {
                 formData.append("maxHiglightSnippets", "1");
                 const queryApiUrl = `${config.default.dataRepositoryApiRoot}/solr-search`
 
-                console.log("queryApiUrl",queryApiUrl)
-                console.log("Query",query)
-
                 fetch(queryApiUrl, {
                     method: 'POST', // or 'PUT'
                     body: formData
                 })
                     .then(response => response.json())
                     .then(data => {
-                        console.log("Search Results:\n", JSON.stringify(data));
                         const entries = (data as CatfishUI.Components.ResultItem)?.resultEntries;
                         this.activeProfile = entries?.length > 0 ? entries[0] : null;
                         
