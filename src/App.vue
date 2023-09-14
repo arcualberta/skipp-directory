@@ -31,14 +31,11 @@ const router = useRouter();
           <div class="col-sm-12">
             <header>
               <nav class="nav-bar">
-                <router-link to="/about">About Us</router-link>
-                <router-link to="/join">Join Our Directory</router-link>
-                <router-link to="/news">Latest News & Events</router-link>
-                <router-link to="/contact">Contact</router-link>
-                {{loginRes?.success}}
-        <router-link to="/" class="navigation-menu-box">Home</router-link> | 
+              <router-link to="/" class="navigation-menu-box">Home</router-link> 
+              <router-link to="/about">About Us</router-link>
+              <router-link to="/join">Join Our Directory</router-link>
         <span v-if="loginRes?.success" class="user-info">
-            <span class="welcome">Welcome {{loginRes?.name}}! </span>
+            <span class="welcome">{{loginRes?.name}} </span>
             <a @click="logout" class="navigation-menu-box logout">Logout</a>
         </span>
         <router-link v-else to="/login" class="navigation-menu-box">Login</router-link>

@@ -33,11 +33,12 @@ export const useSearchStore = defineStore('SearchStore', {
             fetchQuery(
                 this.selectedLetter as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
-                this.searchResult.last,
+                this.searchResult.itemsPerPage,
                 this.pageSize,
                 (result: CatfishUI.Components.SolrQuery.SearchOutput) => {
-                    this.searchResult.items = this.searchResult.items.concat(result.items);
-                    this.searchResult.last = result.last
+                    //this.searchResult.resultEntries = this.searchResult.resultEntries.concat(result.resultEntries);
+                    this.searchResult.resultEntries = result.resultEntries;
+                    this.searchResult.offset = result.offset;
                 },
                 false
             )

@@ -7,6 +7,7 @@ export interface BaseState {
     queryParams: null | string;
     offset: number;
     pageSize: number;
+    last: number;
     searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
 }
 export const baseState: BaseState = {
@@ -14,6 +15,7 @@ export const baseState: BaseState = {
     queryParams: null,
     offset: 0,
     pageSize: 25,
+    last: 25,
     searchResult: {
         first: 0,
         last: 0,

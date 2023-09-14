@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { useSearchStore } from '@/stores/SearchStore';
 import Banner from '../components/Banner.vue'
-import CheckboxList from '../components/CheckboxList.vue'
 import Filter from '../components/Filter.vue'
 import  ProfileListEntry  from '../components/ProfileListEntry.vue'
-import Results from '../components/Results.vue'
 import * as CatfishUI from 'applets'
-import { ref, computed, watch} from 'vue';
+import { ref, computed} from 'vue';
 
 const searchStore = useSearchStore();
 const selectedButtons = ref([] as string[]);
@@ -23,7 +21,8 @@ const selectLetter = (letter: string) => {
   }else{
     searchStore.selectLetter(letter)}
   }
-  
+  const first = computed(() => searchStore.searchResult.offset + 1)
+  const last = computed(() => searchStore.searchResult.offset + searchStore.searchResult.itemsPerPage)
 
 const setAccordion = (Id : string) => {
         if(selectedButtons.value.includes(Id)){
@@ -112,7 +111,7 @@ const setAccordion = (Id : string) => {
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          ....
       </div>
     </div>
   </div>
@@ -144,6 +143,10 @@ const setAccordion = (Id : string) => {
       </div>
       <div class="col-sm-8">
         <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
+        <div style="text-align:center; margin:10px;">
+                {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
+                <a  v-if="last < searchStore.searchResult?.totalMatches" href="#" @click="searchStore.fetchNextPage()">load more ...</a>
+            </div>
       </div>
     </div>
     <div class="contact-link">
