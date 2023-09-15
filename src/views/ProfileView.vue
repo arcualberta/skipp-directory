@@ -3,7 +3,6 @@
   import { useRoute, useRouter } from 'vue-router'
   import { Guid } from 'guid-typescript';
 
-  import * as CatfishUI from 'applets'
   import { default as config, SearchResultFieldMapping } from '../appsettings';
   import { useProfileStore } from '../stores/ProfileStore'
   import { useSearchStore } from '../stores/SearchStore'
@@ -26,15 +25,6 @@
   const organization = computed(() => itemHelper.getFaculty(profileStore.activeProfile));
   const pronounce = computed(() => itemHelper.getPronouns(profileStore.activeProfile));
   const websiteLinks = computed(() => itemHelper.getWebsiteLinks(profileStore.activeProfile));
-  const disability = ""//computed(() => itemHelper.getDisability(profile.value));
-  const showRace = ""//computed(() => itemHelper.getShowRace(profile.value));
-  const race = ""//computed(() => itemHelper.getRace(profile.value));
-  const genderIdentity = ""//computed(() => itemHelper.getGenderIdentity(profile.value));
-  const showGenderIdentity = ""//computed(() => itemHelper.getShowGenderIdentity(profile.value));
-  const researchQuestion = ""//computed(() => itemHelper.getResearchQuestion(profile.value));
-  const communityProjects = ""//computed(() => itemHelper.getCommunityProjects(profile.value));
-  const pronouns = ""//computed(() => itemHelper.getPronouns(profile.value));
-
 </script>
 <template>
   <div class="container">

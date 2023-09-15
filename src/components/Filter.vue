@@ -6,12 +6,10 @@ import { useSearchStore } from '../stores/SearchStore'
 const props = defineProps<{ 
   options: CatfishUI.Components.SolrQuery.ValueConstraint[]
   }>();
-console.log("options",props.options)
   const searchStore = useSearchStore();
   const toggleOption = (option: CatfishUI.Components.SolrQuery.ValueConstraint) => {
     option.selected = !option.selected;
     searchStore.fetchData();
-    console.log("Toggling checkbox ... ")
     }
 </script>
 

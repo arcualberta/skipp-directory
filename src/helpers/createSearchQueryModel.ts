@@ -2,11 +2,8 @@ import * as CatfishUI from 'applets'
 import * as config from '../appsettings'
 
 export const createSearchQueryModel = () =>{
-    
-    console.log("CatfishUI.Search: ", CatfishUI)
 
     const queryModel = new CatfishUI.Components.SolrQuery.QueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.AND);
-    console.log("queryModel start", queryModel)
     //Keyword constraint
     queryModel.appendNewFieldConstraint(
         config.SearchResultFieldMapping.KEYWORDS,
@@ -28,7 +25,6 @@ export const createSearchQueryModel = () =>{
         CatfishUI.Components.SolrQuery.AggregationOperator.OR,
         "faculties");
         
-    console.log("queryModel end", queryModel)
 
     return queryModel;
 

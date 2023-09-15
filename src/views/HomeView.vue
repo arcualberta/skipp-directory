@@ -3,6 +3,7 @@ import { useSearchStore } from '@/stores/SearchStore';
 import Banner from '../components/Banner.vue'
 import Filter from '../components/Filter.vue'
 import  ProfileListEntry  from '../components/ProfileListEntry.vue'
+import  NoDataFound  from '../components/NoDataFound.vue'
 import * as CatfishUI from 'applets'
 import { ref, computed} from 'vue';
 
@@ -142,11 +143,17 @@ const setAccordion = (Id : string) => {
 </div></div>
       </div>
       <div class="col-sm-8">
-        <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
-        <div style="text-align:center; margin:10px;">
+        <span v-if="searchStore.searchResult.totalMatches>0">
+          <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
+          <div style="text-align:center; margin:10px;">
                 {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
                 <a  v-if="last < searchStore.searchResult?.totalMatches" href="#" @click="searchStore.fetchNextPage()">load more ...</a>
             </div>
+        </span>
+        <span v-else>
+                <NoDataFound />
+            </span>
+        
       </div>
     </div>
     <div class="contact-link">

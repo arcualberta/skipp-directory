@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue';
 import { RouterLink, RouterView, useRouter } from 'vue-router'
-import { LoginResult } from 'applets';
-import { Components as cmp} from 'applets';
+import { LoginResult,Components as cmp } from 'applets';
 import Footer from './components/Footer.vue'
 
 const authorizationStore = cmp.useLoginStore();

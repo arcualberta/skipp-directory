@@ -43,8 +43,6 @@ export const fetchQuery = (
     resultCallback: any,
     isAdmin: boolean
 ) => {
-
-    console.log("Query API: ", config.default.dataRepositoryApiRoot)
     if (isAdmin) {
         //Update the visibleStates property in the query model such that the admin can see
         //both submitted and approved entries
@@ -77,9 +75,7 @@ export const fetchQuery = (
    
     const queryApiUrl = `${config.default.dataRepositoryApiRoot}/solr-search`
 
-    console.log("queryApiUrl",queryApiUrl)
-    console.log("Query",query)
-
+    
     fetch(queryApiUrl, {
         method: 'POST', // or 'PUT'
         body: formData

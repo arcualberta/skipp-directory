@@ -5,7 +5,7 @@ import * as CatfishUI from 'applets';
 import { useSearchStore } from './SearchStore';
 import * as config from '../appsettings';
 import { baseState, fetchQuery } from './common';
-import { createProfileQueryModel } from '../helpers/createProfileQueryModel';
+//import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 const searchStore = useSearchStore();
 interface UserInfo {
@@ -16,8 +16,8 @@ interface UserInfo {
 export const useProfileStore = defineStore('ProfileStore', {
     state: () => ({
         ...baseState,
-        solrQueryModel: createProfileQueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.AND),
-        defaultQueryModel: createProfileQueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.OR),
+        //solrQueryModel: createProfileQueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.AND),
+        //defaultQueryModel: createProfileQueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.OR),
         activeProfile: null as CatfishUI.Components.ResultItem | null,
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
@@ -29,26 +29,7 @@ export const useProfileStore = defineStore('ProfileStore', {
     },
     actions: {
         
-        fetchData() {
-            if (!this.activeProfile)
-                return;
-
-            let queryModel: CatfishUI.Components.SolrQuery.QueryModel | null = null;
-            
-                queryModel = this.defaultQueryModel as CatfishUI.Components.SolrQuery.QueryModel;
-            
-
-            queryModel.excludeIds = [(this.activeProfile as CatfishUI.Components.ResultItem)?.id];
-
-            fetchQuery(
-                null,
-                queryModel,
-                this.offset,
-                this.pageSize,
-                (result: CatfishUI.Components.SearchOutput) => { this.searchResult = result; },
-                this.isAdmin
-            )
-        },
+        
         
         setActiveProfile(profileId: Guid) {
             if (profileId) {
