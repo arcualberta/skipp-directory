@@ -9,18 +9,18 @@
       <span class="footer-content"> The University of Alberta, its buildings, labs, and research stations are primarily located on the traditional territory of Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, and Ojibway/Saulteaux/Anishinaabe nations; lands that are now known as part of Treaties 6, 7, and 8 and homeland of the Métis. The University of Alberta respects the sovereignty, lands, histories, languages, knowledge systems, and cultures of First Nations, Métis and Inuit nations.</span>
     </div>
     <div class="row footer-row">
-      <div class="col-sm-2 footer-links">
+      <div class="col-sm-3 footer-links">
         <router-link to="/contact">Contact Us</router-link>
       </div>
-      <div class="col-sm-2 footer-links">
+      <div class="col-sm-3 footer-links">
         <router-link to="/contact">Policies</router-link>
       </div>
-      <div class="col-sm-2 footer-links">
+      <div class="col-sm-3 footer-links">
         <router-link to="/contact">Privacy</router-link>
       </div>
-      <div class="col-sm-2 news">
+      <!--<div class="col-sm-2">
         <router-link to="/news">News</router-link>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -70,6 +70,9 @@ h3 {
   text-align: center;
   border-right: 1px solid #BDBDBD;
 }
+.footer-links:last-child {
+  border-right:none;
+}
 a.router-link-exact-active {
   color: #FFFFFF;
   text-decoration: none;
@@ -90,11 +93,7 @@ a {
 a:hover {
   background-color: transparent;
 }
-.news{
-  padding-left: 30px;
-  padding-right: 30px;
-  text-align: center;
-}
+
 .greetings h1,
 .greetings h3 {
   text-align: center;

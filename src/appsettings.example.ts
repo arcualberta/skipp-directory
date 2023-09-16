@@ -50,7 +50,7 @@ export const QueryCategoryValues = {
         "Health", "History", "Human Rights", "Identity", "Immigration", "Indigenous", "Inequality", " International", "Intersectionality", "Language", "Law", "Literature", "Marginalized population", "Masculinities", "Media", "Mental health", " Mothering",
         "Pedagogy", "Policy", "Politics", "Qualitative", "Research", " Queer", "Quare", "Race", "Relation", "Religion", "Sex", "Sexuality",
         "Science", "Sport", "Social justice", "Transgender", " Two-spirit", "Violence", "Work"],
-    Positions: ["Assistant Professor", "Assistant Clinical Professor", "Associate Professor", "Professor", "Academic Teaching Staff", "Professor Emerit/a/us", "Retired"],
+    Positions: ["Academic teaching staff", "Assistant professor","Associate professor","Graduate student","Postdoctoral fellow","Professor","Professor Emeritus","Research assistant"],
     Faculties: ["Arts", "Education", "Native Studies", "Agricultural, Life and Environmental Sciences", "Nursing"],
     SelfIdentification: {
         Disability: ["Deaf", "Neurodivergent", "Experiencing disability", "Not living with a disability", "Another"],
