@@ -14,8 +14,8 @@ export const baseState: BaseState = {
     selectedLetter:null,
     queryParams: null,
     offset: 0,
-    pageSize: 25,
-    last: 25,
+    pageSize: 10,
+    last: 10,
     searchResult: {
         first: 0,
         last: 0,

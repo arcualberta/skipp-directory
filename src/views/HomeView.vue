@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useSearchStore } from '@/stores/SearchStore';
-import Banner from '../components/Banner.vue'
 import Filter from '../components/Filter.vue'
 import  ProfileListEntry  from '../components/ProfileListEntry.vue'
 import  NoDataFound  from '../components/NoDataFound.vue'
@@ -37,12 +36,9 @@ const setAccordion = (Id : string) => {
 
 <template>
   <main>
-    <div >
-      <Banner>
-          <template #image>
-            <img src="../assets/images/SKIPP-Banner.png" class="banner-div">
-          </template>
-        </Banner>
+    <div class="main-content">
+    <div>
+      <img src="../assets/images/SKIPP-Banner.png" class="image-banner">
     </div>
     <div class="alpherbertical-search">
       <div class="row">
@@ -159,12 +155,15 @@ const setAccordion = (Id : string) => {
     <div class="contact-link">
       Have a question? Want to share a story? Tell us how we’re doing? Contact us at <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a>
     </div>
+  </div>
   </main>
 </template>
 <style>
-.banner-div{
-  width: auto;
-  max-width: 100%;
+.image-banner{
+  width: 100%;
+}
+.main-content{
+  background-color: white;
 }
 .alpherbertical-search{
   color: white;

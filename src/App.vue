@@ -20,15 +20,14 @@ const router = useRouter();
 
 
 <template>
-  <div class="top-layer">
-    <div class="row header-panel">
-      <div class="col-sm-5">
-        <img  src="./assets/images/UA-logo.png" class="ua-logo"/>
-      </div>
-      <div class="col-sm-7">
-        <div class="row">
-          <div class="col-sm-12">
-            <header>
+  <div class="page-background">
+    <div class="header">
+      <div class="row">
+        <div class="col-sm-5">
+          <img  src="./assets/images/UA-logo.png" class="ua-logo"/>
+        </div>
+        <div class="col-sm-7">
+          <header>
               <nav class="nav-bar">
               <router-link to="/" class="navigation-menu-box">Home</router-link> 
               <router-link to="/about">About Us</router-link>
@@ -40,21 +39,26 @@ const router = useRouter();
         <router-link v-else to="/login" class="navigation-menu-box">Login</router-link>
               </nav>
             </header>
-          </div>
-          
         </div>
       </div>
     </div>
+  <RouterView />
+  <Footer></Footer>
   </div>
-    <RouterView />
-    <div>
-      <!--{{ authorizationStore.jwtToken }}-->
-    </div>
-    <Footer></Footer>
 </template>
 <style scoped>
+.page-background{
+  background: #DBDBDB;
+  overflow:hidden;
+}
+.header{
+  background: white;
+    border-radius: 50px 50px 0px 0px ;
+    overflow:hidden;
+}
 .top-layer{
   background: #DBDBDB;
+  width: 100%;
 }
 .ua-logo{
   margin-left: 160px;
@@ -82,6 +86,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 18px;
 color: #000000;
+text-align: center;
 
 }
 

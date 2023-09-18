@@ -10,5 +10,7 @@
 </template>
 
 <style scoped>
-
+.banner{
+  width: auto;
+}
 </style>
