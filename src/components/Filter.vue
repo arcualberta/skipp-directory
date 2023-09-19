@@ -9,6 +9,7 @@ const props = defineProps<{
   const searchStore = useSearchStore();
   const toggleOption = (option: CatfishUI.Components.SolrQuery.ValueConstraint) => {
     option.selected = !option.selected;
+    searchStore.offset = 0;
     searchStore.fetchData();
     }
 </script>

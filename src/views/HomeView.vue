@@ -16,17 +16,22 @@ const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Co
 const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 searchStore.fetchData();
 
-const selectLetter = (letter: string) => {
+
+  const first = computed(() => searchStore.searchResult.offset + 1)
+  const last = computed(() => searchStore.searchResult.offset + searchStore.searchResult.itemsPerPage)
+  const pageCount = computed(() => Math.ceil((searchStore.searchResult.totalMatches)/(searchStore.searchResult.itemsPerPage)))
+  
+  const selectLetter = (letter: string) => {
   if(searchStore.selectedLetter===letter)
   {
     searchStore.selectedLetter=null;
     searchStore.fetchData();
+    checkFirstLast(selectedPage.value);
+    
   }else{
-    searchStore.selectLetter(letter)}
+    searchStore.selectLetter(letter)
+    checkFirstLast(selectedPage.value)}
   }
-  const first = computed(() => searchStore.searchResult.offset + 1)
-  const last = computed(() => searchStore.searchResult.offset + searchStore.searchResult.itemsPerPage)
-  const pageCount = computed(() => Math.ceil((searchStore.searchResult.totalMatches)/(searchStore.searchResult.itemsPerPage)))
   const checkFirstLast = (page : number) => {
     if(page === 1){
           isFirst.value = true;
@@ -42,21 +47,27 @@ const selectLetter = (letter: string) => {
     }
 const setPage = (page : number) => {
         selectedPage.value = page;
-        searchStore.setPage(page);
+        if(pageCount.value > 1){
+          searchStore.setPage(page);
+        }
         checkFirstLast(page);
       
     }
     const setPrevious = () => {
       selectedPage.value = selectedPage.value-1; 
       checkFirstLast(selectedPage.value);
-      searchStore.fetchPerviousPage();
-      
+      if(pageCount.value > 1){
+        searchStore.fetchPerviousPage();
+        }
     }
     const setNext = () => {
-      selectedPage.value = selectedPage.value+1; 
-      checkFirstLast(selectedPage.value);
-      searchStore.fetchNextPage();
-      
+      if(pageCount.value > 1){
+        selectedPage.value = selectedPage.value+1;
+        searchStore.fetchNextPage();
+        }else{
+          selectedPage.value = pageCount.value
+        }
+        checkFirstLast(selectedPage.value);
     }
 </script>
 
