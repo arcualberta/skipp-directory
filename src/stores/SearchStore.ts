@@ -44,6 +44,21 @@ export const useSearchStore = defineStore('SearchStore', {
                 false
             )
         },
+        fetchPerviousPage() {
+            this.offset = this.offset - this.pageSize;
+            fetchQuery(
+                this.selectedLetter as string,
+                this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
+                this.offset,
+                this.pageSize,
+                (result: CatfishUI.Components.SolrQuery.SearchOutput) => {
+                    //this.searchResult.resultEntries = this.searchResult.resultEntries.concat(result.resultEntries);
+                    this.searchResult.resultEntries = result.resultEntries;
+                    this.searchResult.offset = result.offset;
+                },
+                false
+            )
+        },
         selectKeyword(index: number) {
             if (!this.keywords[index].selected) {
                 this.keywords[index].selected = true;
@@ -65,6 +80,11 @@ export const useSearchStore = defineStore('SearchStore', {
         },
         selectLetter(letter: string) {
             this.selectedLetter = letter,
+            this.fetchData();
+            
+        },
+        setPage(pageNumber: number) {
+            this.offset = (pageNumber-1)*this.pageSize,
             this.fetchData();
             
         },

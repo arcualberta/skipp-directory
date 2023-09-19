@@ -8,6 +8,9 @@ import { ref, computed} from 'vue';
 
 const searchStore = useSearchStore();
 const selectedButtons = ref([] as string[]);
+const selectedPage = ref(1);
+const isFirst = ref(true);
+const isLast = ref(false);
 const keyOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
@@ -23,14 +26,37 @@ const selectLetter = (letter: string) => {
   }
   const first = computed(() => searchStore.searchResult.offset + 1)
   const last = computed(() => searchStore.searchResult.offset + searchStore.searchResult.itemsPerPage)
-
-const setAccordion = (Id : string) => {
-        if(selectedButtons.value.includes(Id)){
-            const idx = selectedButtons.value.findIndex(sb => sb == Id)
-            selectedButtons.value?.splice(idx as number, 1)
+  const pageCount = computed(() => Math.ceil((searchStore.searchResult.totalMatches)/(searchStore.searchResult.itemsPerPage)))
+  const checkFirstLast = (page : number) => {
+    if(page === 1){
+          isFirst.value = true;
         }else{
-            selectedButtons.value.push(Id);
+          isFirst.value = false;
         }
+        if(page === pageCount.value){
+          isLast.value = true;
+        }else{
+          isLast.value = false;
+        }
+      
+    }
+const setPage = (page : number) => {
+        selectedPage.value = page;
+        searchStore.setPage(page);
+        checkFirstLast(page);
+      
+    }
+    const setPrevious = () => {
+      selectedPage.value = selectedPage.value-1; 
+      checkFirstLast(selectedPage.value);
+      searchStore.fetchPerviousPage();
+      
+    }
+    const setNext = () => {
+      selectedPage.value = selectedPage.value+1; 
+      checkFirstLast(selectedPage.value);
+      searchStore.fetchNextPage();
+      
     }
 </script>
 
@@ -140,10 +166,19 @@ const setAccordion = (Id : string) => {
       </div>
       <div class="col-sm-8">
         <span v-if="searchStore.searchResult.totalMatches>0">
+          <div style="text-align: center;">
+            {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
+          </div>
+                
           <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
-          <div style="text-align:center; margin:10px;">
-                {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
-                <a  v-if="last < searchStore.searchResult?.totalMatches" href="#" @click="searchStore.fetchNextPage()">load more ...</a>
+          <div >
+                <nav>
+                  <ul class="pagination justify-content-center">
+                    <li v-bind:class = "(isFirst)?'page-item disabled':'page-item'"><a class="page-link" href="#" tabindex="-1" @click="setPrevious()">Previous</a></li>
+                    <li v-for="p in pageCount" v-bind:class = "(selectedPage===p)?'page-item active':'page-item'" @click="setPage(p)"><a class="page-link" href="#">{{p}}</a></li>
+                    <li v-bind:class = "(isLast)?'page-item disabled':'page-item'"><a class="page-link" href="#" @click="setNext()">Next</a></li>
+                  </ul>
+                </nav>
             </div>
         </span>
         <span v-else>
@@ -164,6 +199,12 @@ const setAccordion = (Id : string) => {
 }
 .main-content{
   background-color: white;
+}
+.center {
+  border: 1px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 .alpherbertical-search{
   color: white;
