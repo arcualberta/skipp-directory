@@ -20,41 +20,50 @@ export const useSearchStore = defineStore('SearchStore', {
     },
     actions: {
         fetchData() {
+            this.isLoading = true;
             fetchQuery(
                 this.selectedLetter as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
-                (result: CatfishUI.Components.SolrQuery.SearchOutput) => { this.searchResult = result; },
+                true,
+                (result: CatfishUI.Components.SolrQuery.SearchOutput) => { this.searchResult = result;
+                    this.isLoading = false; },
                 false
             )
         },
         fetchNextPage() {
             this.offset = this.pageSize + this.offset;
+            this.isLoading = true;
             fetchQuery(
                 this.selectedLetter as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
+                true,
                 (result: CatfishUI.Components.SolrQuery.SearchOutput) => {
                     //this.searchResult.resultEntries = this.searchResult.resultEntries.concat(result.resultEntries);
                     this.searchResult.resultEntries = result.resultEntries;
                     this.searchResult.offset = result.offset;
+                    this.isLoading = false;
                 },
                 false
             )
         },
         fetchPerviousPage() {
             this.offset = this.offset - this.pageSize;
+            this.isLoading = true;
             fetchQuery(
                 this.selectedLetter as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
+                true,
                 (result: CatfishUI.Components.SolrQuery.SearchOutput) => {
                     //this.searchResult.resultEntries = this.searchResult.resultEntries.concat(result.resultEntries);
                     this.searchResult.resultEntries = result.resultEntries;
                     this.searchResult.offset = result.offset;
+                    this.isLoading = false;
                 },
                 false
             )
@@ -79,11 +88,13 @@ export const useSearchStore = defineStore('SearchStore', {
             this.fetchData();
         },
         selectLetter(letter: string) {
+            this.isLoading = true;
             this.selectedLetter = letter,
             this.fetchData();
             
         },
         setPage(pageNumber: number) {
+            this.isLoading = true;
             this.offset = (pageNumber-1)*this.pageSize,
             this.fetchData();
             

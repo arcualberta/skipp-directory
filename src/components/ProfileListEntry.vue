@@ -15,8 +15,7 @@ const props = defineProps<{
   const position = computed(() => itemHelper.getPosition(props.model))
   const email = computed(() => itemHelper.getEmail(props.model))
   const keywords = computed(() => itemHelper.getKeywords(props.model))
-  const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })
-                }
+  const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })}
 </script>
 <template>
   <div class="profile-component">

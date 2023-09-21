@@ -14,6 +14,7 @@ const isLast = ref(false);
 const keyOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
+//searchStore.isLoading = true;
 searchStore.fetchData();
 
 
@@ -176,7 +177,13 @@ const setPage = (page : number) => {
 </div></div>
       </div>
       <div class="col-sm-8">
-        <span v-if="searchStore.searchResult.totalMatches>0">
+        <div v-if="searchStore.isLoading" style="text-align: center;">
+          <div class="spinner-border text-primary" role="status">
+            <span class="sr-only"></span>
+          </div>
+        </div>
+        <div v-else>
+          <div v-if="searchStore.searchResult.totalMatches>0">
           <div style="text-align: center;">
             {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
           </div>
@@ -191,12 +198,12 @@ const setPage = (page : number) => {
                   </ul>
                 </nav>
             </div>
-        </span>
-        <span v-else>
+          </div>
+        <div v-else>
                 <NoDataFound />
-            </span>
-        
-      </div>
+        </div>
+          </div>
+        </div>
     </div>
     <div class="contact-link">
       Have a question? Want to share a story? Tell us how we’re doing? Contact us at <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a>

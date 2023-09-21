@@ -8,6 +8,7 @@ export interface BaseState {
     offset: number;
     pageSize: number;
     last: number;
+    isLoading: boolean;
     searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
 }
 export const baseState: BaseState = {
@@ -16,6 +17,7 @@ export const baseState: BaseState = {
     offset: 0,
     pageSize: 10,
     last: 10,
+    isLoading: false,
     searchResult: {
         first: 0,
         last: 0,
@@ -40,6 +42,7 @@ export const fetchQuery = (
     queryModel: CatfishUI.Components.SolrQuery.solrQueryModel,
     offset: number,
     pageSize: number,
+    isLoading: boolean,
     resultCallback: any,
     isAdmin: boolean
 ) => {
@@ -83,10 +86,11 @@ export const fetchQuery = (
         .then(response => response.json())
         .then(data => {
             //console.log("Search Results:\n", JSON.stringify(data));
+            isLoading = false;
             resultCallback(JSON.parse(JSON.stringify(data)));
-            
         })
         .catch((error) => {
+            isLoading = false;
             console.error('Item Load API Error:', error);
         });
 }

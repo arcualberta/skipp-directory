@@ -28,9 +28,6 @@ export const useProfileStore = defineStore('ProfileStore', {
         }
     },
     actions: {
-        
-        
-        
         setActiveProfile(profileId: Guid) {
             if (profileId) {
                 let query = "id:"+profileId;
