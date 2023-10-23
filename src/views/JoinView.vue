@@ -4,6 +4,7 @@
     import { useRoute } from 'vue-router'
     import { Guid } from 'guid-typescript'
     import {default as config} from "@/appsettings";
+    import { FormSubmission } from '@arc/form-submission'
     
     const route = useRoute()
     const submissionId = route.params.submissionId as unknown as Guid
@@ -13,6 +14,6 @@
 </script>
 <template>
   <div class="row">
-    <FormSubmission :repository-root="apiRoot" :piniaInstance="getActivePinia()" :form-id="config.joinUsFormId"></FormSubmission>
+    <FormSubmission :pinia-instance="getActivePinia()" :apiRoot="'https://localhost:5020'" :msg="''" :formTemplateId="config.joinUsFormId"></FormSubmission>
   </div>
 </template>

@@ -6,12 +6,11 @@ import App from './App.vue'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 /* Import Google Login */
 import vue3GoogleLogin from 'vue3-google-login'
-
+import BootstrapVue3 from 'bootstrap-vue-3'
+import IconsPlugin from 'bootstrap-vue-3'
 import * as CatfishUI from 'applets'
 
 import {default as config} from './appsettings'
@@ -29,6 +28,7 @@ import * as faIcons from '@fortawesome/free-solid-svg-icons'
 library.add(faIcons.faQuestionCircle)
 const app = createApp(App)
 app.use(createPinia())
+app.use(BootstrapVue3)
 app.use(router)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(vue3GoogleLogin, {
