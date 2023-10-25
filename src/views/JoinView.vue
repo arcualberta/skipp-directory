@@ -13,7 +13,14 @@
 
 </script>
 <template>
-  <div class="row">
+  <div class="container">
     <FormSubmission :pinia-instance="getActivePinia()" :apiRoot="'https://localhost:5020'" :msg="''" :formTemplateId="config.joinUsFormId"></FormSubmission>
   </div>
 </template>
+<style scoped>
+.info-field{
+  font-size: 24px;
+  font-weight: 500;
+  color: #327D49;
+}
+</style>
