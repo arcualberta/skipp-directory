@@ -48,11 +48,12 @@ const router = useRouter();
 </template>
 <style scoped>
 .page-background{
-  background: #DBDBDB;
+  /* background: #DBDBDB; */
   overflow:hidden;
 }
 .header{
   background: white;
+  border: #327D49 1px solid;
     border-radius: 50px 50px 0px 0px ;
     overflow:hidden;
 }
