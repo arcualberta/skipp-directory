@@ -5,11 +5,14 @@
     import { Guid } from 'guid-typescript'
     import {default as config} from "@/appsettings";
     import { FormSubmission } from '@arc/form-submission'
+    import { StatusCodes } from 'http-status-codes'
     
     const route = useRoute()
     const submissionId = route.params.submissionId as unknown as Guid
     const apiRoot= config.dataRepositoryApiRoot;
-
+    const formSubmissionCallback = (submissionStatus:StatusCodes) => {
+        console.log("submissionStatus",submissionStatus)
+    }
 
 </script>
 <template>
@@ -27,7 +30,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
     <div class="protection-description">
       Protection of Privacy - Personal information provided is collected in accordance with Section 33(c) of the Alberta Freedom of Information and Protection of Privacy Act (the FOIP Act) and will be protected under Part 2 of that Act. It will be used for the purpose of the Intersections of Gender Researcher Directory. Information collected will be used to administer and manage the Gender Researcher Directory. Information will be used to highlight and mobilize intersectional research, for statistical reporting, and to identify and support equity seeking groups. Any public disclosures of information from the directory will be in aggregate form only.Should you require further information about collection, use and disclosure of personal information, please contact intersectionsofgender@ualberta.ca
     </div>
-    <FormSubmission :pinia-instance="getActivePinia()" :apiRoot="'https://localhost:5020'" :msg="''" :formTemplateId="config.joinUsFormId"></FormSubmission>
+    <FormSubmission :pinia-instance="getActivePinia()" :apiRoot="'https://localhost:5020'" :msg="''" :formTemplateId="config.joinUsFormId" :submissionCallback=""></FormSubmission>
   </div>
 </template>
 <style>
