@@ -35,7 +35,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
       :apiRoot="'https://localhost:5020'"
       :msg="''" 
       :formTemplateId="config.joinUsFormId" 
-      :arc-form-submit="formSubmissionCallback"
+      @arc-form-submit="formSubmissionCallback"
       >
     </FormSubmission>
   </div>
