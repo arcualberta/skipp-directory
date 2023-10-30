@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@arc/form-submission": "file:../npm.form-submission/form-submission/arc-form-submission-0.0.0.tgz",
-    "applets": "file:../Catfish3.0/catfish-ui/applets-0.0.0.tgz",
     "bootstrap": "^5.3.1",
     "bootstrap-vue-3": "^0.5.1",
     "http-status-codes": "^2.3.0",
