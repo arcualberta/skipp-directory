@@ -2,6 +2,7 @@
     import { ref } from 'vue'
     import { getActivePinia } from 'pinia'
     import { useRoute } from 'vue-router'
+    import router from '../router'
     import { Guid } from 'guid-typescript'
     import {default as config} from "@/appsettings";
     import { FormSubmission } from '@arc/form-submission'
@@ -12,6 +13,9 @@
     const apiRoot= config.dataRepositoryApiRoot;
     const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
         console.log("submissionStatus",submissionStatus)
+        if(submissionStatus == StatusCodes.OK){
+          router.push({name:'success'})
+        }
     }
 
 </script>

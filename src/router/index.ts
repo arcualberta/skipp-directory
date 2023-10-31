@@ -23,14 +23,14 @@ const router = createRouter({
       component: () => import('../views/JoinView.vue')
     },
     {
-      path: '/join',
-      name: 'join',
-      component: () => import('../views/JoinView.vue')
-    },
-    {
       path: '/login',
       name: 'login',
       component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: () => import('../views/SuccessView.vue')
     },
     {
       path: '/profile/:id',
