@@ -10,10 +10,12 @@
     
     const route = useRoute()
     const submissionId = route.params.submissionId as unknown as Guid
-    const apiRoot= config.dataRepositoryApiRoot;
+    const apiRoot= config.solrApiRoot;
+    const solrApiRoot = config.solrApiRoot;
     const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
         console.log("submissionStatus",submissionStatus)
         if(submissionStatus == StatusCodes.OK){
+          console.log("sucess")
           router.push({name:'success'})
         }
     }
@@ -36,9 +38,10 @@ For additional information, please visit the <a class="roots-of-change-url" href
     </div>
     <FormSubmission 
       :pinia-instance="getActivePinia()" 
-      :apiRoot="'https://localhost:5020'"
+      :api-root=apiRoot
+      :sorl-api-root=solrApiRoot
       :msg="''" 
-      :formTemplateId="config.joinUsFormId" 
+      :form-template-id="config.joinUsFormId" 
       @arc-form-submit="formSubmissionCallback"
       >
     </FormSubmission>
