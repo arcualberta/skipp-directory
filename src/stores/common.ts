@@ -76,7 +76,7 @@ export const fetchQuery = (
     formData.append("maxHiglightSnippets", "1");
     
    
-    const queryApiUrl = `${config.default.dataRepositoryApiRoot}/solr-search`
+    const queryApiUrl = `${config.default.dataRepositoryApiRoot}/api/solr-search`
 
     
     fetch(queryApiUrl, {
