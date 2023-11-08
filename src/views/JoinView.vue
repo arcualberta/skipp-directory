@@ -7,6 +7,8 @@
     import {default as config} from "@/appsettings";
     import { FormSubmission } from '@arc/form-submission'
     import { StatusCodes } from 'http-status-codes'
+
+    import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
     
     const route = useRoute()
     const submissionId = route.params.submissionId as unknown as Guid
@@ -42,7 +44,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
       :api-root=apiRoot
       :solrApiRoot=solrApiRoot
       :msg="''" 
-      :form-template-id="config.joinUsFormId" 
+      :form-template="JoinUsFormTemplate" 
       @arc-form-submit="formSubmissionCallback"
       >
     </FormSubmission>
