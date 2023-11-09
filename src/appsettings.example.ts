@@ -10,8 +10,7 @@ export default {
     //authorizationApiRoot:"https://localhost:5010/",
     //dataRepositoryApiRoot: "https://localhost:5020",
     authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
-    dataRepositoryApiRoot: "https://skipp-test.artsrn.ualberta.ca/api",
-    joinUsFormId:"43FF5214-B6A6-9F16-E7FD-A2337B97A949"
+    solrApiRoot:  "https://localhost:7148"
 };
 
 export enum SearchResultFieldMapping {

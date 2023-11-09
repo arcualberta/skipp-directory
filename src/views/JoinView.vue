@@ -1,27 +1,26 @@
 <script setup lang="ts">
-    import { ref } from 'vue'
-    import { getActivePinia } from 'pinia'
-    import { useRoute } from 'vue-router'
-    import router from '../router'
-    import { Guid } from 'guid-typescript'
-    import {default as config} from "@/appsettings";
-    import { FormSubmission } from '@arc/form-submission'
-    import { StatusCodes } from 'http-status-codes'
+  import { ref } from 'vue'
+  import { getActivePinia } from 'pinia'
+  import { useRoute } from 'vue-router'
+  import router from '../router'
+  import { Guid } from 'guid-typescript'
+  import {default as config} from "@/appsettings";
+  import { FormSubmission } from '@arc/form-submission'
+  import { StatusCodes } from 'http-status-codes'
 
-    import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
-    
-    const route = useRoute()
-    const submissionId = route.params.submissionId as unknown as Guid
-    const apiRoot= config.dataRepositoryApiRoot;
-    const solrApiRoot = "https://localhost:7148"
-    const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
-        console.log("submissionStatus",submissionStatus)
+  import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
+  
+  const route = useRoute()
+  const submissionId = route.params.submissionId as unknown as Guid
+  const solrApiRoot = config.solrApiRoot;
+  const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
+      console.log("Submission Status:",submissionStatus)
 
-        if(submissionStatus == StatusCodes.OK){
-          console.log("sucess")
-          router.push({name:'success'})
-        }
-    }
+      if(submissionStatus == StatusCodes.OK){
+        console.log("sucess")
+        router.push({name:'success'})
+      }
+  }
 console.log("solrApiRoot",solrApiRoot)
 </script>
 <template>
@@ -41,10 +40,10 @@ For additional information, please visit the <a class="roots-of-change-url" href
     </div>
     <FormSubmission 
       :pinia-instance="getActivePinia()" 
-      :api-root=apiRoot
-      :solrApiRoot=solrApiRoot
+      :api-root=solrApiRoot
       :msg="''" 
-      :form-template="JoinUsFormTemplate" 
+      :form-template="JoinUsFormTemplate"
+      :data-store="'Solr'"
       @arc-form-submit="formSubmissionCallback"
       >
     </FormSubmission>
