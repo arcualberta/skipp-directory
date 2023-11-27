@@ -10,7 +10,6 @@ import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 /* Import Google Login */
 import vue3GoogleLogin from 'vue3-google-login'
 import BootstrapVue3 from 'bootstrap-vue-3'
-import IconsPlugin from 'bootstrap-vue-3'
 import * as CatfishUI from 'applets'
 
 import {default as config} from './appsettings'
@@ -24,8 +23,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-
 library.add(faIcons.faQuestionCircle)
+library.add(faIcons.faMagnifyingGlass)
 const app = createApp(App)
 app.use(createPinia())
 app.use(BootstrapVue3)

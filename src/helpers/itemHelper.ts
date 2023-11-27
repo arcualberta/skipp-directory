@@ -57,3 +57,6 @@ export function getPronouns(item: CatfishUI.Components.ResultItem) {
 export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
 }
+export function getIndigeniousCommunity(item: CatfishUI.Components.ResultItem) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY);
+}

@@ -22,7 +22,7 @@ export const useSearchStore = defineStore('SearchStore', {
         fetchData() {
             this.isLoading = true;
             fetchQuery(
-                this.selectedLetter as string,
+                this.searchWord as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
@@ -36,7 +36,7 @@ export const useSearchStore = defineStore('SearchStore', {
             this.offset = this.pageSize + this.offset;
             this.isLoading = true;
             fetchQuery(
-                this.selectedLetter as string,
+                this.searchWord as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
@@ -54,7 +54,7 @@ export const useSearchStore = defineStore('SearchStore', {
             this.offset = this.offset - this.pageSize;
             this.isLoading = true;
             fetchQuery(
-                this.selectedLetter as string,
+                this.searchWord as string,
                 this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
@@ -87,9 +87,10 @@ export const useSearchStore = defineStore('SearchStore', {
 
             this.fetchData();
         },
-        selectLetter(letter: string) {
+        selectWord(word: string) {
+            console.log("word",word)
             this.isLoading = true;
-            this.selectedLetter = letter,
+            this.searchWord = word,
             this.fetchData();
             
         },

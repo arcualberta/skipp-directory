@@ -17,7 +17,7 @@
 
   const id = route.params.id as unknown as Guid;
   profileStore.setActiveProfile(id);
-  
+  console.log("activeProfile", JSON.stringify(profileStore.activeProfile))
   const name = computed(() => itemHelper.getName(profileStore.activeProfile));
   const position = computed(() => itemHelper.getPosition(profileStore.activeProfile))
   const email = computed(() => itemHelper.getEmail(profileStore.activeProfile));
@@ -25,6 +25,7 @@
   const organization = computed(() => itemHelper.getFaculty(profileStore.activeProfile));
   const pronounce = computed(() => itemHelper.getPronouns(profileStore.activeProfile));
   const websiteLinks = computed(() => itemHelper.getWebsiteLinks(profileStore.activeProfile));
+  const IndigenousCommunity = computed(() => itemHelper.getIndigeniousCommunity(profileStore.activeProfile));
 </script>
 <template>
   <div class="container">
@@ -37,6 +38,7 @@
         <div class="psh">{{ position }} | {{ organization }}</div>
         <div class="psh">Email: <span class="email-value">{{ email }}</span></div>
         <div class="psh">Pronounce: <span class="pronounce-value">{{ pronounce }}</span></div>
+        <div class="psh" v-if="IndigenousCommunity">Indigenous Nation / Community: <span class="pronounce-value">{{ IndigenousCommunity }}</span></div>
       </div>
     </div>
     <div class="row">

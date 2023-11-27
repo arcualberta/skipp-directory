@@ -3,7 +3,7 @@ import * as CatfishUI from 'applets';
 import * as config from '../appsettings';
 
 export interface BaseState {
-    selectedLetter: null | string;
+    searchWord: null | string;
     queryParams: null | string;
     offset: number;
     pageSize: number;
@@ -12,7 +12,7 @@ export interface BaseState {
     searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
 }
 export const baseState: BaseState = {
-    selectedLetter:null,
+    searchWord:null,
     queryParams: null,
     offset: 0,
     pageSize: 10,
@@ -38,7 +38,7 @@ export const baseState: BaseState = {
  * @param isAdmin 
  */
 export const fetchQuery = (
-    selectedLetter:string|null,
+    searchWord:string|null,
     queryModel: CatfishUI.Components.SolrQuery.solrQueryModel,
     offset: number,
     pageSize: number,
@@ -57,8 +57,10 @@ export const fetchQuery = (
     //const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
     let query = "*:*";
-    if(selectedLetter != null){
-        query = (config.SearchResultFieldMapping.NAME+":"+selectedLetter+"*")
+    console.log("searchWord",searchWord)
+    if(searchWord != null){
+        query = (config.SearchResultFieldMapping.NAME+":"+searchWord + " OR " + config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS+":"+searchWord+ " OR " + config.SearchResultFieldMapping.KEYWORDS+":"+searchWord)
+        console.log("query",query)
         if(queryModel?.buildQueryString())
             query = query + " AND "+queryModel?.buildQueryString();
     }

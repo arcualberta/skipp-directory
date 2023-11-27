@@ -31,6 +31,7 @@ export const useProfileStore = defineStore('ProfileStore', {
         setActiveProfile(profileId: Guid) {
             if (profileId) {
                 let query = "id:"+profileId;
+                console.log("query",query)
                 const formData = new FormData();
                 formData.append("query", query);
                 formData.append("offset","0");
@@ -39,7 +40,7 @@ export const useProfileStore = defineStore('ProfileStore', {
                 formData.append("sortBy", "");
                 formData.append("fieldList", "");
                 formData.append("maxHiglightSnippets", "1");
-                const queryApiUrl = `${config.default.dataRepositoryApiRoot}/solr-search`
+                const queryApiUrl = `${config.default.dataRepositoryApiRoot}/api/solr-search`
 
                 fetch(queryApiUrl, {
                     method: 'POST', // or 'PUT'

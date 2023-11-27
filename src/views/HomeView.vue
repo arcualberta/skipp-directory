@@ -16,22 +16,28 @@ const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Co
 const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
 //searchStore.isLoading = true;
 searchStore.fetchData();
-
+let searchText:string;
 
   const first = computed(() => searchStore.searchResult.offset + 1)
   const last = computed(() => searchStore.searchResult.offset + searchStore.searchResult.itemsPerPage)
   const pageCount = computed(() => Math.ceil((searchStore.searchResult.totalMatches)/(searchStore.searchResult.itemsPerPage)))
   
-  const selectLetter = (letter: string) => {
-  if(searchStore.selectedLetter===letter)
-  {
-    searchStore.selectedLetter=null;
-    searchStore.fetchData();
-    checkFirstLast(selectedPage.value);
+  // const selectLetter = (letter: string) => {
+  // if(searchStore.selectedLetter===letter)
+  // {
+  //   searchStore.selectedLetter=null;
+  //   searchStore.fetchData();
+  //   checkFirstLast(selectedPage.value);
     
-  }else{
-    searchStore.selectLetter(letter)
-    checkFirstLast(selectedPage.value)}
+  // }else{
+  //   searchStore.selectLetter(letter)
+  //   checkFirstLast(selectedPage.value)}
+  // }
+
+  const search = (searchText:string) =>{
+    searchStore.searchWord = searchText;
+    searchStore.selectWord(searchText)
+
   }
   const checkFirstLast = (page : number) => {
     if(page === 1){
@@ -76,41 +82,34 @@ const setPage = (page : number) => {
   <main>
     <div class="main-content">
     <div>
-      <img src="../assets/images/SKIPP-Banner.png" class="image-banner">
+      <div class="row">
+        <div class="col-sm-8">
+          <img src="../assets/images/SKIPP-Banner.png" class="image-banner">
+        </div>
+        <div class="col-sm-4">
+          <div class="banner-heading">
+            SKIPP | Situated Knowledges : Indigenous Peoples & Place
+          </div>
+          <div class="banner-description">
+            Indigenous - Engaged Researcher Database
+          </div>
+        </div>
+      </div>
     </div>
     <div class="alpherbertical-search">
       <div class="row">
         <div class="col-sm-4 alpherbertical-search-title">
-          Search Alphabetically:
+          Search :
         </div>
         <div class="col-sm-8">
-          <span class="alpherbertical-search-letters">#</span>
-          <button v-bind:class = "(searchStore.selectedLetter==='A')?'btn-active':'btn-letters'" @click="selectLetter ('A')">A</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='B')?'btn-active':'btn-letters'" @click="selectLetter ('B')">B</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='C')?'btn-active':'btn-letters'" @click="selectLetter ('C')">C</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='D')?'btn-active':'btn-letters'" @click="selectLetter ('D')">D</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='E')?'btn-active':'btn-letters'" @click="selectLetter ('E')">E</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='F')?'btn-active':'btn-letters'" @click="selectLetter ('F')">F</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='G')?'btn-active':'btn-letters'" @click="selectLetter ('G')">G</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='H')?'btn-active':'btn-letters'" @click="selectLetter ('H')">H</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='I')?'btn-active':'btn-letters'" @click="selectLetter ('I')">I</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='J')?'btn-active':'btn-letters'" @click="selectLetter ('J')">J</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='K')?'btn-active':'btn-letters'" @click="selectLetter ('K')">K</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='L')?'btn-active':'btn-letters'" @click="selectLetter ('L')">L</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='M')?'btn-active':'btn-letters'" @click="selectLetter ('M')">M</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='N')?'btn-active':'btn-letters'" @click="selectLetter ('N')">N</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='O')?'btn-active':'btn-letters'" @click="selectLetter ('O')">O</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='P')?'btn-active':'btn-letters'" @click="selectLetter ('P')">P</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='Q')?'btn-active':'btn-letters'" @click="selectLetter ('Q')">Q</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='R')?'btn-active':'btn-letters'" @click="selectLetter ('R')">R</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='S')?'btn-active':'btn-letters'" @click="selectLetter ('S')">S</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='T')?'btn-active':'btn-letters'" @click="selectLetter ('T')">T</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='U')?'btn-active':'btn-letters'" @click="selectLetter ('U')">U</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='V')?'btn-active':'btn-letters'" @click="selectLetter ('V')">V</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='W')?'btn-active':'btn-letters'" @click="selectLetter ('W')">W</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='X')?'btn-active':'btn-letters'" @click="selectLetter ('X')">X</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='Y')?'btn-active':'btn-letters'" @click="selectLetter ('Y')">Y</button>
-          <button v-bind:class = "(searchStore.selectedLetter==='Z')?'btn-active':'btn-letters'" @click="selectLetter ('Z')">Z</button>
+          <div class="row">
+            <div class="col-sm-10">
+              <input type="text" v-model="searchText" class="search-field" placeholder="Search by Keyword, Community or Name...."/>
+            </div>
+            <div class="col-sm-2">
+              <font-awesome-icon icon="fa-solid fa-magnifying-glass" @click="search(searchText)"  class="fa-icon fa-magnifying-glass search-text" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -217,6 +216,22 @@ const setPage = (page : number) => {
 }
 .main-content{
   background-color: white;
+}
+.search-text:hover{
+cursor: pointer;
+}
+.search-field{
+  width: 100%;
+}
+.banner-heading{
+  font-size: 36px;
+    font-weight: 600;
+    color: #327D49;
+}
+.banner-description{
+  font-size: 24px;
+    font-weight: 600;
+    margin-top: 100px;
 }
 .center {
   border: 1px solid;
