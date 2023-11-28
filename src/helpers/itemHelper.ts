@@ -58,5 +58,5 @@ export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
 }
 export function getIndigeniousCommunity(item: CatfishUI.Components.ResultItem) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY);
+    return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY);
 }
