@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@arc/arc-foundation": "^0.3.1",
-    "@arc/form-submission": "^0.1.1",
+    "@arc/form-submission": "^0.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "applets": "file:../Catfish3.0/catfish-ui/applets-0.0.0.tgz",
     "bootstrap": "^5.3.1",
