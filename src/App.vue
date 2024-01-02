@@ -30,7 +30,6 @@ const router = useRouter();
           <header>
               <nav class="nav-bar">
               <router-link to="/" class="navigation-menu-box">Home</router-link> 
-              <router-link to="/about">About Us</router-link>
               <router-link to="/join">Join Our Directory</router-link>
         <span v-if="loginRes?.success" class="user-info">
             <span class="welcome">{{loginRes?.name}} </span>
