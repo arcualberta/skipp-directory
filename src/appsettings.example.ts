@@ -10,7 +10,7 @@ export default {
     //authorizationApiRoot:"https://localhost:5010/",
     //dataRepositoryApiRoot: "https://localhost:5020",
     authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
-    solrApiRoot:  "https://localhost:7148"
+    solrApiRoot:  "https://solr-test.artsrn.ualberta.ca"
 };
 
 export enum SearchResultFieldMapping {
