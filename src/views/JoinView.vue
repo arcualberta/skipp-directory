@@ -39,11 +39,15 @@ For additional information, please visit the <a class="roots-of-change-url" href
       Protection of Privacy - Personal information provided is collected in accordance with Section 33(c) of the Alberta Freedom of Information and Protection of Privacy Act (the FOIP Act) and will be protected under Part 2 of that Act. It will be used for the purpose of the Intersections of Gender Researcher Directory. Information collected will be used to administer and manage the Gender Researcher Directory. Information will be used to highlight and mobilize intersectional research, for statistical reporting, and to identify and support equity seeking groups. Any public disclosures of information from the directory will be in aggregate form only.Should you require further information about collection, use and disclosure of personal information, please contact intersectionsofgender@ualberta.ca
     </div>
     <FormSubmission 
-      :pinia-instance="getActivePinia()" 
       :api-root=solrApiRoot
-      :msg="''" 
-      :form-template="JoinUsFormTemplate"
       :data-store="'Solr'"
+      securityToken=""
+      :form-template="JoinUsFormTemplate"
+      :pinia-instance="getActivePinia()" 
+      :tanent-id="('a4a50d9f-fd20-4d74-8274-2acad28a6553' as unknown as Guid)"
+      :msg="''" 
+      
+      
       @arc-form-submit="formSubmissionCallback"
       >
     </FormSubmission>
@@ -84,5 +88,27 @@ For additional information, please visit the <a class="roots-of-change-url" href
 .roots-of-change-url{
   text-decoration:underline;
   color: black;
+}
+.delete-button{
+  float:right;
+}
+.add-button{
+  float:right;
+}
+.compositeField{
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.lightGrayBorder{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+/* insert field button*/
+.insertFieldBtn{
+    text-align: center;
+    width: 100%;
+   }
+.fontSize2em{
+    font-size: 2rem;
 }
 </style>
