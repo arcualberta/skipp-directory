@@ -78,12 +78,15 @@ export const fetchQuery = (
     formData.append("maxHiglightSnippets", "1");
     
    
-    const queryApiUrl = `${config.default.dataRepositoryApiRoot}/api/solr-search`
-
-    
+    const queryApiUrl = `${config.default.solrApiRoot}/api/SolrSearch`
+    const tenantId = "a4a50d9f-fd20-4d74-8274-2acad28a6553" as unknown as Guid
+    const securityToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhcmNyY2dAdWFsYmVydGEuY2EiLCJ0b2tlblR5cGUiOiJVc2VyVG9rZW4iLCJ1c2VyZGF0YSI6IiIsIm1lbWJlcnNoaXAiOiJ7XCJVc2VyXCI6e1wiSWRcIjpcIjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMFwiLFwiSWRlbnRpdHlVc2VySWRcIjpcIjRiZDc1NjAzLTQzZjEtNGM5OS1hNDkxLWRjNjJhZmVjMmQ2OVwiLFwiVXNlck5hbWVcIjpcImFkbWluXCIsXCJFbWFpbFwiOlwiYXJjcmNnQHVhbGJlcnRhLmNhXCIsXCJTeXN0ZW1Sb2xlc1wiOltcIlN5c0FkbWluXCJdfSxcIlRlbmFuY3lcIjpudWxsfSIsImp0aSI6IjJlYzA3YmIzLTEwOTYtNGI0Ni05ZGZkLTVjZjRmYWI2MTg3MyIsInJvbGVzIjoiU3lzQWRtaW4iLCJleHAiOjE3MDUwMDA5NDEsImlzcyI6Imh0dHBzOi8vYXV0aC5hcnRzcm4udWFsYmVydGEuY2EiLCJhdWQiOiJodHRwczovL2FyYy1hcHBzLmFydHNybi51YWxiZXJ0YS5jYSJ9.aLDvfQ16WHwR0iHHsYFHspXwRK274OrrG-k8E45gVW01tHJbfhIWEzyS5vHgFiJilJgS8PlVnzcHsjK4YVR95bPQ1mtLK6F-EowsG0aAlCldi7aVzjmh7yKQ86cu5g6rxG0rR6gVa71PTpvCSCLkHVWVyGzwgTyyaIwhFhFBqtSiO--N8h4EWF-BPk2usxBua-ODLhGzTmCKDFeUTn5bw2L7hA_Zr581_q9opiwiLXRGGt1JynZcULPcVnfcq7Gv8yQ02QSbfXJHqDUH4xen5SNw6Figf8ngiL7H2DvVWVJITbkqGNax1RzmF57mh_3at5pZaOOZ9I8gwhRpuuGCgA"
+    console.log("tenantId", tenantId);
     fetch(queryApiUrl, {
+        'Tenant-Id': `${tenantId}`,
         method: 'POST', // or 'PUT'
-        body: formData
+        body: formData,
+        'Authorization': `Bearer ${securityToken}`
     })
         .then(response => response.json())
         .then(data => {

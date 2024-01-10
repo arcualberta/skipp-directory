@@ -60,3 +60,6 @@ export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
 export function getIndigeniousCommunity(item: CatfishUI.Components.ResultItem) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY);
 }
+export function getLocation(item: CatfishUI.Components.ResultItem) {
+    return getConcatenatedStringValue(item, config.SearchResultFieldMapping.LOCATION);
+}

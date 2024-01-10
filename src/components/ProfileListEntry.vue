@@ -44,12 +44,12 @@ const props = defineProps<{
   margin-top: 60px;
   margin-bottom: 60px;
   border-radius: 10px;
-  background-color: #EEFEF7;
+  background-color: #F6FCFA;
 }
 .profile-name{
   padding-top: 70px;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 800;
 }
 .profile-name:hover{
   text-decoration: none;
@@ -60,6 +60,7 @@ const props = defineProps<{
   color:#7A7A7A;
 }
 .research-interest-headding{
+  padding-top: 30px;
   font-size: 16px;
   font-weight: 500; 
 }
@@ -87,6 +88,7 @@ const props = defineProps<{
   margin-top: 70px;
 }
 .email-id{
+  font-weight: 600;
   margin-left: 10px;
 }
 

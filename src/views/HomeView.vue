@@ -98,10 +98,10 @@ const setPage = (page : number) => {
     </div>
     <div class="alpherbertical-search">
       <div class="row">
-        <div class="col-sm-4 alpherbertical-search-title">
+        <div class="col-sm-2 alpherbertical-search-title">
           Search :
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-10">
           <div class="row">
             <div class="col-sm-10">
               <input type="text" v-model="searchText" class="search-field" placeholder="Search by Keyword, Community or Name...."/>
@@ -127,7 +127,7 @@ const setPage = (page : number) => {
           <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button accordion-button-height" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <span class="accordion-header-text">Keywords</span>
       </button>
     </h2>
@@ -192,13 +192,17 @@ const setPage = (page : number) => {
           </div>
         </div>
     </div>
-    <div class="contact-link">
-      Have a question? Want to share a story? Tell us how we’re doing? Contact us at <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a>
-    </div>
   </div>
   </main>
 </template>
 <style>
+.accordion-header{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.accordion-button-height{
+  min-height: 30px;
+}
 .image-banner{
   width: 100%;
 }
@@ -209,6 +213,7 @@ const setPage = (page : number) => {
 cursor: pointer;
 }
 .search-field{
+  height: 50px;
   width: 100%;
 }
 .banner-heading{
@@ -229,14 +234,14 @@ cursor: pointer;
 }
 .alpherbertical-search{
   color: white;
-  min-height: 131px;
+  min-height: 100px;
   background-color: #327D49;
-  padding-top: 60px;
+  padding-top: 30px;
   font-size: 24px;
   font-weight: 500;
 }
 .alpherbertical-search-title{
-  text-align: center;
+  text-align:right;
 }
 .alpherbertical-search-letters{
   padding:0px 10px 0px 10px;
@@ -254,19 +259,19 @@ cursor: pointer;
   padding:0px 11px 0px 11px;
 }
 .lbl-filters{
-  color: #A1A1A1;
+  /* color: #A1A1A1; */
   font-size: 24px;
   font-weight: 500;
 }
 .lbl-filters-title{
-  padding-top: 60px;
+  padding-top: 30px;
   text-align: center;
-  min-height: 131px;
+  min-height: 100px;
 }
 .lbl-results{
-  padding-top: 60px;
+  padding-top: 30px;
   padding-left: 90px;
-  min-height: 131px;
+  min-height: 100px;
 }
 .contact-link{
   font-size: 24px;
@@ -274,7 +279,7 @@ cursor: pointer;
   text-align: center;
 }
 .filter-results{
-  min-height: 200px;
+  min-height: 100px;
 }
 .mail-to-link{
   color: black;
@@ -288,11 +293,14 @@ cursor: pointer;
 
 
 .accordion-header-text{
+  padding-top: 30px;
+  padding-bottom: 30px;
     font-size: 24px;
     font-weight: 400;
     color: #327D49;
 }
 .accordion-button{
+  background-color: white;
     width: 30px;
     height: 30px;
     float: right;

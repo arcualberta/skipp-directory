@@ -35,7 +35,7 @@ const router = useRouter();
             <span class="welcome">{{loginRes?.name}} </span>
             <a @click="logout" class="navigation-menu-box logout">Logout</a>
         </span>
-        <router-link v-else to="/login" class="navigation-menu-box">Login</router-link>
+        <router-link v-else to="/login" class="navigation-menu-box login">Login</router-link>
               </nav>
             </header>
         </div>
@@ -52,9 +52,9 @@ const router = useRouter();
 }
 .header{
   background: white;
-  border: #327D49 1px solid;
-    border-radius: 50px 50px 0px 0px ;
-    overflow:hidden;
+  border-bottom: #919191 solid 2px;
+  padding-bottom: 25px;
+  
 }
 .top-layer{
   background: #DBDBDB;
@@ -66,10 +66,10 @@ const router = useRouter();
   margin-bottom: 20px;
 }
 .login{
-  margin-top: 20px;
-  width: 140px;
-  margin-right: 120px;
-  background-color: #327D49;
+   background-color: #327D49;
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
 }
 .banner{
   width: 100%;

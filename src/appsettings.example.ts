@@ -3,12 +3,13 @@ import { eFieldType, type SearchFieldDefinition } from "./components/Shared/cons
 export default {
     dataServiceApiRoot: "/server/applets/api/",
     googleApiKey: "AIzaSyBgCnBy-LbHAqbB8PbQhNID68vZ8f8_j_Q",
+    tenantId:"a4a50d9f-fd20-4d74-8274-2acad28a6553",
     googleCalendarIds: ["ualberta.ca_kdp9enkplai8s5ipu2efknjels@group.calendar.google.com","c_1netqe2n16i5o9su69ft5c8f8c@group.calendar.google.com"],
     maxEvents: 10,
     initialView: 'dayGridMonth',
     googleLoginClientId:"589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
     //authorizationApiRoot:"https://localhost:5010/",
-    //dataRepositoryApiRoot: "https://localhost:5020",
+    dataRepositoryApiRoot: "https://localhost:5020",
     authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
     solrApiRoot:  "https://solr-test.artsrn.ualberta.ca"
 };

@@ -41,7 +41,6 @@ h3 {
   width: 100%;
   padding: 50px 100px 50px 100px;
   text-align: justify;
-  border-radius: 0px 0px 50px 50px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 

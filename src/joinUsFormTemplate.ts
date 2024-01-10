@@ -1465,74 +1465,6 @@ export const JoinUsFormTemplate = {
       ]
     },
     {
-      "id": "3e1a3bee-3418-b19e-f804-5a2c77af27b0",
-      "title": {
-        "id": "524c987d-a39a-d74c-6135-aa60f9986bdf",
-        "values": [
-          {
-            "id": "dad500a8-7b56-865d-3240-9b2a981daeb3",
-            "lang": "en",
-            "value": "Section 5: Image upload"
-          },
-          {
-            "id": "3b0ba77d-9c3d-2434-07f4-5cbe0406ff88",
-            "lang": "fr",
-            "value": ""
-          }
-        ]
-      },
-      "description": {
-        "id": "ce074280-a83b-867e-f61b-0acbd282ed47",
-        "values": [
-          {
-            "id": "f52e2820-73f8-e3db-1512-83bb51a86018",
-            "lang": "en",
-            "value": ""
-          },
-          {
-            "id": "5f2598ed-0d6d-6620-0f8d-d0873c8b1c5c",
-            "lang": "fr",
-            "value": ""
-          }
-        ]
-      },
-      "type": 12
-    },
-    {
-      "id": "16536f56-2682-9027-a1ab-180ad3ced68d",
-      "title": {
-        "id": "be276061-0cba-eed8-7cde-3cbf3fb7b32b",
-        "values": [
-          {
-            "id": "bca59556-73f3-abd3-819b-96eabadaeab7",
-            "lang": "en",
-            "value": "Please upload an image - it can be a headshot, avatar, or an image that is representative of your work."
-          },
-          {
-            "id": "47c78409-3162-68a3-ef1c-f4ca70d2aa65",
-            "lang": "fr",
-            "value": ""
-          }
-        ]
-      },
-      "description": {
-        "id": "082530db-0d1f-adc2-d79a-cc7272584f1b",
-        "values": [
-          {
-            "id": "c6d446cb-52b4-64ef-849e-e69501c35332",
-            "lang": "en",
-            "value": ""
-          },
-          {
-            "id": "a2ede24a-7db1-0acf-ae69-9373e3d54499",
-            "lang": "fr",
-            "value": ""
-          }
-        ]
-      },
-      "type": 13
-    },
-    {
       "id": "10075d53-eee8-1805-a9d7-3a08acee7160",
       "title": {
         "id": "bbce1e3a-823b-e9a6-1498-911f634d76a1",
@@ -1540,7 +1472,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "32879aea-d43f-760e-affc-6092d69621df",
             "lang": "en",
-            "value": "Section 6: Consent"
+            "value": "Section 5: Consent"
           },
           {
             "id": "3c93da09-025e-2962-82ac-02fb2f2ebaaa",

@@ -40,9 +40,10 @@ export const useProfileStore = defineStore('ProfileStore', {
                 formData.append("sortBy", "");
                 formData.append("fieldList", "");
                 formData.append("maxHiglightSnippets", "1");
-                const queryApiUrl = `${config.default.dataRepositoryApiRoot}/api/solr-search`
+                const queryApiUrl = `${config.default.solrApiRoot}/api/SolrSearch`
 
                 fetch(queryApiUrl, {
+                    'Tenant-Id': `${tenantId}`,
                     method: 'POST', // or 'PUT'
                     body: formData
                 })
