@@ -575,7 +575,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
-      "type": 9,
+      "type": 11,
       "options": [
         {
           "id": "672d4471-bf04-de2f-aa24-4aec2599efc8",
@@ -711,7 +711,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
-      "type": 9,
+      "type": 11,
       "options": [
         {
           "id": "54c2db55-9005-8c16-a9a7-a772e6f7c736",
