@@ -60,6 +60,7 @@ window.scrollTo(0,0);
         <div class="container">
         <div class="research-project-header">
           Recent Indigenous-Engaged Research Projects
+          <div><pre>{{ profileStore.activeProfile }}</pre></div>
         </div>
       </div>
     </div>

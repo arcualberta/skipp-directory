@@ -30,6 +30,7 @@ export const useProfileStore = defineStore('ProfileStore', {
     actions: {
         setActiveProfile(profileId: Guid) {
             if (profileId) {
+                /*
                 let query = "id:"+profileId;
                 console.log("query",query)
                 const formData = new FormData();
@@ -58,7 +59,22 @@ export const useProfileStore = defineStore('ProfileStore', {
                     .catch((error) => {
                         console.error('Item Load API Error:', error);
                     });
-                
+                */
+
+                const url = `${config.default.solrApiRoot}/api/SolrSearch/get-document/${profileId}`;
+                fetch(url, {
+                    method: 'GET', 
+                    headers: {
+                        'Tenant-Id': `${config.default.tenantId}`
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.activeProfile = data;                        
+                    })
+                    .catch((error) => {
+                        console.error('Solr get-document API error:', error);
+                    });
             }
             else
                 this.activeProfile = null;

@@ -72,6 +72,7 @@ export const fetchQuery = (
     formData.append("query", query);
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());
+    formData.append("searchRootDocsOnly", "true");
     formData.append("filterQuery", "");
     formData.append("sortBy", "");
     formData.append("fieldList", "");
