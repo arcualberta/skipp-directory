@@ -3,17 +3,17 @@ import { useSearchStore } from '@/stores/SearchStore';
 import Filter from '../components/Filter.vue'
 import  ProfileListEntry  from '../components/ProfileListEntry.vue'
 import  NoDataFound  from '../components/NoDataFound.vue'
-import * as CatfishUI from 'applets'
 import { ref, computed} from 'vue';
+import type { SolrQuery } from '@arc/arc-foundation/lib/solr/models/solrQuery';
 
 const searchStore = useSearchStore();
 const selectedButtons = ref([] as string[]);
 const selectedPage = ref(1);
 const isFirst = ref(true);
 const isLast = ref(false);
-const keyOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
-const posOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
-const facOptions = ((searchStore.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints as CatfishUI.Components.SolrQuery.ValueConstraint[];
+const keyOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
+const posOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
+const facOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
 //searchStore.isLoading = true;
 searchStore.fetchData();
 let searchText:string;

@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
 import { Guid } from 'guid-typescript';
-import * as CatfishUI from 'applets'
 import * as config from '../appsettings';
 import { baseState, fetchQuery } from './common';
 import { createSearchQueryModel } from '../helpers/createSearchQueryModel';
+import type { SolrQuery, SolrSearchResult } from '@arc/arc-foundation/lib/solr/models';
 
 export const useSearchStore = defineStore('SearchStore', {
     state: () => ({
@@ -12,9 +12,9 @@ export const useSearchStore = defineStore('SearchStore', {
     }),
     
     getters: {
-        keywords(): CatfishUI.Components.SolrQuery.ValueConstraint[] { return ((this.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as CatfishUI.Components.SolrQuery.FieldConstraint)?.valueConstraints },
-        resultCount: state => state.searchResult?.items?.length,
-        selectedKeywords(): CatfishUI.Components.SolrQuery.ValueConstraint[] {
+        keywords(): SolrQuery.ValueConstraint[] { return ((this.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as SolrQuery.FieldConstraint)?.valueConstraints },
+        resultCount: state => state.searchResult?.resultEntries?.length,
+        selectedKeywords(): SolrQuery.ValueConstraint[] {
             return this.keywords.filter(keyword => keyword.selected)
         },
     },
@@ -23,11 +23,11 @@ export const useSearchStore = defineStore('SearchStore', {
             this.isLoading = true;
             fetchQuery(
                 this.searchWord as string,
-                this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
+                this.solrQueryModel as SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
                 true,
-                (result: CatfishUI.Components.SolrQuery.SearchOutput) => { this.searchResult = result;
+                (result: SolrSearchResult) => { this.searchResult = result;
                     this.isLoading = false; },
                 false
             )
@@ -37,11 +37,11 @@ export const useSearchStore = defineStore('SearchStore', {
             this.isLoading = true;
             fetchQuery(
                 this.searchWord as string,
-                this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
+                this.solrQueryModel as SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
                 true,
-                (result: CatfishUI.Components.SolrQuery.SearchOutput) => {
+                (result: SolrSearchResult) => {
                     //this.searchResult.resultEntries = this.searchResult.resultEntries.concat(result.resultEntries);
                     this.searchResult.resultEntries = result.resultEntries;
                     this.searchResult.offset = result.offset;
@@ -55,11 +55,11 @@ export const useSearchStore = defineStore('SearchStore', {
             this.isLoading = true;
             fetchQuery(
                 this.searchWord as string,
-                this.solrQueryModel as CatfishUI.Components.SolrQuery.QueryModel,
+                this.solrQueryModel as SolrQuery.QueryModel,
                 this.offset,
                 this.pageSize,
                 true,
-                (result: CatfishUI.Components.SolrQuery.SearchOutput) => {
+                (result: SolrSearchResult) => {
                     //this.searchResult.resultEntries = this.searchResult.resultEntries.concat(result.resultEntries);
                     this.searchResult.resultEntries = result.resultEntries;
                     this.searchResult.offset = result.offset;
@@ -82,7 +82,7 @@ export const useSearchStore = defineStore('SearchStore', {
             this.selectedKeywords.forEach(keyword => keyword.selected = false);
             
             //clear searchText
-            const fieldConstraint = (this.solrQueryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "freetext") as CatfishUI.Components.SolrQuery.FieldConstraint;
+            const fieldConstraint = (this.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "freetext") as SolrQuery.FieldConstraint;
             fieldConstraint.valueConstraints[0].value = "";
 
             this.fetchData();

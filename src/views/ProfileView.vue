@@ -7,6 +7,7 @@
   import { useProfileStore } from '../stores/ProfileStore'
   import { useSearchStore } from '../stores/SearchStore'
   import * as itemHelper from '../helpers/itemHelper';
+import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
   
   
   const profileStore = useProfileStore();
@@ -18,15 +19,15 @@
   const id = route.params.id as unknown as Guid;
   profileStore.setActiveProfile(id);
   console.log("activeProfile", JSON.stringify(profileStore.activeProfile))
-  const name = computed(() => itemHelper.getName(profileStore.activeProfile));
-  const position = computed(() => itemHelper.getPosition(profileStore.activeProfile))
-  const email = computed(() => itemHelper.getEmail(profileStore.activeProfile));
-  const keywords = computed(() => itemHelper.getKeywordList(profileStore.activeProfile));
-  const organization = computed(() => itemHelper.getFaculty(profileStore.activeProfile));
-  const pronounce = computed(() => itemHelper.getPronouns(profileStore.activeProfile));
-  const websiteLinks = computed(() => itemHelper.getWebsiteLinks(profileStore.activeProfile));
-  const IndigenousCommunity = computed(() => itemHelper.getIndigeniousCommunity(profileStore.activeProfile));
-  const location = computed(() => itemHelper.getLocation(profileStore.activeProfile));
+  const name = computed(() => itemHelper.getName(profileStore.activeProfile as SolrResultEntry));
+  const position = computed(() => itemHelper.getPosition(profileStore.activeProfile as SolrResultEntry))
+  const email = computed(() => itemHelper.getEmail(profileStore.activeProfile as SolrResultEntry));
+  const keywords = computed(() => itemHelper.getKeywordList(profileStore.activeProfile as SolrResultEntry));
+  const organization = computed(() => itemHelper.getFaculty(profileStore.activeProfile as SolrResultEntry));
+  const pronounce = computed(() => itemHelper.getPronouns(profileStore.activeProfile as SolrResultEntry));
+  const websiteLinks = computed(() => itemHelper.getWebsiteLinks(profileStore.activeProfile as SolrResultEntry));
+  const IndigenousCommunity = computed(() => itemHelper.getIndigeniousCommunity(profileStore.activeProfile as SolrResultEntry));
+  const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
   onMounted(()=>{
 window.scrollTo(0,0);
   })

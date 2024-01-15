@@ -10,7 +10,6 @@ import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 /* Import Google Login */
 import vue3GoogleLogin from 'vue3-google-login'
 import BootstrapVue3 from 'bootstrap-vue-3'
-import * as CatfishUI from 'applets'
 
 import {default as config} from './appsettings'
 
@@ -25,6 +24,8 @@ import * as faIcons from '@fortawesome/free-solid-svg-icons'
 /* add icons to the library */
 library.add(faIcons.faQuestionCircle)
 library.add(faIcons.faMagnifyingGlass)
+library.add(faIcons.faCircleXmark)
+library.add(faIcons.faCirclePlus)
 const app = createApp(App)
 app.use(createPinia())
 app.use(BootstrapVue3)
@@ -35,10 +36,10 @@ app.use(vue3GoogleLogin, {
     clientId: config.googleLoginClientId
 })
 
-app.component("Login", CatfishUI.Components.Login)
-app.component("FormSubmission", CatfishUI.Components.FormSubmission)
-app.component("SolrSearchPanel", CatfishUI.Components.SolrSearchPanel)
-app.component("FontAwesomeIcon", CatfishUI.Components.FontAwesomeIcon)
+// app.component("Login", CatfishUI.Components.Login)
+// app.component("FormSubmission", CatfishUI.Components.FormSubmission)
+// app.component("SolrSearchPanel", CatfishUI.Components.SolrSearchPanel)
+// app.component("FontAwesomeIcon", CatfishUI.Components.FontAwesomeIcon)
 
 /*
 for (const entry of Object.entries({ 

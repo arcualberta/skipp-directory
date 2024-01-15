@@ -1,10 +1,10 @@
 import { Guid } from 'guid-typescript';
 import { defineStore } from 'pinia';
 
-import * as CatfishUI from 'applets';
 import { useSearchStore } from './SearchStore';
 import * as config from '../appsettings';
 import { baseState, fetchQuery } from './common';
+import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/solr/models';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 const searchStore = useSearchStore();
@@ -18,7 +18,7 @@ export const useProfileStore = defineStore('ProfileStore', {
         ...baseState,
         //solrQueryModel: createProfileQueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.AND),
         //defaultQueryModel: createProfileQueryModel(CatfishUI.Components.SolrQuery.AggregationOperator.OR),
-        activeProfile: null as CatfishUI.Components.ResultItem | null,
+        activeProfile: null as SolrResultEntry | null,
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
   }),
@@ -51,7 +51,7 @@ export const useProfileStore = defineStore('ProfileStore', {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        const entries = (data as CatfishUI.Components.ResultItem)?.resultEntries;
+                        const entries = (data as SolrSearchResult)?.resultEntries;
                         this.activeProfile = entries?.length > 0 ? entries[0] : null;
                         
                     })

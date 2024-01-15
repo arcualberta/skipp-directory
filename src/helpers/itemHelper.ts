@@ -1,9 +1,9 @@
-import * as CatfishUI from 'applets'
+import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models';
 import * as config from '../appsettings';
 
 type SolrFieldValueType = string | string[] | number | number[] | Date | Date[] | null
 
-export function getSolrFieldValue(item: CatfishUI.Components.ResultItem, solrFieldName: string): SolrFieldValueType {
+export function getSolrFieldValue(item: SolrResultEntry, solrFieldName: string): SolrFieldValueType {
     
     if (item?.data) {
         /* item.data is an array of key/value pairs. We need to select the key-value pair that has the
@@ -17,49 +17,48 @@ export function getSolrFieldValue(item: CatfishUI.Components.ResultItem, solrFie
             _dt => a single date
             _dts => array of dates.
         */
-        
         return item.data.find((entry: { key: string; }) => entry.key === solrFieldName)?.value
     }
     return null;
 }
-export function getStringArrayValue(item: CatfishUI.Components.ResultItem, solrFieldName: string): string[] {
+export function getStringArrayValue(item: SolrResultEntry, solrFieldName: string): string[] {
     
     const val = getSolrFieldValue(item, solrFieldName)
     return val ? val as unknown as string[] : [];
 }
 
-export function getConcatenatedStringValue(item: CatfishUI.Components.ResultItem, solrFieldName: string){
+export function getConcatenatedStringValue(item: SolrResultEntry, solrFieldName: string){
     return getStringArrayValue(item, solrFieldName)?.join(", ");
 }
 
-export function getName(item: CatfishUI.Components.ResultItem){
+export function getName(item: SolrResultEntry){
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NAME)
 }
-export function getPosition(item: CatfishUI.Components.ResultItem): string{
+export function getPosition(item: SolrResultEntry): string{
     return getSolrFieldValue(item, config.SearchResultFieldMapping.POSITION) as string
 }
-export function getEmail(item: CatfishUI.Components.ResultItem): string {
+export function getEmail(item: SolrResultEntry): string {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.EMAIL) as string
 }
 
-export function getKeywords(item: CatfishUI.Components.ResultItem) {
+export function getKeywords(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS).join(", ");
 }
-export function getKeywordList(item: CatfishUI.Components.ResultItem) {
+export function getKeywordList(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS);
 }
-export function getFaculty(item: CatfishUI.Components.ResultItem) {
+export function getFaculty(item: SolrResultEntry) {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.FACULTY)
 }
-export function getPronouns(item: CatfishUI.Components.ResultItem) {
+export function getPronouns(item: SolrResultEntry) {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.PRONOUNS)
 }
-export function getWebsiteLinks(item: CatfishUI.Components.ResultItem) {
+export function getWebsiteLinks(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
 }
-export function getIndigeniousCommunity(item: CatfishUI.Components.ResultItem) {
+export function getIndigeniousCommunity(item: SolrResultEntry) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY);
 }
-export function getLocation(item: CatfishUI.Components.ResultItem) {
+export function getLocation(item: SolrResultEntry) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.LOCATION);
 }

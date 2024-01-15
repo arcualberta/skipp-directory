@@ -10,10 +10,9 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "@arc/arc-foundation": "^0.3.16",
-    "@arc/form-submission": "^0.1.24",
+    "@arc/arc-foundation": "^0.3.26",
+    "@arc/form-submission": "^0.1.30",
     "@fortawesome/vue-fontawesome": "^3.0.5",
-    "applets": "file:../Catfish3.0/catfish-ui/applets-0.0.0.tgz",
     "bootstrap": "^5.3.1",
     "bootstrap-vue-3": "^0.5.1",
     "http-status-codes": "^2.3.0",

@@ -1,20 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import * as CatfishUI from 'applets'
 import * as itemHelper from '../helpers/itemHelper';
 import { useSearchStore } from './../stores/SearchStore'
 import {useRouter} from 'vue-router'
 import { Guid } from 'guid-typescript';
+import type { SolrSearchResult } from '@arc/arc-foundation/lib/solr/models/solrSearchResult';
+import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
 
 const props = defineProps<{ 
-  model: CatfishUI.Components.ResultItem | null
+  model: SolrResultEntry | null
   }>();
   const router = useRouter();
   const searchStore = useSearchStore();
-  const name = computed(() => itemHelper.getName(props.model))
-  const position = computed(() => itemHelper.getPosition(props.model))
-  const email = computed(() => itemHelper.getEmail(props.model))
-  const keywords = computed(() => itemHelper.getKeywords(props.model))
+  const name = computed(() => itemHelper.getName(props.model as SolrResultEntry))
+  const position = computed(() => itemHelper.getPosition(props.model as SolrResultEntry))
+  const email = computed(() => itemHelper.getEmail(props.model as SolrResultEntry))
+  const keywords = computed(() => itemHelper.getKeywords(props.model as SolrResultEntry))
   const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })}
 </script>
 <template>
@@ -24,7 +25,7 @@ const props = defineProps<{
         <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
       </div>
       <div class="col-sm-6">
-        <div class="profile-name"><a  @click="gotoProfile(model.id)">{{ name }}</a></div>
+        <div class="profile-name"><a  @click="gotoProfile(model?.id as unknown as Guid)">{{ name }}</a></div>
         <div class="profile-position">{{ position }}</div>
         <div class="research-interest-headding">Research Interests</div>
         <div class="research-interest-list">{{keywords}}</div>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { defineComponent, type PropType } from "vue";
-import * as CatfishUI from 'applets'
 import { useSearchStore } from '../stores/SearchStore'
+import type { SolrQuery } from "@arc/arc-foundation/lib/solr/models/solrQuery";
 
 const props = defineProps<{ 
-  options: CatfishUI.Components.SolrQuery.ValueConstraint[]
+  options: SolrQuery.ValueConstraint[]
   }>();
   const searchStore = useSearchStore();
-  const toggleOption = (option: CatfishUI.Components.SolrQuery.ValueConstraint) => {
+  const toggleOption = (option: SolrQuery.ValueConstraint) => {
     option.selected = !option.selected;
     searchStore.offset = 0;
     searchStore.fetchData();
