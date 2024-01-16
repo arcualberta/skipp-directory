@@ -35,10 +35,10 @@ export function getName(item: SolrResultEntry){
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NAME)
 }
 export function getPosition(item: SolrResultEntry): string{
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.POSITION) as string
+    return getStringArrayValue(item, config.SearchResultFieldMapping.POSITION).join(", "); 
 }
 export function getEmail(item: SolrResultEntry): string {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.EMAIL) as string
+    return getStringArrayValue(item, config.SearchResultFieldMapping.EMAIL).join(", "); 
 }
 
 export function getKeywords(item: SolrResultEntry) {
@@ -48,10 +48,10 @@ export function getKeywordList(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS);
 }
 export function getFaculty(item: SolrResultEntry) {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.FACULTY)
+    return getStringArrayValue(item, config.SearchResultFieldMapping.FACULTY).join(", ");
 }
 export function getPronouns(item: SolrResultEntry) {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.PRONOUNS)
+    return getStringArrayValue(item, config.SearchResultFieldMapping.PRONOUNS).join(", ");
 }
 export function getWebsiteLinks(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
