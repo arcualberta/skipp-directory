@@ -1,5 +1,5 @@
 export const JoinUsFormTemplate = {
-  "id": "485a5858-7ba2-3606-fd8f-c5e34e08b5da",
+  "id": "8d9a6bc9-863d-2ee8-ea93-d5544778f090",
   "name": "SKIPP Test Form New",
   "description": "",
   "fields": [
