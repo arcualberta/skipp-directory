@@ -56,13 +56,15 @@ window.scrollTo(0,0);
     </div> 
     <div class="psh" v-if="location">Recently Engaged Indigenous Communities / Nation(s) / organization(s): <span class="pronounce-value">{{ location }}</span></div>
     </div>
+    <div class=" container research-project-header">
+      Recent Indigenous-Engaged Research Projects
+          
+        </div>
     
       <div class="research-projects-background">
         <div class="container">
-        <div class="research-project-header">
-          Recent Indigenous-Engaged Research Projects
-          <div><pre>{{ profileStore.activeProfile }}</pre></div>
-        </div>
+        
+        <div><pre>{{ profileStore.activeProfile }}</pre></div>
       </div>
     </div>
     <div class="container">
