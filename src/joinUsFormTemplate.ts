@@ -38,7 +38,7 @@ export const JoinUsFormTemplate = {
       "type": 12
     },
     {
-      "id": "e54ae515-28cc-e153-a44d-9d3d97e055e0",
+      "id": "77ef4194-c2bf-686c-a05d-e3a63ab53750",
       "title": {
         "id": "5c58037e-9c8a-9a92-2397-8f0ddf30de01",
         "values": [
@@ -73,7 +73,7 @@ export const JoinUsFormTemplate = {
       "isRequired": true
     },
     {
-      "id": "87893812-8151-d4bc-a97b-2b31936b5713",
+      "id": "6c130003-7792-10c5-cdf5-372f8fe237bd",
       "title": {
         "id": "a69eccfd-1558-f38b-9cd9-9f228c52afec",
         "values": [
@@ -110,7 +110,7 @@ export const JoinUsFormTemplate = {
       "allowCustomOptionValues": false
     },
     {
-      "id": "450eab29-e83f-bcd0-0a65-4e311b2b82ad",
+      "id": "b0620da7-6bf1-5c9c-b70d-b96aadeb0413",
       "title": {
         "id": "0137fc85-3095-0c6e-e605-5bde20e00a23",
         "values": [
@@ -286,7 +286,7 @@ export const JoinUsFormTemplate = {
       ]
     },
     {
-      "id": "f1acae32-8339-7f72-95d9-29b7c3c7e591",
+      "id": "93f55bd0-8620-515e-411e-3abb2abf66e4",
       "title": {
         "id": "74f80dff-1553-84d2-2c35-58c3edae6015",
         "values": [
@@ -442,7 +442,7 @@ export const JoinUsFormTemplate = {
       ]
     },
     {
-      "id": "64edb8c0-f220-e6c6-8fe7-f1ed0328579d",
+      "id": "8f097f5a-d234-53e0-1399-968cf6ea2243",
       "title": {
         "id": "df020f1b-4fee-1c06-de6d-8eebbabeaf85",
         "values": [
@@ -476,7 +476,7 @@ export const JoinUsFormTemplate = {
       "type": 0
     },
     {
-      "id": "6dd0d180-245f-9347-f4c9-301222a8967e",
+      "id": "0b559321-498d-95b3-0734-2ae9ae876b93",
       "title": {
         "id": "c50ebf7b-d146-b410-d45f-3c655a8b5bf2",
         "values": [
@@ -544,7 +544,7 @@ export const JoinUsFormTemplate = {
       "type": 12
     },
     {
-      "id": "fdf26951-9605-7b7f-1991-acf7c7aac6f9",
+      "id": "bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb",
       "title": {
         "id": "43007857-0b4c-c757-8391-d6337073a034",
         "values": [
@@ -680,7 +680,7 @@ export const JoinUsFormTemplate = {
       ]
     },
     {
-      "id": "05089b45-479a-cfa8-00bd-e479beff5571",
+      "id": "3138944e-82e7-3ff0-831a-b17cc2c950fe",
       "title": {
         "id": "5c095128-c6cc-6a86-e0c3-a09fa102ec65",
         "values": [
@@ -776,7 +776,7 @@ export const JoinUsFormTemplate = {
       ]
     },
     {
-      "id": "39356634-4cc7-5b4f-01d6-6d5138997ebb",
+      "id": "af27cd1f-4df1-fc15-4ef4-286eb2002816",
       "title": {
         "id": "f69789b3-1882-28f4-4bc8-25cab9b60abe",
         "values": [
@@ -844,7 +844,7 @@ export const JoinUsFormTemplate = {
       "type": 12
     },
     {
-      "id": "b6b52e33-1d9a-b26c-0f44-f7a95ee9becc",
+      "id": "be9ebb54-2971-0267-80b2-3d963b56b8a4",
       "title": {
         "id": "d6c1ce64-22e1-fe1d-9d50-a72f6c4b1553",
         "values": [
@@ -878,7 +878,7 @@ export const JoinUsFormTemplate = {
       "type": 0
     },
     {
-      "id": "edcf6b5d-4226-3790-23f2-8d4854d1c00d",
+      "id": "aeaf264c-06e0-7bec-1073-832cbdb88bca",
       "title": {
         "id": "61d22644-5f2d-88a0-9978-6dc3fdd19315",
         "values": [
@@ -1288,7 +1288,7 @@ export const JoinUsFormTemplate = {
       "type": 12
     },
     {
-      "id": "24c17dd6-2811-2376-ab13-b58926e2130f",
+      "id": "020e9f66-911d-55dd-3eff-3bb3aec182ee",
       "title": {
         "id": "26a687cc-5dd2-c72d-301a-6d4422a1a245",
         "values": [
