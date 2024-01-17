@@ -65,3 +65,18 @@ export function getLocation(item: SolrResultEntry) {
 export function getProjectList(item: SolrResultEntry) {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_LIST) as SolrResultEntry[];
 }
+export function getProjectTitle(item: SolrResultEntry) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_TITLE).join(", ");
+}
+export function getProjectDescription(item: SolrResultEntry) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_DESCRIPTION).join(", ");
+}
+export function getProjectInitiation(item: SolrResultEntry) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_INITIATION).join(", ");
+}
+export function getProjectRole(item: SolrResultEntry) {
+    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_ROLE).join(", ");
+}
+export function getProjectIndex(item: SolrResultEntry) {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_INDEX);
+}

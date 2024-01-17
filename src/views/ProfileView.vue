@@ -57,15 +57,14 @@ window.scrollTo(0,0);
     </div> 
     <div class="psh" v-if="location">Recently Engaged Indigenous Communities / Nation(s) / organization(s): <span class="pronounce-value">{{ location }}</span></div>
     </div>
-    <div class=" container research-project-header">
+    <div class=" container research-project">
       Recent Indigenous-Engaged Research Projects
-          {{ projectList }}
-        </div>
+    </div>
     
-      <div class="research-projects-background">
+      <div >
         <div class="container">
         <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
-        <div><pre>{{ profileStore.activeProfile }}</pre></div>
+        
       </div>
     </div>
     <div class="container">
@@ -79,20 +78,17 @@ window.scrollTo(0,0);
 </template>
 
 <style>
-.auto-scroll{
-
+.contact-link{
+margin-top: 50px;
 }
 .space-bottom{
   margin-bottom: 100px;
 }
-.research-project-header{
+.research-project{
   color: #327D49;
   font-size: 28px;
-  padding-top: 50px;
-}
-.research-projects-background{
-  background-color: #EFF7F4;
-  min-height: 400px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
 .profile-name{
   padding-top: 70px;
@@ -141,6 +137,7 @@ window.scrollTo(0,0);
   font-weight: 600;
   color:#000000;
   line-height: 50px;
+  margin-left: 80px;
   
 }
 .keyword-block{

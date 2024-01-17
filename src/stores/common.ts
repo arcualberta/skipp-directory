@@ -1,6 +1,6 @@
 import { Guid } from 'guid-typescript';
-import * as CatfishUI from 'applets';
 import * as config from '../appsettings';
+import type { SolrQuery, SolrSearchResult } from '@arc/arc-foundation/lib/solr/models';
 
 export interface BaseState {
     searchWord: null | string;
@@ -9,7 +9,7 @@ export interface BaseState {
     pageSize: number;
     last: number;
     isLoading: boolean;
-    searchResult: CatfishUI.Components.SolrQuery.SearchOutput;
+    searchResult: SolrSearchResult;
 }
 export const baseState: BaseState = {
     searchWord:null,
@@ -19,10 +19,10 @@ export const baseState: BaseState = {
     last: 10,
     isLoading: false,
     searchResult: {
-        first: 0,
-        last: 0,
-        count: 0,
-        items: [] 
+        offset: 0,
+        totalMatches: 0,
+        itemsPerPage:10,
+        resultEntries: [] 
     },
 }
 
@@ -39,20 +39,20 @@ export const baseState: BaseState = {
  */
 export const fetchQuery = (
     searchWord:string|null,
-    queryModel: CatfishUI.Components.SolrQuery.solrQueryModel,
+    queryModel: SolrQuery.QueryModel,
     offset: number,
     pageSize: number,
     isLoading: boolean,
     resultCallback: any,
     isAdmin: boolean
 ) => {
-    if (isAdmin) {
-        //Update the visibleStates property in the query model such that the admin can see
-        //both submitted and approved entries
-        const visibilityConstraint = (queryModel.queryConstraints as CatfishUI.Components.SolrQuery.FieldConstraint[]).filter(q => q.internalId === "visibleStates")[0] as CatfishUI.Components.SolrQuery.FieldConstraint;
-        if (visibilityConstraint)
-            visibilityConstraint.setValueConstraints(config.QueryCategoryValues.adminVisibleStates, true);
-    }
+    // if (isAdmin) {
+    //     //Update the visibleStates property in the query model such that the admin can see
+    //     //both submitted and approved entries
+    //     const visibilityConstraint = (queryModel.queryConstraints as SolrQuery.FieldConstraint[]).filter(q => q.internalId === "visibleStates")[0] as SolrQuery.FieldConstraint;
+    //     if (visibilityConstraint)
+    //         visibilityConstraint.setValueConstraints(config.QueryCategoryValues.adminVisibleStates, true);
+    // }
     
     //const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
@@ -72,7 +72,6 @@ export const fetchQuery = (
     formData.append("query", query);
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());
-    formData.append("searchRootDocsOnly", "true");
     formData.append("filterQuery", "");
     formData.append("sortBy", "");
     formData.append("fieldList", "");
