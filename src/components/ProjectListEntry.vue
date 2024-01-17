@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { FieldData } from '@arc/arc-foundation/lib/forms/models';
+import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
 
     const props = defineProps<{ 
-        model: FieldData
+        model: SolrResultEntry
     }>();
 
 </script>

@@ -2,7 +2,7 @@
   import { defineComponent, computed, watch,onMounted, ref } from 'vue';
   import { useRoute, useRouter } from 'vue-router'
   import { Guid } from 'guid-typescript';
-
+  import  ProjectListEntry  from '../components/ProjectListEntry.vue'
   import { default as config, SearchResultFieldMapping } from '../appsettings';
   import { useProfileStore } from '../stores/ProfileStore'
   import { useSearchStore } from '../stores/SearchStore'
@@ -28,6 +28,7 @@ import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrRe
   const websiteLinks = computed(() => itemHelper.getWebsiteLinks(profileStore.activeProfile as SolrResultEntry));
   const IndigenousCommunity = computed(() => itemHelper.getIndigeniousCommunity(profileStore.activeProfile as SolrResultEntry));
   const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
+  const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   onMounted(()=>{
 window.scrollTo(0,0);
   })
@@ -58,12 +59,12 @@ window.scrollTo(0,0);
     </div>
     <div class=" container research-project-header">
       Recent Indigenous-Engaged Research Projects
-          
+          {{ projectList }}
         </div>
     
       <div class="research-projects-background">
         <div class="container">
-        
+        <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
         <div><pre>{{ profileStore.activeProfile }}</pre></div>
       </div>
     </div>

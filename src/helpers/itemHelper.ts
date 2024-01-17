@@ -62,3 +62,6 @@ export function getIndigeniousCommunity(item: SolrResultEntry) {
 export function getLocation(item: SolrResultEntry) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.LOCATION);
 }
+export function getProjectList(item: SolrResultEntry) {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_LIST) as SolrResultEntry[];
+}
