@@ -38,7 +38,6 @@ const props = defineProps<{
       </div>
     </div>
   </div>
-  <div><pre>{{ model }}</pre></div>
 </template>
 <style scoped>
 .profile-component{
