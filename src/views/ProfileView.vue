@@ -40,7 +40,7 @@ window.scrollTo(0,0);
         <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
       </div>
       <div class="col-sm-8">
-        <div class="profile-name" tabindex="0">{{ name }}</div>
+        <div class="profile-name">{{ name }}</div>
         <div class="psh">{{ position }} | {{ organization }}</div>
         <div class="psh">Email: <span class="email-value">{{ email }}</span></div>
         <div class="psh" v-if="pronounce" >Pronounce: <span class="pronounce-value">{{ pronounce }}</span></div>
@@ -64,7 +64,6 @@ window.scrollTo(0,0);
       <div >
         <div class="container">
         <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
-        
       </div>
     </div>
     <div class="container">
@@ -136,7 +135,7 @@ margin-top: 50px;
   font-size: 18px;
   font-weight: 600;
   color:#000000;
-  line-height: 50px;
+  line-height: 70px;
   margin-left: 80px;
   
 }
@@ -147,6 +146,8 @@ margin-top: 50px;
   border-radius: 10px;
   background-color: #327D49;
   color: #F4F9F6;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .external-links{
   background-color: #F4F9F6;

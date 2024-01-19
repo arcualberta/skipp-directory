@@ -32,7 +32,7 @@ export function getConcatenatedStringValue(item: SolrResultEntry, solrFieldName:
 }
 
 export function getName(item: SolrResultEntry){
-    return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NAME)
+    return getStringArrayValue(item, config.SearchResultFieldMapping.NAME).join(", ")
 }
 export function getPosition(item: SolrResultEntry): string{
     return getStringArrayValue(item, config.SearchResultFieldMapping.POSITION).join(", "); 
