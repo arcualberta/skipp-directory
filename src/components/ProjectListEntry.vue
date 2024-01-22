@@ -7,7 +7,7 @@ import * as itemHelper from '../helpers/itemHelper';
     }>();
 
     const title = computed(() => itemHelper.getProjectTitle(props.model as SolrResultEntry));
-    const description = computed(() => itemHelper.getProjectDescription(props.model as SolrResultEntry));
+    const description = computed(() => '<p>' + itemHelper.getProjectDescription(props.model as SolrResultEntry).split('\n').join('</p><p>') + '</p>');
     const initiation = computed(() => itemHelper.getProjectInitiation(props.model as SolrResultEntry));
     const role = computed(() => itemHelper.getProjectRole(props.model as SolrResultEntry));
     const index = computed(() => itemHelper.getProjectIndex(props.model as SolrResultEntry)) as unknown as number;
