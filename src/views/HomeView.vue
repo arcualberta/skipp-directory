@@ -235,7 +235,7 @@ cursor: pointer;
     padding-top: 30px;
 }
 .banner-description{
-  font-size: 24px;
+  font-size: 18px;
     font-weight: 600;
     margin-left: 50px;
     padding-top: 30px;

@@ -47,7 +47,7 @@ const router = useRouter();
 }
 .header{
   background: white;
-  border-bottom: #919191 solid 2px;
+  border-bottom: #E6E7E7 solid 2px;
   padding-bottom: 25px;
   
 }
