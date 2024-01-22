@@ -64,10 +64,7 @@ export const fetchQuery = (
         if(queryModel?.buildQueryString())
             query = query + " AND "+queryModel?.buildQueryString();
     }
-    else{
-        if(queryModel?.buildQueryString())
-            query = queryModel?.buildQueryString();
-    }
+    
     
     formData.append("query", query);
     formData.append("offset", offset.toString());

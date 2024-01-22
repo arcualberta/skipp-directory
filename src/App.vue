@@ -14,19 +14,21 @@ const router = useRouter();
 <template>
   <div class="page-background">
     <div class="header">
-      <div class="row">
-        <div class="col-sm-5">
-          <img  src="./assets/images/UA-logo.png" class="ua-logo"/>
-        </div>
-        <div class="col-sm-7">
-          <header>
-              <nav class="nav-bar">
-              <router-link to="/" class="navigation-menu-box">Home</router-link> 
-              <router-link to="/join">Join Our Directory</router-link>
-        
-        <router-link to="/login" class="navigation-menu-box login">Login</router-link>
-              </nav>
-            </header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <img  src="./assets/images/UA-logo.png" class="ua-logo"/>
+          </div>
+          <div class="col-sm-7">
+            <header>
+                <nav class="nav-bar">
+                <router-link to="/" class="navigation-menu-box">Home</router-link> 
+                <router-link to="/join">Join Our Directory</router-link>
+                <a href=" https://www.ualberta.ca/provost/portfolio/indigenous-initiatives/index.html" target="_blank" class="navigation-menu-box">Contact</a>
+          <router-link to="/login" class="navigation-menu-box login">Login</router-link>
+                </nav>
+              </header>
+          </div>
         </div>
       </div>
     </div>
@@ -35,6 +37,10 @@ const router = useRouter();
   </div>
 </template>
 <style scoped>
+.navigation-menu-box{
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .page-background{
   /* background: #DBDBDB; */
   overflow:hidden;
@@ -50,15 +56,17 @@ const router = useRouter();
   width: 100%;
 }
 .ua-logo{
-  margin-left: 160px;
+  /* margin-left: 160px; */
+  max-width: 200px;
+  max-height: 50px;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .login{
    background-color: #327D49;
   color: white;
   padding: 10px 30px 10px 30px;
   border-radius: 5px;
+  margin-left: 30px;
 }
 .banner{
   width: 100%;
@@ -75,7 +83,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 18px;
 color: #000000;
-text-align: center;
+text-align:right;
 
 }
 

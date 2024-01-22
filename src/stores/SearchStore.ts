@@ -90,7 +90,10 @@ export const useSearchStore = defineStore('SearchStore', {
         selectWord(word: string) {
             console.log("word",word)
             this.isLoading = true;
-            this.searchWord = word,
+            this.searchWord = word;
+            if(word === ""){
+                this.searchWord = null; 
+            }
             this.fetchData();
             
         },

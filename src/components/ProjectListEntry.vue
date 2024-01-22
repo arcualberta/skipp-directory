@@ -26,7 +26,7 @@ import * as itemHelper from '../helpers/itemHelper';
     <div v-bind:class="(checkOddEven(index)==='Even')?'research-projects-background':''">
         <div class="container project-list-entry">
         <div class="project-list"><span class="project-list-headers">Project Title : </span> {{ title }}</div>
-        <div class="project-list"><span class="project-list-headers">Project Description : </span> {{ description }}</div>
+        <div class="project-list"><span class="project-list-headers">Project Description : </span> <div v-html="description"></div></div>
         <div class="project-list"><span class="project-list-headers">Research Initiated By : </span> {{ initiation }}</div>
         <div class="project-list"><span class="project-list-headers">Role Played By Community In Project : </span>{{ role }}</div>
     </div>

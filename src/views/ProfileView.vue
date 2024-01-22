@@ -34,6 +34,11 @@ window.scrollTo(0,0);
   })
 </script>
 <template>
+  <div class="green-bar">
+    <div class="container">
+      <router-link to="/" class="navigation-menu-box">Return to Directory</router-link> 
+    </div>
+  </div>
   <div id="profile" class="container">
     <div class="row space-bottom">
       <div class="col-sm-4">
@@ -53,7 +58,7 @@ window.scrollTo(0,0);
       </div>
     </div>
     <div class="row space-bottom">
-      <div class="Keywords">Research Keywords: <span v-for="keyword in keywords" class="keyword-block">{{ keyword }}</span></div>
+      <div class="Keywords">Research Keywords: <button v-for="keyword in keywords" class="keyword-block">{{ keyword }}</button></div>
     </div> 
     <div class="psh" v-if="location">Recently Engaged Indigenous Communities / Nation(s) / organization(s): <span class="pronounce-value">{{ location }}</span></div>
     </div>
@@ -77,6 +82,24 @@ window.scrollTo(0,0);
 </template>
 
 <style>
+.green-bar{
+  color: white;
+  min-height: 100px;
+  background-color: #327D49;
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 500;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+a.navigation-menu-box {
+  color: white;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+a.navigation-menu-box:hover {
+  background-color: transparent;
+}
 .contact-link{
 margin-top: 50px;
 }
@@ -135,19 +158,20 @@ margin-top: 50px;
   font-size: 18px;
   font-weight: 600;
   color:#000000;
-  line-height: 70px;
+  line-height: 30px;
   margin-left: 80px;
   
 }
 .keyword-block{
   margin-left: 10px;
   margin-right: 10px;
-  padding:  15px 15px;
+  padding:  10px 10px;
   border-radius: 10px;
+  border: none;
   background-color: #327D49;
   color: #F4F9F6;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .external-links{
   background-color: #F4F9F6;

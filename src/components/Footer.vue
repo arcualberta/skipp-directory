@@ -4,11 +4,11 @@
 
 <template>
   <div class="footer">
-    <div class="content-row">
+    <div class="container content-row">
       <span class="footer-header">Territorial Acknowledgement </span>
       <span class="footer-content"> The University of Alberta, its buildings, labs, and research stations are primarily located on the traditional territory of Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, and Ojibway/Saulteaux/Anishinaabe nations; lands that are now known as part of Treaties 6, 7, and 8 and homeland of the Métis. The University of Alberta respects the sovereignty, lands, histories, languages, knowledge systems, and cultures of First Nations, Métis and Inuit nations.</span>
     </div>
-    <div class="row footer-row">
+    <!-- <div class="row footer-row">
       <div class="col-sm-3 footer-links">
         <router-link to="/contact">Contact Us</router-link>
       </div>
@@ -17,11 +17,11 @@
       </div>
       <div class="col-sm-3 footer-links">
         <router-link to="/contact">Privacy</router-link>
-      </div>
+      </div> -->
       <!--<div class="col-sm-2">
         <router-link to="/news">News</router-link>
       </div>-->
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -37,9 +37,8 @@ h3 {
 }
 .footer{
   background-color: #327D49;
-  height: 564px;
   width: 100%;
-  padding: 50px 100px 50px 100px;
+  padding: 50px 100px 100px 100px;
   text-align: justify;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 

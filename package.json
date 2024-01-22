@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@arc/arc-foundation": "^0.3.27",
-    "@arc/form-submission": "^0.1.31",
+    "@arc/form-submission": "^0.1.34",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "bootstrap": "^5.3.1",
     "bootstrap-vue-3": "^0.5.1",

@@ -5,6 +5,7 @@ import  ProfileListEntry  from '../components/ProfileListEntry.vue'
 import  NoDataFound  from '../components/NoDataFound.vue'
 import { ref, computed} from 'vue';
 import type { SolrQuery } from '@arc/arc-foundation/lib/solr/models/solrQuery';
+import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
 
 const searchStore = useSearchStore();
 const selectedButtons = ref([] as string[]);
@@ -81,102 +82,107 @@ const setPage = (page : number) => {
 <template>
   <main>
     <div class="main-content">
-    <div>
-      <div class="row">
-        <div class="col-sm-8">
-          <img src="../assets/images/SKIPP-Banner.png" class="image-banner">
-        </div>
-        <div class="col-sm-4">
-          <div class="banner-heading">
-            SKIPP | Situated Knowledges : Indigenous Peoples & Place
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7">
+            <img src="../assets/images/SKIPP-Banner.png" class="image-banner">
           </div>
-          <div class="banner-description">
-            Indigenous - Engaged Researcher Database
+          <div class="col-sm-5">
+            <div class="banner-heading">
+              SKIPP | Situated Knowledges : Indigenous Peoples & Place
+            </div>
+            <div class="banner-description">
+              Indigenous - Engaged Researcher Database
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="alpherbertical-search">
-      <div class="row">
-        <div class="col-sm-2 alpherbertical-search-title">
-          Search :
-        </div>
-        <div class="col-sm-10">
+      <div class="alpherbertical-search">
+        <div class="container">
           <div class="row">
+            <div class="col-sm-2 alpherbertical-search-title">
+              Search :
+            </div>
             <div class="col-sm-10">
-              <input type="text" v-model="searchText" class="search-field" placeholder="Search by Keyword, Community or Name...."/>
+              <div class="row">
+                <div class="col-sm-10">
+                  <input type="text" v-model="searchText" class="search-field" placeholder="Search by Keyword, Community or Name...."/>
+                </div>
+                <div class="col-sm-2">
+                  <font-awesome-icon icon="fa-solid fa-magnifying-glass" @click="search(searchText)"  class="fa-icon fa-magnifying-glass search-text" />
+                </div>
+              </div>
             </div>
-            <div class="col-sm-2">
-              <font-awesome-icon icon="fa-solid fa-magnifying-glass" @click="search(searchText)"  class="fa-icon fa-magnifying-glass search-text" />
+          </div>
+        </div>
+      </div>
+    <div class="container">
+      <div class="row filter-results">
+        <div class="col-sm-4 lbl-filters-title">
+          <span class="lbl-filters">Filter results by:</span>
+        </div>
+        <div class="col-sm-8 lbl-results">
+          <span class="lbl-filters">Results</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="list-item">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button accordion-button-height" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <span class="accordion-header-text">Keywords</span>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <Filter :options= keyOptions></Filter>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span class="accordion-header-text">Faculty/ Department</span>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <Filter :options= facOptions></Filter>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span class="accordion-header-text">Position</span>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <Filter :options= posOptions></Filter>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row filter-results">
-      <div class="col-sm-4 lbl-filters-title">
-        <span class="lbl-filters">Filter results by:</span>
-      </div>
-      <div class="col-sm-8 lbl-results">
-        <span class="lbl-filters">Results</span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="list-item">
-          <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button accordion-button-height" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <span class="accordion-header-text">Keywords</span>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <Filter :options= keyOptions></Filter>
-       </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        <span class="accordion-header-text">Faculty/ Department</span>
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <Filter :options= facOptions></Filter>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingFour">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        <span class="accordion-header-text">Position</span>
-      </button>
-    </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <Filter :options= posOptions></Filter>
-        </div>
-    </div>
-  </div>
-</div></div>
-      </div>
-      <div class="col-sm-8">
-        <div v-if="searchStore.isLoading" style="text-align: center;">
-          <div class="spinner-border text-primary" role="status">
-            <span class="sr-only"></span>
+        <div class="col-sm-8">
+          <div v-if="searchStore.isLoading" style="text-align: center;">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only"></span>
+            </div>
           </div>
-        </div>
-        <div v-else>
-          <div v-if="searchStore.searchResult.totalMatches>0">
-          <div style="text-align: center;">
-            {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
-          </div>
-                
-          <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="entry"></ProfileListEntry>
-          <div >
+          <div v-else>
+            <div v-if="searchStore.searchResult.totalMatches>0">
+              <div style="text-align: center;">
+                {{first}} to <span v-if="last<searchStore.searchResult?.totalMatches">{{last}}</span><span v-else>{{searchStore.searchResult?.totalMatches}}</span> of {{searchStore.searchResult?.totalMatches}}
+              </div>
+              <ProfileListEntry v-for="entry in searchStore.searchResult?.resultEntries" :key="entry.id" :model="(entry as SolrResultEntry)"></ProfileListEntry>
+              <div >
                 <nav>
                   <ul class="pagination justify-content-center">
                     <li v-bind:class = "(isFirst)?'page-item disabled':'page-item'"><a class="page-link" href="#" tabindex="-1" @click="setPrevious()">Previous</a></li>
@@ -184,24 +190,29 @@ const setPage = (page : number) => {
                     <li v-bind:class = "(isLast)?'page-item disabled':'page-item'"><a class="page-link" href="#" @click="setNext()">Next</a></li>
                   </ul>
                 </nav>
+              </div>
+            </div>
+            <div v-else>
+                  <NoDataFound />
             </div>
           </div>
-        <div v-else>
-                <NoDataFound />
-        </div>
-          </div>
-        </div>
+      </div>
     </div>
+    </div>
+    
   </div>
   </main>
 </template>
 <style>
 .accordion-header{
-  padding-top: 60px;
+  padding-top: 28px;
   padding-bottom: 60px;
 }
 .accordion-button-height{
   min-height: 30px;
+}
+.accordion-button:not(.collapsed) {
+  background-color: white;
 }
 .image-banner{
   width: 100%;
@@ -217,14 +228,17 @@ cursor: pointer;
   width: 100%;
 }
 .banner-heading{
-  font-size: 36px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 700;
     color: #327D49;
+    margin-left: 50px;
+    padding-top: 30px;
 }
 .banner-description{
   font-size: 24px;
     font-weight: 600;
-    margin-top: 100px;
+    margin-left: 50px;
+    padding-top: 30px;
 }
 .center {
   border: 1px solid;
@@ -239,18 +253,29 @@ cursor: pointer;
   padding-top: 30px;
   font-size: 24px;
   font-weight: 500;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.alpherbertical-search-title{
+/* .alpherbertical-search-title{
   text-align:right;
-}
-.alpherbertical-search-letters{
-  padding:0px 10px 0px 10px;
+} */
+.alpherbertical-search-title{
+  font-size: 22px;
+    font-weight: 600;
 }
 .btn-letters{
   border: none;
   background-color: transparent;
   color: white;
   padding:0px 11px 0px 11px;
+}
+.pagination > .active > a
+{
+    color: black;
+    background-color: #F6FCFA;
+    border: solid 1px black;
+}
+.page-link{
+color: #327D49 !important;
 }
 .btn-active{
   border: none;
@@ -262,16 +287,16 @@ cursor: pointer;
   /* color: #A1A1A1; */
   font-size: 24px;
   font-weight: 500;
+  color: #D8DAD9;
 }
 .lbl-filters-title{
   padding-top: 30px;
-  text-align: center;
   min-height: 100px;
 }
 .lbl-results{
   padding-top: 30px;
-  padding-left: 90px;
   min-height: 100px;
+  color: #D8DAD9;
 }
 .contact-link{
   font-size: 24px;
