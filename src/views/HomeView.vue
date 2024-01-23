@@ -3,7 +3,7 @@ import { useSearchStore } from '@/stores/SearchStore';
 import Filter from '../components/Filter.vue'
 import  ProfileListEntry  from '../components/ProfileListEntry.vue'
 import  NoDataFound  from '../components/NoDataFound.vue'
-import { ref, computed} from 'vue';
+import { ref, computed, watch} from 'vue';
 import type { SolrQuery } from '@arc/arc-foundation/lib/solr/models/solrQuery';
 import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
 
@@ -18,12 +18,13 @@ const facOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.Fi
 const comOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "communities") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
 //searchStore.isLoading = true;
 searchStore.fetchData();
-let searchText:string;
+
 
   const first = computed(() => searchStore.searchResult.offset + 1)
   const last = computed(() => searchStore.searchResult.offset + searchStore.searchResult.itemsPerPage)
   const pageCount = computed(() => Math.ceil((searchStore.searchResult.totalMatches)/(searchStore.searchResult.itemsPerPage)))
   
+
   // const selectLetter = (letter: string) => {
   // if(searchStore.selectedLetter===letter)
   // {
@@ -35,9 +36,12 @@ let searchText:string;
   //   searchStore.selectLetter(letter)
   //   checkFirstLast(selectedPage.value)}
   // }
-
+watch(() => searchStore.searchWord, async newText => {
+        if(newText === "" || newText === null){
+          searchStore.selectWord("")
+        }
+    })
   const search = (searchText:string) =>{
-    searchStore.searchWord = searchText;
     searchStore.selectWord(searchText)
 
   }
@@ -107,10 +111,10 @@ const setPage = (page : number) => {
             <div class="col-sm-10">
               <div class="row">
                 <div class="col-sm-10">
-                  <input type="text" v-model="searchText" class="search-field" placeholder="Search by Keyword, Community or Name...."/>
+                  <input type="text" v-model="searchStore.searchWord" class="search-field" placeholder="Search by Keyword, Community or Name...." v-on:keyup.enter="search(searchStore.searchWord as string)"/>
                 </div>
                 <div class="col-sm-2">
-                  <font-awesome-icon icon="fa-solid fa-magnifying-glass" @click="search(searchText)"  class="fa-icon fa-magnifying-glass search-text" />
+                  <font-awesome-icon icon="fa-solid fa-magnifying-glass" @click="search(searchStore.searchWord as string)"  class="fa-icon fa-magnifying-glass search-text" />
                 </div>
               </div>
             </div>
@@ -248,7 +252,7 @@ cursor: pointer;
     padding-top: 30px;
 }
 .banner-description{
-  font-size: 18px;
+  font-size: 22px;
     font-weight: 600;
     margin-left: 50px;
     padding-top: 30px;
@@ -300,7 +304,7 @@ color: #327D49 !important;
   /* color: #A1A1A1; */
   font-size: 24px;
   font-weight: 500;
-  color: #D8DAD9;
+  color: #c1c2c1;
 }
 .lbl-filters-title{
   padding-top: 30px;
@@ -309,7 +313,7 @@ color: #327D49 !important;
 .lbl-results{
   padding-top: 30px;
   min-height: 100px;
-  color: #D8DAD9;
+  color: #c1c2c1;
 }
 .contact-link{
   font-size: 24px;
