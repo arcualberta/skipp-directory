@@ -58,11 +58,17 @@ export const fetchQuery = (
     const formData = new FormData();
     let query = "*:*";
     console.log("searchWord",searchWord)
+    console.log("queryModel", queryModel)
     if(searchWord != null){
         query = (config.SearchResultFieldMapping.NAME+":"+searchWord + " OR " + config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS+":"+searchWord+ " OR " + config.SearchResultFieldMapping.KEYWORDS+":"+searchWord)
         console.log("query",query)
         if(queryModel?.buildQueryString())
             query = query + " AND "+queryModel?.buildQueryString();
+    }else{
+        console.log("queryModel", queryModel)
+        if(queryModel?.buildQueryString())
+            query = queryModel?.buildQueryString();
+            console.log("query", query)
     }
     
     

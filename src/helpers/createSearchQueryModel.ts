@@ -11,6 +11,13 @@ export const createSearchQueryModel = () =>{
         SolrQuery.AggregationOperator.AND,
         "keywords");
 
+    //Communities constraint
+    queryModel.appendNewFieldConstraint(
+        config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS,
+        config.QueryCategoryValues.Communities,
+        SolrQuery.AggregationOperator.OR,
+        "communities");
+
         //Position constraint
     queryModel.appendNewFieldConstraint(
         config.SearchResultFieldMapping.POSITION,
@@ -25,7 +32,7 @@ export const createSearchQueryModel = () =>{
         SolrQuery.AggregationOperator.OR,
         "faculties");
         
-
+console.log("queryModel",JSON.stringify(queryModel))
     return queryModel;
 
         

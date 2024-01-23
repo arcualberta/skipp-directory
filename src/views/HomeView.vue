@@ -15,6 +15,7 @@ const isLast = ref(false);
 const keyOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "keywords") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
 const posOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "positions") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
 const facOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "faculties") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
+const comOptions = ((searchStore.solrQueryModel.queryConstraints as SolrQuery.FieldConstraint[]).find(qc => qc.internalId === "communities") as SolrQuery.FieldConstraint)?.valueConstraints as SolrQuery.ValueConstraint[];
 //searchStore.isLoading = true;
 searchStore.fetchData();
 let searchText:string;
@@ -133,13 +134,25 @@ const setPage = (page : number) => {
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button accordion-button-height" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     <span class="accordion-header-text">Keywords</span>
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     <Filter :options= keyOptions></Filter>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span class="accordion-header-text">Communities</span>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <Filter :options= comOptions></Filter>
                   </div>
                 </div>
               </div>
@@ -333,6 +346,9 @@ color: #327D49 !important;
 .accordion-body{
   max-height: 400px;
   overflow-y: scroll;
+}
+.accordion-button>.collapsed{
+  background-color: white !important;
 }
 </style>
 @/stores/searchStore
