@@ -56,21 +56,26 @@ export const fetchQuery = (
     
     //const queryVal = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_t:Arts"
     const formData = new FormData();
-    let query = "*:*";
+    let query = "";
+
+    const modelString = queryModel?.buildQueryString();
+    const searchConstraint = (!searchWord || searchWord.trim().length == 0) ? "" : config.freeTextSearchTargetFieldNames.map( fieldName => `${fieldName}:${searchWord}`).join(' OR ');
+    if(modelString.length == 0 &&  searchConstraint.length == 0){
+        query = "*:*";
+    }
+    else if(modelString.length > 0 &&  searchConstraint.length == 0){
+        query = modelString;
+    }
+    else if(modelString.length == 0 &&  searchConstraint.length > 0){
+        query = searchConstraint;
+    }
+    else{
+        query = `(${modelString}) AND (${searchConstraint})`;
+    }
+
     console.log("searchWord",searchWord)
     console.log("queryModel", queryModel)
-    if(searchWord != null){
-        query = (config.SearchResultFieldMapping.NAME+":"+searchWord + " OR " + config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS+":"+searchWord+ " OR " + config.SearchResultFieldMapping.KEYWORDS+":"+searchWord)
-        console.log("query",query)
-        if(queryModel?.buildQueryString())
-            query = query + " AND "+queryModel?.buildQueryString();
-    }else{
-        console.log("queryModel", queryModel)
-        if(queryModel?.buildQueryString())
-            query = queryModel?.buildQueryString();
-            console.log("query", query)
-    }
-    
+    console.log("query",query)  
     
     formData.append("query", query);
     formData.append("offset", offset.toString());
