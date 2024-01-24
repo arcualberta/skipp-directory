@@ -73,9 +73,9 @@ Communities: ["Aboriginal Counseling Services of Alberta", "Alexander First Nati
     "Sagkeeng First Nation", "Sahtu Renewable Resources Board", "Samson Cree Nation", "Sand Bay First Nation", "Sarrapia Community", "SevGen Consulting",
     "Sexual Assault Centre of Edmonton", "Squamish Communities", "Standing Together", "Tlicho Government", "Tribal Chiefs Ventures", "Urban Indigenous 2S Youth",
     "Urban Indigenous Edmonton"],
-Positions: ["Academic Teaching Staff", "Assistant Clinical Professor", "Assistant Professor", "Associate Professor", "Graduate Student", "Librarian", "Pofessor Emeritus", 
+Positions: ["Academic Teaching Staff", "Assistant Clinical Professor", "Assistant Professor", "Associate Professor", "Graduate Student", "Librarian", "Professor Emeritus", 
     "Postdoctoral Fellow", "Professor", "Research Assistant"],
-Faculties: ["Agustana Campus", "Alberta School of Business", "Argricultural, Life, & Environmental Sciences", "Arts", "Campus Saint-Jean", "Education", "Engineering",
+Faculties: ["Agustana Campus", "Alberta School of Business", "Agricultural, Life, & Environmental Sciences", "Arts", "Campus Saint-Jean", "Education", "Engineering",
     "Kinesiology, Sport, & Recreation", "Law", "Medicine & Dentistry", "Native Studies", "Nursing", "Pharmacy & Pharmaceutical Sciences", "Rehabilitation Medicine",
     "School of Public Health", "Science", "St. Joseph's College", "St. Stephen's College"],
     SelfIdentification: {
