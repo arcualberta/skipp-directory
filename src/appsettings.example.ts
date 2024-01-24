@@ -1,5 +1,3 @@
-import { eFieldType, type SearchFieldDefinition } from "./components/Shared/constant";
-
 export default {
     dataServiceApiRoot: "/server/applets/api/",
     googleApiKey: "AIzaSyBgCnBy-LbHAqbB8PbQhNID68vZ8f8_j_Q",
