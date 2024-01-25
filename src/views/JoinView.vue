@@ -60,6 +60,13 @@ For additional information, please visit the <a class="roots-of-change-url" href
   </div>
 </template>
 <style>
+.collapse-button{
+  background-color: #327D49;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+}
 .submit-button{
   background-color: #327D49;
   color: white;
