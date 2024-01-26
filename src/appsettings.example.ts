@@ -42,6 +42,11 @@ export enum SearchResultFieldMapping {
     PROJECT_INDEX = "child_index_i",
     STATE = "status_s",
 };
+export const freeTextSearchTargetFieldNames = [
+    SearchResultFieldMapping.NAME,
+    SearchResultFieldMapping.KEYWORDS,
+    SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS
+]
 export const QueryCategoryValues = {
     publicVisibleStates: ["654d0e93-0d14-4e6c-8f4a-98884bc7Fb0e"],
     adminVisibleStates: ["e952e454-73f8-4c54-92d9-d11f84ac3985", "654d0e93-0d14-4e6c-8f4a-98884bc7Fb0e"],
@@ -58,7 +63,7 @@ export const QueryCategoryValues = {
     "Performance", "Physical Activity", "Public Health", "Quality of Life", "Rare Disorders", "Reservoir / Dam Management", "Resource Extraction", "Sexual & Reproductive Health",
     "Statistics", "Substance Abuse", "Telecommunications Policy", "Transcription and Translation", "Two-Spirit", "Vaccine", "Water", "Wellness",
     "Wetlands", "Wildlife Management", "Women's Health", "Wood Bison", "Youth"],
-Communities: ["Aboriginal Counseling Services of Alberta", "Alexander First Nation", "Alexis Community", "Amhara Communities", "Aseniwuche Winewak Nation", "Athabasca Chipewyan First Nation",
+    Communities: ["Aboriginal Counseling Services of Alberta", "Alexander First Nation", "Alexis Community", "Amhara Communities", "Aseniwuche Winewak Nation", "Athabasca Chipewyan First Nation",
     "Babel Community", "Baniwa Communities", "Carry the Kettle", "Chief Julius School", "Cold Lake First Nation", "Dagbamba Communities", "Dehcho AAROM",
     "Dene Tha' First Nation", "El Duya Community", "Enoch Cree Nation", "Ermineskin Cree Nation", "Ewe Communities", "First Mile Connectivity Consortium",
     "First Nations Information Connection", "Four Bands Community Fund", "Four Nations of Maskwacis", "Guajajara Communities", "Gwich'in Tribal Council",
@@ -71,9 +76,9 @@ Communities: ["Aboriginal Counseling Services of Alberta", "Alexander First Nati
     "Sagkeeng First Nation", "Sahtu Renewable Resources Board", "Samson Cree Nation", "Sand Bay First Nation", "Sarrapia Community", "SevGen Consulting",
     "Sexual Assault Centre of Edmonton", "Squamish Communities", "Standing Together", "Tlicho Government", "Tribal Chiefs Ventures", "Urban Indigenous 2S Youth",
     "Urban Indigenous Edmonton"],
-Positions: ["Academic Teaching Staff", "Assistant Clinical Professor", "Assistant Professor", "Associate Professor", "Graduate Student", "Librarian", "Professor Emeritus", 
+    Positions: ["Academic Teaching Staff", "Assistant Clinical Professor", "Assistant Professor", "Associate Professor", "Graduate Student", "Librarian", "Professor Emeritus", 
     "Postdoctoral Fellow", "Professor", "Research Assistant"],
-Faculties: ["Agustana Campus", "Alberta School of Business", "Agricultural, Life, & Environmental Sciences", "Arts", "Campus Saint-Jean", "Education", "Engineering",
+    Faculties: ["Agustana Campus", "Alberta School of Business", "Agricultural, Life, & Environmental Sciences", "Arts", "Campus Saint-Jean", "Education", "Engineering",
     "Kinesiology, Sport, & Recreation", "Law", "Medicine & Dentistry", "Native Studies", "Nursing", "Pharmacy & Pharmaceutical Sciences", "Rehabilitation Medicine",
     "School of Public Health", "Science", "St. Joseph's College", "St. Stephen's College"],
     SelfIdentification: {
