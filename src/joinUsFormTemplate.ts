@@ -142,6 +142,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 11,
+      "isRequired": true,
       "options": [
         {
           "id": "0aa2aa00-5099-ac07-810a-9cab6dbcf87a",
@@ -749,7 +750,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "bb0accf5-7048-d34f-e43d-d44c0d350cb2",
             "lang": "en",
-            "value": "Additional Faculties / Organizations (Optional) :"
+            "value": "Additional Faculties / Organizations"
           },
           {
             "id": "43fae72e-6d77-4783-bd40-cb5a193577a4",
@@ -851,7 +852,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "e8a410db-7426-4224-75ff-f36318b7ca05",
             "lang": "en",
-            "value": "Pronouns (Optional)"
+            "value": "Pronouns"
           },
           {
             "id": "16f0763c-ee40-4ef5-8568-01c1bf982e57",
@@ -987,7 +988,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "749dbfb8-7e06-7a95-62a4-efc796c0d5a4",
             "lang": "en",
-            "value": "Indigenous Self-Declaration (Optional)"
+            "value": "Indigenous Self-Declaration"
           },
           {
             "id": "7f571ccf-acd7-e186-85ee-c1439c827eea",
@@ -1014,6 +1015,66 @@ export const JoinUsFormTemplate = {
       "type": 11,
       "options": [
         {
+          "id": "2e5dd243-e8b3-829e-10b8-d070a42e8e79",
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
+          "optionText": {
+            "id": "fba9d17a-fa60-1e64-5a96-e637c55ae9a2",
+            "values": [
+              {
+                "id": "a8d24341-171f-4c4f-62e2-b48bcd159ad1",
+                "lang": "en",
+                "value": "First Nations (both Status and Non-Status Indians)"
+              },
+              {
+                "id": "c6e8cc92-4ba9-1aa4-ea2c-8b8604b4e589",
+                "lang": "fr",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "0ba61866-7695-6022-17b4-34c16028a653",
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
+          "optionText": {
+            "id": "017c4228-d1ba-cede-d0db-35920a60bcc8",
+            "values": [
+              {
+                "id": "5df718d2-9ce5-8c5a-f5c8-a669042f5c9a",
+                "lang": "en",
+                "value": "Indian (as defined by the Indian Act)"
+              },
+              {
+                "id": "bdc31030-6893-2fa4-8fe6-973a2be71f6d",
+                "lang": "fr",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "167f40bb-eac7-5661-78a2-c034a54250d6",
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
+          "optionText": {
+            "id": "46865c90-d9df-e63e-2143-1f98e3ff0095",
+            "values": [
+              {
+                "id": "c2264542-7cc5-10cc-a833-cb76742954f3",
+                "lang": "en",
+                "value": "Inuk (Inuit) (Within Canada)"
+              },
+              {
+                "id": "b0ac6d0c-3248-e802-a1e0-1e0d412a62db",
+                "lang": "fr",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
           "id": "54c2db55-9005-8c16-a9a7-a772e6f7c736",
           "isExtendedInput": false,
           "isExtendedInputRequired": false,
@@ -1023,7 +1084,7 @@ export const JoinUsFormTemplate = {
               {
                 "id": "2eada9a0-f02e-ceca-4bc4-42e0bbbeda7f",
                 "lang": "en",
-                "value": "Métis"
+                "value": "Métis (Within Canada)"
               },
               {
                 "id": "c473ddda-96b2-3c14-a8f4-6df08f07af9e",
@@ -1034,19 +1095,19 @@ export const JoinUsFormTemplate = {
           }
         },
         {
-          "id": "2e5dd243-e8b3-829e-10b8-d070a42e8e79",
+          "id": "eba0c2ad-7ccc-e5a7-3212-1ac120deaffc",
           "isExtendedInput": false,
           "isExtendedInputRequired": false,
           "optionText": {
-            "id": "fba9d17a-fa60-1e64-5a96-e637c55ae9a2",
+            "id": "ebfe8652-b43b-56d7-8ca2-06a4e468fd3d",
             "values": [
               {
-                "id": "a8d24341-171f-4c4f-62e2-b48bcd159ad1",
+                "id": "8f3f2db2-8ba1-49d0-4005-6e2e64c95d62",
                 "lang": "en",
-                "value": "First Nation"
+                "value": "Indigenous Person (outside of Canada)"
               },
               {
-                "id": "c6e8cc92-4ba9-1aa4-ea2c-8b8604b4e589",
+                "id": "8d41b2f3-7cc6-aed9-8501-e9f33d3fdefa",
                 "lang": "fr",
                 "value": ""
               }
@@ -1072,6 +1133,26 @@ export const JoinUsFormTemplate = {
               }
             ]
           }
+        },
+        {
+          "id": "080dc795-e28c-34a2-1188-a665f733bf45",
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
+          "optionText": {
+            "id": "1c9af128-5494-b51c-2264-4dbaf5d47357",
+            "values": [
+              {
+                "id": "14d44124-9d5d-acca-3307-2ae057037b7c",
+                "lang": "en",
+                "value": "I Prefer Not to Answer"
+              },
+              {
+                "id": "cd41dcd8-863f-b327-129c-c9fceb6e513f",
+                "lang": "fr",
+                "value": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -1083,7 +1164,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "04d0562f-550b-c42d-cca7-3c6d20e72a03",
             "lang": "en",
-            "value": "Indigenous Nation and/or Community (Optional)"
+            "value": "Indigenous Nation / Community"
           },
           {
             "id": "dd3b3ad7-ba62-d3a5-21fa-3379ceb862c6",
@@ -2632,6 +2713,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 15,
+      "isRequired": true,
       "options": [
         {
           "id": "59f8ecf8-d392-550f-2075-ffba1520413a",

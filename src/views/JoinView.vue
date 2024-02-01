@@ -37,7 +37,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
       <h1>CREATE A PROFILE</h1>
     </div >
     <div class="protection-description">
-      Protection of Privacy - Personal information provided is collected in accordance with Section 33(c) of the Alberta Freedom of Information and Protection of Privacy Act (the FOIP Act) and will be protected under Part 2 of that Act. It will be used for the purpose of the Intersections of Gender Researcher Directory. Information collected will be used to administer and manage the Gender Researcher Directory. Information will be used to highlight and mobilize intersectional research, for statistical reporting, and to identify and support equity seeking groups. Any public disclosures of information from the directory will be in aggregate form only.Should you require further information about collection, use and disclosure of personal information, please contact intersectionsofgender@ualberta.ca
+      Protection of Privacy - Personal information provided is collected in accordance with Section 33(c) of the Alberta Freedom of Information and Protection of Privacy Act (the FOIP Act) and will be protected under Part 2 of that Act. it will be used for the purpose of the Indigenous-Engaged Researcher Database. Information collected will be used to administer and manage the database. Information will be used to highlight and identify Indigenous-engaged research at the University of Alberta. Any public disclosures of information from the director will be in aggregate form only. Should you require further information about collection, use, and disclosure of personal information please contact <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a> 
     </div>
     <div class="inner-container form-details">
       <FormSubmission 
@@ -66,6 +66,14 @@ For additional information, please visit the <a class="roots-of-change-url" href
   border: none;
   border-radius: 5px;
   height: 35px;
+}
+.project-button{
+  background-color: #327D49;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 5px;
+  margin-bottom: 20px;
 }
 .submit-button{
   background-color: #327D49;

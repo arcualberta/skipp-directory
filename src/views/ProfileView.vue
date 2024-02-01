@@ -60,7 +60,7 @@ window.scrollTo(0,0);
     <div class="row space-bottom">
       <div class="Keywords">Research Keywords: <button v-for="keyword in keywords" class="keyword-block">{{ keyword }}</button></div>
     </div> 
-    <div class="psh" v-if="location">Recently Engaged Indigenous Communities / Nation(s) / organization(s): <span class="pronounce-value">{{ location }}</span></div>
+    <div class="communities-org psh space-bottom" v-if="location">Recently Engaged Indigenous Communities / Nation(s) / organization(s): <span class="pronounce-value">{{ location }}</span></div>
     </div>
     <div class=" container research-project">
       Recent Indigenous-Engaged Research Projects
@@ -104,12 +104,15 @@ a.navigation-menu-box:hover {
 margin-top: 50px;
 }
 .space-bottom{
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .research-project{
   color: #327D49;
   font-size: 28px;
   padding-bottom: 50px;
+  padding-left: 90px;
+}
+.communities-org{
   padding-left: 80px;
 }
 .profile-name{

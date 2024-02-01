@@ -94,10 +94,10 @@ const setPage = (page : number) => {
           </div>
           <div class="col-sm-5">
             <div class="banner-heading">
-              SKIPP | Situated Knowledges : Indigenous Peoples & Place
+              SKIPP | Situated Knowledges : Indigenous Peoples and Place to Roots of Change
             </div>
             <div class="banner-description">
-              Indigenous - Engaged Researcher Database
+              Indigenous-Engaged Researcher Database
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ const setPage = (page : number) => {
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span class="accordion-header-text">Communities</span>
+                    <span class="accordion-header-text">Communities / Organizations</span>
                   </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -163,7 +163,7 @@ const setPage = (page : number) => {
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <span class="accordion-header-text">Faculty/ Department</span>
+                    <span class="accordion-header-text">Faculty / Department</span>
                   </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
