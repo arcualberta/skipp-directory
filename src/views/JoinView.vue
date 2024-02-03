@@ -67,7 +67,12 @@ For additional information, please visit the <a class="roots-of-change-url" href
   border-radius: 5px;
   height: 35px;
 }
-.project-button{
+.composite-field-heading{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.add-button{
   background-color: #327D49;
   color: white;
   border-radius: 5px;

@@ -4,7 +4,6 @@ import * as itemHelper from '../helpers/itemHelper';
 import { useSearchStore } from './../stores/SearchStore'
 import {useRouter} from 'vue-router'
 import { Guid } from 'guid-typescript';
-import type { SolrSearchResult } from '@arc/arc-foundation/lib/solr/models/solrSearchResult';
 import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
 
 const props = defineProps<{ 
@@ -24,13 +23,13 @@ const props = defineProps<{
       <div class="col-sm-3">
         <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <div class="profile-name"><a  @click="gotoProfile(model?.id as unknown as Guid)">{{ name }}</a></div>
         <div class="profile-position">{{ position }}</div>
         <div class="research-interest-headding">Research Interests</div>
         <div class="research-interest-list">{{keywords}}</div>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <div class="email">
             <img src="../assets/images/email.png" />
           <span class="email-id">{{ email }}</span>
@@ -87,6 +86,7 @@ const props = defineProps<{
 }
 .email{
   margin-top: 70px;
+  float: right;
 }
 .email-id{
   font-weight: 600;

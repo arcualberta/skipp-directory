@@ -1179,7 +1179,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "e42bd63b-5a2f-9986-41f3-ca39769fc22c",
             "lang": "en",
-            "value": "We understand that in some cases, an Indigenous person may not know their nation or community due to the impacts of colonial or assimilationist practices. With the intent of gaining a better understanding of these realities, we welcome your submission and ask that you articulate your truth."
+            "value": ""
           },
           {
             "id": "6b5cf4fa-7e56-14cc-7210-d79e2e2c45c1",
@@ -4634,6 +4634,27 @@ export const JoinUsFormTemplate = {
               }
             ]
           }
+        },
+        {
+          "id": "355b4333-c696-10af-73f2-60db669f42d5",
+          "isExtendedInput": true,
+          "isExtendedInputRequired": true,
+          "allowCustomOptionValues": true,
+          "optionText": {
+            "id": "6235181b-20cd-83fa-f9ed-222efe282a22",
+            "values": [
+              {
+                "id": "3569eec5-6848-900a-cf1f-1050cef8d50d",
+                "lang": "en",
+                "value": "Other"
+              },
+              {
+                "id": "21e821dd-79aa-7d25-d4cd-396abc572713",
+                "lang": "fr",
+                "value": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -4784,7 +4805,7 @@ export const JoinUsFormTemplate = {
               {
                 "id": "7baaabbe-08a3-02e4-f657-5f35735952b4",
                 "lang": "en",
-                "value": "Who initiated your research project?"
+                "value": "Who initiated your research project"
               },
               {
                 "id": "607f59da-b195-402b-74b3-5bf6a128c11f",
@@ -4819,7 +4840,7 @@ export const JoinUsFormTemplate = {
               {
                 "id": "309e3c89-9b2b-7194-1b37-04e6c0b9824f",
                 "lang": "en",
-                "value": "What role do community members play in your project? "
+                "value": "What role do community members play in your project"
               },
               {
                 "id": "9ee5e920-8b6a-4e1c-f363-2163f7f8456b",

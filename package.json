@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@arc/arc-foundation": "^0.3.27",
-    "@arc/form-submission": "^0.1.40",
+    "@arc/form-submission": "^0.1.42",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "bootstrap": "^5.3.1",
