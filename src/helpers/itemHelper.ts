@@ -77,6 +77,3 @@ export function getProjectInitiation(item: SolrResultEntry) {
 export function getProjectRole(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_ROLE).join(", ");
 }
-export function getProjectIndex(item: SolrResultEntry) {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_INDEX);
-}
