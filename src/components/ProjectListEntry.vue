@@ -10,8 +10,8 @@ import * as itemHelper from '../helpers/itemHelper';
     const description = computed(() => '<p>' + itemHelper.getProjectDescription(props.model as SolrResultEntry).split('\n').join('</p><p>') + '</p>');
     const initiation = computed(() => itemHelper.getProjectInitiation(props.model as SolrResultEntry));
     const role = computed(() => itemHelper.getProjectRole(props.model as SolrResultEntry));
-    const index = computed(() => itemHelper.getProjectIndex(props.model as SolrResultEntry)) as unknown as number;
-    
+    const index = computed(() => itemHelper.getProjectIndex(props.model)) as unknown as number;
+    console.log("index",index)
     function checkOddEven(num: number): string {
     if (num % 2 === 0) {
         return 'Even';
@@ -23,6 +23,8 @@ import * as itemHelper from '../helpers/itemHelper';
 </script>
 
 <template>
+    <!-- model {{ model }}
+    index {{ index }} -->
     <div v-bind:class="(checkOddEven(index)==='Even')?'research-projects-background':''">
         <div class="container project-list-entry">
         <div class="project-list"><span class="project-list-headers">Project Title : </span> {{ title }}</div>

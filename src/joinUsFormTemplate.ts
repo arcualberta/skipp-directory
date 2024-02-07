@@ -2677,6 +2677,26 @@ export const JoinUsFormTemplate = {
               }
             ]
           }
+        },
+        {
+          "id": "6cc4b6b9-a177-0082-8293-2832992d7c3b",
+          "isExtendedInput": true,
+          "isExtendedInputRequired": false,
+          "optionText": {
+            "id": "396fcaed-ab31-17b1-6e71-540fda0c1dbe",
+            "values": [
+              {
+                "id": "38cd436b-dbd0-c551-96cf-32791b098a40",
+                "lang": "en",
+                "value": "Other"
+              },
+              {
+                "id": "0300798c-7bcb-340c-041f-4a44ad7db25e",
+                "lang": "fr",
+                "value": ""
+              }
+            ]
+          }
         }
       ]
     },
@@ -4805,7 +4825,7 @@ export const JoinUsFormTemplate = {
               {
                 "id": "7baaabbe-08a3-02e4-f657-5f35735952b4",
                 "lang": "en",
-                "value": "Who initiated your research project"
+                "value": "Who initiated your project"
               },
               {
                 "id": "607f59da-b195-402b-74b3-5bf6a128c11f",
