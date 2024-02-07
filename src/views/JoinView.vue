@@ -41,16 +41,14 @@ For additional information, please visit the <a class="roots-of-change-url" href
     </div>
     <div class="inner-container form-details">
       <FormSubmission 
-      :api-root=solrApiRoot
-      :data-store="'Solr'"
-      securityToken=""
-      :form-template="JoinUsFormTemplate"
-      :pinia-instance="getActivePinia()" 
-      :tanent-id="('a4a50d9f-fd20-4d74-8274-2acad28a6553' as unknown as Guid)"
-      :msg="''" 
-      
-      
-      @arc-form-submit="formSubmissionCallback"
+      :api-root = solrApiRoot
+      :data-store = "'Solr'"
+      securityToken = ""
+      :form-template = "JoinUsFormTemplate"
+      :pinia-instance = "getActivePinia()" 
+      :tanent-id = "('a4a50d9f-fd20-4d74-8274-2acad28a6553' as unknown as Guid)"
+      :msg = "''" 
+      @arc-form-submit = "formSubmissionCallback"
       >
     </FormSubmission>
     </div>

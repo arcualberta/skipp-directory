@@ -7,18 +7,17 @@
   import { useProfileStore } from '../stores/ProfileStore'
   import { useSearchStore } from '../stores/SearchStore'
   import * as itemHelper from '../helpers/itemHelper';
-import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
+  import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
   
   
   const profileStore = useProfileStore();
-  const searchStore = useProfileStore();
 
   const route = useRoute();
   const router = useRouter();
 
   const id = route.params.id as unknown as Guid;
+
   profileStore.setActiveProfile(id);
-  console.log("activeProfile", JSON.stringify(profileStore.activeProfile))
   const name = computed(() => itemHelper.getName(profileStore.activeProfile as SolrResultEntry));
   const position = computed(() => itemHelper.getPosition(profileStore.activeProfile as SolrResultEntry))
   const email = computed(() => itemHelper.getEmail(profileStore.activeProfile as SolrResultEntry));
@@ -29,8 +28,9 @@ import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrRe
   const IndigenousCommunity = computed(() => itemHelper.getIndigeniousCommunity(profileStore.activeProfile as SolrResultEntry));
   const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
+  const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
   onMounted(()=>{
-window.scrollTo(0,0);
+    window.scrollTo(0,0);
   })
 </script>
 <template>
@@ -40,6 +40,9 @@ window.scrollTo(0,0);
     </div>
   </div>
   <div id="profile" class="container">
+    <div class="profile-edit">
+      <button @click="editProfile(id)" class="profilr-edit-button">Edit</button>
+    </div>
     <div class="row space-bottom">
       <div class="col-sm-4">
         <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
