@@ -58,6 +58,21 @@ For additional information, please visit the <a class="roots-of-change-url" href
   </div>
 </template>
 <style>
+.ext-option-button{
+  background-color: #327D49;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.ext-op-delete{
+  margin-left: 10px;
+}
+.ext-option-text{
+  margin-top: 5px;
+}
 .collapse-button{
   background-color: #327D49;
   color: white;

@@ -63,7 +63,7 @@ export function getLocation(item: SolrResultEntry) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.LOCATION);
 }
 export function getProjectList(item: SolrResultEntry) {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_LIST) as SolrResultEntry[];
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_LIST) as unknown as SolrResultEntry[];
 }
 export function getProjectTitle(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_TITLE).join(", ");
@@ -76,7 +76,4 @@ export function getProjectInitiation(item: SolrResultEntry) {
 }
 export function getProjectRole(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_ROLE).join(", ");
-}
-export function getProjectIndex(item: SolrResultEntry) {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_INDEX);
 }

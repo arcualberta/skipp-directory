@@ -77,7 +77,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
     
       <div >
         <div class="container">
-        <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
+          <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
       </div>
     </div>
     <div class="container">
@@ -91,6 +91,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 </template>
 
 <style>
+
 .green-bar{
   color: white;
   min-height: 100px;
@@ -198,4 +199,6 @@ margin-top: 50px;
 .worklinks:hover{
   background-color: transparent;
 }
+
+
 </style>
