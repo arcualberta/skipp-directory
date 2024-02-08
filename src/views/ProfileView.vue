@@ -8,8 +8,10 @@
   import { useSearchStore } from '../stores/SearchStore'
   import * as itemHelper from '../helpers/itemHelper';
   import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
-  
-  
+  import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
+  import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
+import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
+
   const profileStore = useProfileStore();
 
   const route = useRoute();
@@ -29,6 +31,10 @@
   const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
+
+  console.log("profile ", JSON.stringify(profileStore.activeProfile))
+  //const formData = profileStore.getFormData;
+  //console.log("formData", JSON.stringify(formData))
   onMounted(()=>{
     window.scrollTo(0,0);
   })
