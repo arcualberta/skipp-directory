@@ -24,12 +24,6 @@
 </script>
 
 <template>
-<br>
-<br>
-    {{ id }}
-
-
-    <!-- {{ formData }} -->
 
     <FormSubmission 
       :api-root = solrApiRoot
