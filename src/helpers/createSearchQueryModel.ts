@@ -32,7 +32,7 @@ export const createSearchQueryModel = () =>{
         SolrQuery.AggregationOperator.OR,
         "faculties");
         
-console.log("queryModel",JSON.stringify(queryModel))
+
     return queryModel;
 
         

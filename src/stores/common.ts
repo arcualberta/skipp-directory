@@ -73,9 +73,7 @@ export const fetchQuery = (
         query = `(${modelString}) AND (${searchConstraint})`;
     }
 
-    console.log("searchWord",searchWord)
-    console.log("queryModel", queryModel)
-    console.log("query",query)  
+    
     
     formData.append("query", query);
     formData.append("offset", offset.toString());
@@ -88,7 +86,6 @@ export const fetchQuery = (
    
     const queryApiUrl = `${config.default.solrApiRoot}/api/SolrSearch`
     const tenantId = `${config.default.tenantId}`
-    console.log("tenantId", tenantId);
     fetch(queryApiUrl, {
         
         method: 'POST', // or 'PUT'

@@ -88,7 +88,6 @@ export const useSearchStore = defineStore('SearchStore', {
             this.fetchData();
         },
         selectWord(word: string | null) {
-            console.log("word",word)
             this.isLoading = true;
             this.offset = 0;
             this.searchWord = word;

@@ -5,6 +5,9 @@ import { useSearchStore } from './SearchStore';
 import * as config from '../appsettings';
 import { baseState, fetchQuery } from './common';
 import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/solr/models';
+import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
+  import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
+import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 const searchStore = useSearchStore();
@@ -25,42 +28,15 @@ export const useProfileStore = defineStore('ProfileStore', {
     getters: {
         isAdmin(): boolean {
             return this.userInfo?.roles?.includes("SysAdmin") ? true : false;
+        },
+        getFormData(): ArcFormData | CompositeFieldData {
+            const formData = toFormData(this.activeProfile as SolrResultEntry, JoinUsFormTemplate as unknown as FormTemplate);
+            return formData
         }
     },
     actions: {
         setActiveProfile(profileId: Guid) {
             if (profileId) {
-                /*
-                let query = "id:"+profileId;
-                console.log("query",query)
-                const formData = new FormData();
-                formData.append("query", query);
-                formData.append("offset","0");
-                formData.append("max", "1");
-                formData.append("filterQuery", "");
-                formData.append("sortBy", "");
-                formData.append("fieldList", "");
-                formData.append("maxHiglightSnippets", "1");
-                const queryApiUrl = `${config.default.solrApiRoot}/api/SolrSearch`
-                const tenantId = `${config.default.tenantId}`
-                fetch(queryApiUrl, {
-                    method: 'POST', // or 'PUT'
-                    body: formData,
-                    headers: {
-                        'Tenant-Id': `${tenantId}`
-                    }
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        const entries = (data as SolrSearchResult)?.resultEntries;
-                        this.activeProfile = entries?.length > 0 ? entries[0] : null;
-                        
-                    })
-                    .catch((error) => {
-                        console.error('Item Load API Error:', error);
-                    });
-                */
-
                 const url = `${config.default.solrApiRoot}/api/SolrSearch/get-document/${profileId}`;
                 fetch(url, {
                     method: 'GET', 
@@ -70,7 +46,8 @@ export const useProfileStore = defineStore('ProfileStore', {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        this.activeProfile = data;                       
+                        this.activeProfile = data;  
+                        console.log("profile ", JSON.stringify(data))                     
                     })
                     .catch((error) => {
                         console.error('Solr get-document API error:', error);
@@ -79,6 +56,7 @@ export const useProfileStore = defineStore('ProfileStore', {
             else
                 this.activeProfile = null;
         },
+        
     }
 });
 
