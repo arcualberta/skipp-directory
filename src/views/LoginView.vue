@@ -1,15 +1,21 @@
 <script setup lang="ts">
-//import { Login } from 'applets';
-import { default as config } from '@/appsettings'
+
+import { getActivePinia } from 'pinia';
+import { default as config}  from '@/appsettings'
+
+const tenantId = config.tenantId;
+const authApiRoot = config.authorizationApiRoot;
 
 </script>
 
-<template>
-  <div class="login">
-    <Login :authorizationRoot = config.authorizationApiRoot></Login>
-  </div>
-</template>
 
+<template>
+    <div>Login View </div>
+
+    <Login :pinia-instance="getActivePinia()"
+           :tenantId="tenantId" 
+           :apiRoot="authApiRoot" />
+</template>
 <style>
 
 </style>

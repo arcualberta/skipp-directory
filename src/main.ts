@@ -21,6 +21,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import * as faIcons from '@fortawesome/free-solid-svg-icons'
 
+import * as ArcAuthorization from '@arc/authorization'
+
 /* add icons to the library */
 library.add(faIcons.faQuestionCircle)
 library.add(faIcons.faMagnifyingGlass)
@@ -35,8 +37,8 @@ app.use(vue3GoogleLogin, {
     //refer to https://docs.google.com/document/d/1N_y4aQupxPKPGh2eaxpOqCmc_75QionPp4U_MoY3gZQ/edit#heading=h.4zlex6l80fxx
     clientId: config.googleLoginClientId
 })
+app.component("Login", ArcAuthorization.Login)
 
-// app.component("Login", CatfishUI.Components.Login)
 // app.component("FormSubmission", CatfishUI.Components.FormSubmission)
 // app.component("SolrSearchPanel", CatfishUI.Components.SolrSearchPanel)
 // app.component("FontAwesomeIcon", CatfishUI.Components.FontAwesomeIcon)

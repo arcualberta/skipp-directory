@@ -9,7 +9,17 @@ export default {
     //authorizationApiRoot:"https://localhost:5010/",
     dataRepositoryApiRoot: "https://localhost:5020",
     authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
-    solrApiRoot:  "https://solr-test.artsrn.ualberta.ca"
+    solrApiRoot:  "https://solr-test.artsrn.ualberta.ca",
+
+    
+    //LOGIN component  settings
+    googleLocalClientId: "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
+    googleProductionClientId: "589183038778-i21iod3d3obrmot5vk3ap59akglg5a9u.apps.googleusercontent.com",
+   
+   //SKIPP's tenantId
+    tenantId: "a4a50d9f-fd20-4d74-8274-2acad28a6553" as unknown as Guid,
+     //on prod auth.api
+    appId: "22edb968-b74c-4826-bef0-6fda9d6c349d" as unknown as Guid
 };
 
 export enum SearchResultFieldMapping {
