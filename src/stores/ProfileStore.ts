@@ -8,6 +8,7 @@ import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/
 import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
+//import LoginResult from '@arc/authorization'
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 const searchStore = useSearchStore();
@@ -24,6 +25,7 @@ export const useProfileStore = defineStore('ProfileStore', {
         activeProfile: null as SolrResultEntry | null,
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
+        userLoginResult: null as LoginResult | null
   }),
     getters: {
         isAdmin(): boolean {
@@ -32,6 +34,9 @@ export const useProfileStore = defineStore('ProfileStore', {
         getFormData(): ArcFormData | CompositeFieldData {
             const formData = toFormData(this.activeProfile as SolrResultEntry, JoinUsFormTemplate as unknown as FormTemplate);
             return formData
+        },
+        getUserLoginResult(): LoginResult{
+            return this.userLoginResult;
         }
     },
     actions: {
@@ -56,6 +61,10 @@ export const useProfileStore = defineStore('ProfileStore', {
             else
                 this.activeProfile = null;
         },
+        setUserLoginResult(loginResult: LoginResult){
+            this.userLoginResult = loginResult;
+            console.log("profile store: ", this.userLoginResult)
+        }
         
     }
 });
