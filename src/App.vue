@@ -1,13 +1,25 @@
 <script setup lang="ts">
+import { getActivePinia } from 'pinia';
 import { computed, onMounted, ref, watch } from 'vue';
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import Footer from './components/Footer.vue'
 
+import {useProfileStore} from './stores/ProfileStore'
+import LoginResult from '@arc/authorization'
+
 const router = useRouter();
 
-    
-    
-   
+ 
+const pStore = useProfileStore();
+
+const logout = () => {
+  pStore.userLoginResult = null;
+  sessionStorage.removeItem("user");
+  localStorage.removeItem("catfishLoginResult")
+  return false;
+}
+
+
 </script>
 
 
@@ -25,7 +37,14 @@ const router = useRouter();
                 <router-link to="/" class="navigation-menu-box">Home</router-link> 
                 <router-link to="/join">Join Our Directory</router-link>
                 <a href=" https://www.ualberta.ca/provost/portfolio/indigenous-initiatives/index.html" target="_blank" class="navigation-menu-box">Contact</a>
-          <router-link to="/login" class="navigation-menu-box login">Login</router-link>
+      
+          <span style="float: right;">
+              <span v-if="pStore.isUserLogin">
+                  Welcome {{pStore.getUserName}}! 
+                  <router-link :to="{}" href="" @click="logout">Logout</router-link>
+              </span>
+            <router-link v-else to="/login">Login</router-link>
+          </span>  
                 </nav>
               </header>
           </div>

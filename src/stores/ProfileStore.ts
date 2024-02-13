@@ -8,10 +8,10 @@ import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/
 import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
-//import LoginResult from '@arc/authorization'
+
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
-const searchStore = useSearchStore();
+//const searchStore = useSearchStore();
 interface UserInfo {
     userName: string | null;
     roles: string[] | null;
@@ -25,7 +25,8 @@ export const useProfileStore = defineStore('ProfileStore', {
         activeProfile: null as SolrResultEntry | null,
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
-        userLoginResult: null as LoginResult | null
+        userLoginResult: null as LoginResult | null,
+       // isUserLogin: null as boolean | false
   }),
     getters: {
         isAdmin(): boolean {
@@ -37,7 +38,14 @@ export const useProfileStore = defineStore('ProfileStore', {
         },
         getUserLoginResult(): LoginResult{
             return this.userLoginResult;
+        },
+        isUserLogin(): boolean{
+            return this.userLoginResult? this.userLoginResult.success : false
+        },
+        getUserName(): string{
+            return this.userLoginResult? this.userLoginResult.username : ""
         }
+       
     },
     actions: {
         setActiveProfile(profileId: Guid) {
@@ -64,6 +72,8 @@ export const useProfileStore = defineStore('ProfileStore', {
         setUserLoginResult(loginResult: LoginResult){
             this.userLoginResult = loginResult;
             console.log("profile store: ", this.userLoginResult)
+            this.isUserLogin = loginResult.success;
+            console.log("user Login: ", this.isUserLogin)
         }
         
     }
