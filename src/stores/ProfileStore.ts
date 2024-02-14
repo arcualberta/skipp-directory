@@ -8,7 +8,7 @@ import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/
 import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
-
+import type {LoginResult, UserMembership}  from '@arc/authorization'
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 //const searchStore = useSearchStore();
@@ -26,7 +26,8 @@ export const useProfileStore = defineStore('ProfileStore', {
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
         userLoginResult: null as LoginResult | null,
-       // isUserLogin: null as boolean | false
+       userMembership: null as UserMembership | mull,
+       userLoginToken: null as string | null //jwt token return from auth proxy
   }),
     getters: {
         isAdmin(): boolean {
@@ -71,9 +72,15 @@ export const useProfileStore = defineStore('ProfileStore', {
         },
         setUserLoginResult(loginResult: LoginResult){
             this.userLoginResult = loginResult;
-            console.log("profile store: ", this.userLoginResult)
-            this.isUserLogin = loginResult.success;
-            console.log("user Login: ", this.isUserLogin)
+           
+        },
+        setUserMembership(membership: UserMembership){
+            this.userMembership = membership;
+            console.log("userMembership: ", this.userMembership)
+        },
+        setUserLoginToken(loginToken: string){
+            this.userLoginToken = loginToken;
+             console.log("user LoginToken: ", this.userLoginToken)
         }
         
     }
