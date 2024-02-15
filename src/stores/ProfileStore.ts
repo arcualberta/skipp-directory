@@ -26,8 +26,7 @@ export const useProfileStore = defineStore('ProfileStore', {
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
         userLoginResult: null as LoginResult | null,
-       userMembership: null as UserMembership | mull,
-       userLoginToken: null as string | null //jwt token return from auth proxy
+        userLoginToken: null as string | null //jwt token return from auth proxy
   }),
     getters: {
         isAdmin(): boolean {
@@ -40,11 +39,14 @@ export const useProfileStore = defineStore('ProfileStore', {
         getUserLoginResult(): LoginResult{
             return this.userLoginResult;
         },
-        isUserLogin(): boolean{
+        getUserLoginToken(): string | null{
+            return this.userLoginToken;
+        },
+        isUserLoggedIn(): boolean{
             return this.userLoginResult? this.userLoginResult.success : false
         },
         getUserName(): string{
-            return this.userLoginResult? this.userLoginResult.username : ""
+            return this.userLoginResult?.name 
         }
        
     },
@@ -69,20 +71,7 @@ export const useProfileStore = defineStore('ProfileStore', {
             }
             else
                 this.activeProfile = null;
-        },
-        setUserLoginResult(loginResult: LoginResult){
-            this.userLoginResult = loginResult;
-           
-        },
-        setUserMembership(membership: UserMembership){
-            this.userMembership = membership;
-            console.log("userMembership: ", this.userMembership)
-        },
-        setUserLoginToken(loginToken: string){
-            this.userLoginToken = loginToken;
-             console.log("user LoginToken: ", this.userLoginToken)
-        }
-        
+        }        
     }
 });
 
