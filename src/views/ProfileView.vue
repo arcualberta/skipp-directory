@@ -32,9 +32,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
 
-  console.log("profile ", JSON.stringify(profileStore.activeProfile))
-  //const formData = profileStore.getFormData;
-  //console.log("formData", JSON.stringify(formData))
+  
   onMounted(()=>{
     window.scrollTo(0,0);
   })
@@ -77,7 +75,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
     
       <div >
         <div class="container">
-          <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
+        <ProjectListEntry v-for="project in projectList" :key="project.id" :model="project"></ProjectListEntry>
       </div>
     </div>
     <div class="container">
@@ -91,11 +89,11 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 </template>
 
 <style>
-
 .green-bar{
   color: white;
   min-height: 100px;
   background-color: #327D49;
+  min-width: 100px;
   padding-top: 30px;
   font-size: 24px;
   font-weight: 500;
@@ -105,6 +103,17 @@ a.navigation-menu-box {
   color: white;
   font-weight: 600;
   padding-bottom: 10px;
+}
+.profilr-edit-button{
+  float: right;
+  min-width: 50px;
+  background-color: #327D49;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 a.navigation-menu-box:hover {
@@ -199,6 +208,4 @@ margin-top: 50px;
 .worklinks:hover{
   background-color: transparent;
 }
-
-
 </style>

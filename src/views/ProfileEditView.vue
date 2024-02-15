@@ -24,8 +24,9 @@
 </script>
 
 <template>
-
-    <FormSubmission 
+    {{ formData }}
+    <div class="container">
+        <FormSubmission 
       :api-root = solrApiRoot
       :data-store = "'Solr'"
       securityToken = ""
@@ -38,6 +39,9 @@
       @arc-form-submit = "formSubmissionCallback"
       >
     </FormSubmission>
+    </div>
+
+    
 </template>
 
 <style>

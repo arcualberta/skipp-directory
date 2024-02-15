@@ -46,8 +46,7 @@ export const useProfileStore = defineStore('ProfileStore', {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        this.activeProfile = data;  
-                        console.log("profile ", JSON.stringify(data))                     
+                        this.activeProfile = data;                  
                     })
                     .catch((error) => {
                         console.error('Solr get-document API error:', error);

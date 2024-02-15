@@ -10,7 +10,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "@arc/arc-foundation": "^0.3.55",
+    "@arc/arc-foundation": "^0.3.64",
     "@arc/form-submission": "^0.1.47",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
