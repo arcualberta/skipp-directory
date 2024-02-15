@@ -13,6 +13,7 @@ const router = useRouter();
 const pStore = useProfileStore();
 
 const logout = () => {
+  pStore.userLoginToken=null;
   pStore.userLoginResult = null;
   sessionStorage.removeItem("user");
   localStorage.removeItem("catfishLoginResult")

@@ -43,10 +43,17 @@ export const useProfileStore = defineStore('ProfileStore', {
             return this.userLoginToken;
         },
         isUserLoggedIn(): boolean{
-            return this.userLoginResult? this.userLoginResult.success : false
+          
+            if(this.userLoginToken === null){
+                //login token null -- login validation failed
+                return false;
+            }
+            else{
+                return true;
+            }
         },
         getUserName(): string{
-            return this.userLoginResult?.name 
+            return this.userLoginResult?.username 
         }
        
     },
