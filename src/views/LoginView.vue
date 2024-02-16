@@ -26,14 +26,15 @@ const handleAuthorizationResult = ((val: AuthorizationResult)=>{
 
 
 <template>
-    <div>Login View </div>
-
-    <Login :pinia-instance="getActivePinia()"
-           :tenantId="tenantId" 
-           :apiRoot="authApiRoot"
-            @authorizationResult="handleAuthorizationResult"
-             />
+    <div class="google-login">
+        <Login :pinia-instance="getActivePinia()"
+            :tenantId="tenantId" 
+            :apiRoot="authApiRoot"
+                @authorizationResult="handleAuthorizationResult"
+                />
+    </div>
 </template>
-<style>
+
+<style scoped>
 
 </style>
