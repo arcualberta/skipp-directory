@@ -13,7 +13,7 @@ const authApiRoot = config.authorizationApiRoot;
 const profileStore = useProfileStore();
 
 const handleAuthorizationResult = ((authResult: AuthorizationResult)=>{
-    sessionStorage.setItem("authResult", authResult)
+    sessionStorage.setItem("authResult", JSON.stringify(authResult))
     profileStore.userLoginResult = authResult.loginResult
     profileStore.userLoginToken = authResult.jwtToken
     router.go(-1)

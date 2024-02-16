@@ -10,8 +10,9 @@ import {useProfileStore} from './stores/ProfileStore'
 const router = useRouter();
 const profileStore = useProfileStore();
 
-const authResult = sessionStorage.getItem("authResult") as AuthorizationResult;
-if(authResult){
+const sessionAuthResult = sessionStorage.getItem("authResult");
+if(sessionAuthResult){
+  const authResult = JSON.parse(sessionAuthResult) as AuthorizationResult
   profileStore.userLoginResult = authResult.loginResult
   profileStore.userLoginToken = authResult.jwtToken
 }
