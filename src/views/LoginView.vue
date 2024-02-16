@@ -4,32 +4,37 @@ import { getActivePinia } from 'pinia';
 import { default as config}  from '@/appsettings'
 import { ref } from 'vue';
 import { useProfileStore } from '../stores/ProfileStore'
-import LoginResult from '@arc/authorization'
+import {AuthorizationResult} from '@arc/authorization'
+import { useRouter } from 'vue-router'
 
+const router = useRouter();
 const tenantId = config.tenantId;
 const authApiRoot = config.authorizationApiRoot;
 const profileStore = useProfileStore();
 const userToken = ref(null)
-const getUserLoginToken = ((val: string)=>{
+const handleAuthorizationResult = ((val: AuthorizationResult)=>{
     console.log("user token: ", val)
-    userToken.value = JSON.parse(val) as LoginResult;
-    profileStore.setUserLoginResult(userToken.value)
+    userToken.value = val.jwtToken
 
-})
+    profileStore.userLoginResult = val.loginResult
+    profileStore.userLoginToken = val.jwtToken
+
+    router.push('/')
+});
+
 </script>
 
 
 <template>
-    <div>Login View </div>
-
-    <Login :pinia-instance="getActivePinia()"
-           :tenantId="tenantId" 
-           :apiRoot="authApiRoot"
-            @getJwtLoginResult="getUserLoginToken"
-             />
-
-             <div>{{userToken}}</div>
+    <div class="google-login">
+        <Login :pinia-instance="getActivePinia()"
+            :tenantId="tenantId" 
+            :apiRoot="authApiRoot"
+                @authorizationResult="handleAuthorizationResult"
+                />
+    </div>
 </template>
-<style>
+
+<style scoped>
 
 </style>
