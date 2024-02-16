@@ -19,7 +19,7 @@ const handleAuthorizationResult = ((val: AuthorizationResult)=>{
     profileStore.userLoginResult = val.loginResult
     profileStore.userLoginToken = val.jwtToken
 
-    router.push('/')
+    router.go(-1)
 });
 
 </script>
