@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import * as itemHelper from '../helpers/itemHelper';
 import { useSearchStore } from './../stores/SearchStore'
 import {useRouter} from 'vue-router'
-import { Guid } from 'guid-typescript';
+import { Guid } from 'guid-typescript'
 import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
 
 const props = defineProps<{ 

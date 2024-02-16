@@ -8,7 +8,7 @@ import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/
 import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
-import type {LoginResult, UserMembership}  from '@arc/authorization'
+import type {LoginResult}  from '@arc/authorization'
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 //const searchStore = useSearchStore();
@@ -43,7 +43,7 @@ export const useProfileStore = defineStore('ProfileStore', {
             return this.userLoginToken;
         },
         isUserLoggedIn(): boolean{
-            return this.userLoginToken
+            return this.userLoginToken != null
         },
         getUserName(): string{
             return this.userLoginResult?.username 
