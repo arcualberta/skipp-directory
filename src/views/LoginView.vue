@@ -11,13 +11,14 @@ const router = useRouter();
 const tenantId = config.tenantId;
 const authApiRoot = config.authorizationApiRoot;
 const profileStore = useProfileStore();
-const userToken = ref(null)
-const handleAuthorizationResult = ((val: AuthorizationResult)=>{
-    console.log("user token: ", val)
-    userToken.value = val.jwtToken
 
-    profileStore.userLoginResult = val.loginResult
-    profileStore.userLoginToken = val.jwtToken
+const handleAuthorizationResult = ((authResult: AuthorizationResult)=>{
+    //console.log("user token: ", val)
+
+    sessionStorage.setItem("authResult", authResult)
+
+    profileStore.userLoginResult = authResult.loginResult
+    profileStore.userLoginToken = authResult.jwtToken
 
     router.go(-1)
 });
