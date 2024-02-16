@@ -3,7 +3,6 @@ import { getActivePinia } from 'pinia';
 import { computed, onMounted, ref, watch } from 'vue';
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import Footer from './components/Footer.vue'
-
 import {useProfileStore} from './stores/ProfileStore'
 import LoginResult from '@arc/authorization'
 
@@ -43,7 +42,7 @@ const logout = () => {
                   Welcome {{pStore.getUserName}}! 
                   <router-link :to="{}" href="" @click="logout">Logout</router-link>
               </span>
-            <router-link v-else to="/login">Login</router-link>
+            <router-link class="navigation-menu-box login" v-else to="/login">Login</router-link>
           </span>  
                 </nav>
               </header>
@@ -81,8 +80,8 @@ const logout = () => {
   margin-top: 20px;
 }
 .login{
-   background-color: #327D49;
-  color: white;
+   background-color: #327D49 !important;
+  color: white !important;
   padding: 10px 30px 10px 30px;
   border-radius: 5px;
   margin-left: 30px;

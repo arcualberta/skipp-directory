@@ -4,7 +4,7 @@ import { getActivePinia } from 'pinia';
 import { default as config}  from '@/appsettings'
 import { ref } from 'vue';
 import { useProfileStore } from '../stores/ProfileStore'
-import LoginResult from '@arc/authorization'
+import { LoginResult } from '@arc/authorization'
 
 const tenantId = config.tenantId;
 const authApiRoot = config.authorizationApiRoot;
@@ -36,9 +36,10 @@ const getUserLoginToken = ((val: string)=>{
 <style>
 .login-pannel{
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 .button-centre{
+    margin-top: 50px;
     text-align: center;
 }
 .login-lable{
