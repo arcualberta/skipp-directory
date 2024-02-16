@@ -9,6 +9,7 @@ import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 import type {LoginResult}  from '@arc/authorization'
+import { AuthProxy } from '@arc/arc-foundation/lib/api';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 //const searchStore = useSearchStore();
@@ -26,7 +27,8 @@ export const useProfileStore = defineStore('ProfileStore', {
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
         userLoginResult: null as LoginResult | null,
-        userLoginToken: null as string | null //jwt token return from auth proxy
+        userLoginToken: null as string | null, //jwt token return from auth proxy
+        apiKey: null as string | null
   }),
     getters: {
         isAdmin(): boolean {
@@ -47,6 +49,9 @@ export const useProfileStore = defineStore('ProfileStore', {
         },
         getUserName(): string{
             return this.userLoginResult?.username 
+        },
+        getApiKey(): string | null {
+            return this.userLoginResult ? this.apiKey : null
         }
        
     },
@@ -70,6 +75,10 @@ export const useProfileStore = defineStore('ProfileStore', {
             }
             else
                 this.activeProfile = null;
+        },
+        async loadApiKey(){
+            const proxy = new AuthProxy(config.default.authorizationApiRoot, config.default.tenantId as unknown as Guid);
+            this.apiKey = await proxy.getApiToken(config.default.appId, config.default.tenantId as unknown as Guid)
         }        
     }
 });
