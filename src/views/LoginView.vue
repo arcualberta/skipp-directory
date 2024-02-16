@@ -20,16 +20,33 @@ const getUserLoginToken = ((val: string)=>{
 
 
 <template>
-    <div>Login View </div>
-
-    <Login :pinia-instance="getActivePinia()"
-           :tenantId="tenantId" 
-           :apiRoot="authApiRoot"
+    <div class="container login-pannel">
+        <div class="login-lable">Login with Google</div>
+        <div class="button-centre">
+            <Login :pinia-instance="getActivePinia()"
+        :tenantId="tenantId" 
+        :apiRoot="authApiRoot"
             @getJwtLoginResult="getUserLoginToken"
-             />
-
-             <div>{{userToken}}</div>
+        />
+        </div>
+        
+    </div>
+    
 </template>
 <style>
-
+.login-pannel{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.button-centre{
+    text-align: center;
+}
+.login-lable{
+    font-size: 32px;
+    font-weight: 600;
+    color: #327D49;
+    margin-left: 50px;
+    padding-top: 60px;
+    text-align: center;  
+}
 </style>

@@ -94,7 +94,7 @@ const setPage = (page : number) => {
           </div>
           <div class="col-sm-5">
             <div class="banner-heading">
-              SKIPP | Situated Knowledges : Indigenous Peoples and Place to Roots of Change
+              ROOTS OF CHANGE
             </div>
             <div class="banner-description">
               Indigenous-Engaged Researcher Database
@@ -246,16 +246,18 @@ cursor: pointer;
 }
 .banner-heading{
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     color: #327D49;
     margin-left: 50px;
-    padding-top: 30px;
+    padding-top: 60px;
+    text-align: center;
 }
 .banner-description{
   font-size: 22px;
     font-weight: 600;
     margin-left: 50px;
     padding-top: 30px;
+    text-align: center;
 }
 .center {
   border: 1px solid;
