@@ -5,33 +5,38 @@ import { default as config}  from '@/appsettings'
 import { ref } from 'vue';
 import { useProfileStore } from '../stores/ProfileStore'
 import { LoginResult } from '@arc/authorization'
+import {AuthorizationResult} from '@arc/authorization'
+import { useRouter } from 'vue-router'
 
+const router = useRouter();
 const tenantId = config.tenantId;
 const authApiRoot = config.authorizationApiRoot;
 const profileStore = useProfileStore();
-const userToken = ref(null)
-const getUserLoginToken = ((val: string)=>{
-    console.log("user token: ", val)
-    userToken.value = JSON.parse(val) as LoginResult;
-    profileStore.setUserLoginResult(userToken.value)
 
-})
+const handleAuthorizationResult = ((authResult: AuthorizationResult)=>{
+    sessionStorage.setItem("authResult", JSON.stringify(authResult))
+    profileStore.userLoginResult = authResult.loginResult
+    profileStore.userLoginToken = authResult.jwtToken
+    router.go(-1)
+});
+
 </script>
 
 
 <template>
-    <div class="container login-pannel">
+
+<div class="container login-pannel">
         <div class="login-lable">Login with Google</div>
         <div class="button-centre">
             <Login :pinia-instance="getActivePinia()"
-        :tenantId="tenantId" 
-        :apiRoot="authApiRoot"
-            @getJwtLoginResult="getUserLoginToken"
+            :tenantId="tenantId" 
+            :apiRoot="authApiRoot"
+            @authorizationResult="handleAuthorizationResult"
         />
         </div>
-        
-    </div>
-    
+    </div>    
+
+   
 </template>
 <style>
 .login-pannel{

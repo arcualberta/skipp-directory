@@ -8,7 +8,8 @@ import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/
 import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
-
+import type {LoginResult}  from '@arc/authorization'
+import { AuthProxy } from '@arc/arc-foundation/lib/api';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 //const searchStore = useSearchStore();
@@ -26,7 +27,8 @@ export const useProfileStore = defineStore('ProfileStore', {
         userInfo: null as UserInfo | null,
         profileDeleteStatus: "",
         userLoginResult: null as LoginResult | null,
-       // isUserLogin: null as boolean | false
+        userLoginToken: null as string | null, //jwt token return from auth proxy
+        apiKey: null as string | null
   }),
     getters: {
         isAdmin(): boolean {
@@ -39,11 +41,17 @@ export const useProfileStore = defineStore('ProfileStore', {
         getUserLoginResult(): LoginResult{
             return this.userLoginResult;
         },
-        isUserLogin(): boolean{
-            return this.userLoginResult? this.userLoginResult.success : false
+        getUserLoginToken(): string | null{
+            return this.userLoginToken;
+        },
+        isUserLoggedIn(): boolean{
+            return this.userLoginToken != null
         },
         getUserName(): string{
-            return this.userLoginResult? this.userLoginResult.username : ""
+            return this.userLoginResult?.username 
+        },
+        getApiKey(): string | null {
+            return this.userLoginResult ? this.apiKey : null
         }
        
     },
@@ -68,13 +76,10 @@ export const useProfileStore = defineStore('ProfileStore', {
             else
                 this.activeProfile = null;
         },
-        setUserLoginResult(loginResult: LoginResult){
-            this.userLoginResult = loginResult;
-            console.log("profile store: ", this.userLoginResult)
-            this.isUserLogin = loginResult.success;
-            console.log("user Login: ", this.isUserLogin)
-        }
-        
+        async loadApiKey(){
+            const proxy = new AuthProxy(config.default.authorizationApiRoot, config.default.tenantId as unknown as Guid);
+            this.apiKey = await proxy.getApiToken(config.default.appId, config.default.tenantId as unknown as Guid)
+        }        
     }
 });
 
