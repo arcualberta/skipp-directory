@@ -13,9 +13,9 @@ const router = useRouter();
 const pStore = useProfileStore();
 
 const logout = () => {
+  pStore.userLoginToken=null;
   pStore.userLoginResult = null;
   sessionStorage.removeItem("user");
-  localStorage.removeItem("catfishLoginResult")
   return false;
 }
 
@@ -39,11 +39,8 @@ const logout = () => {
                 <a href=" https://www.ualberta.ca/provost/portfolio/indigenous-initiatives/index.html" target="_blank" class="navigation-menu-box">Contact</a>
       
           <span style="float: right;">
-              <span v-if="pStore.isUserLogin">
-                  Welcome {{pStore.getUserName}}! 
-                  <router-link :to="{}" href="" @click="logout">Logout</router-link>
-              </span>
-            <router-link v-else to="/login">Login</router-link>
+              <router-link v-if="pStore.isUserLoggedIn" :to="{}" @click="logout">Logout</router-link>
+              <router-link v-else to="/login">Login</router-link>
           </span>  
                 </nav>
               </header>
