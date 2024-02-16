@@ -13,13 +13,9 @@ const authApiRoot = config.authorizationApiRoot;
 const profileStore = useProfileStore();
 
 const handleAuthorizationResult = ((authResult: AuthorizationResult)=>{
-    //console.log("user token: ", val)
-
     sessionStorage.setItem("authResult", authResult)
-
     profileStore.userLoginResult = authResult.loginResult
     profileStore.userLoginToken = authResult.jwtToken
-
     router.go(-1)
 });
 
