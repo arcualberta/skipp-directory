@@ -8,7 +8,7 @@
     import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
     import router from '../router'
     import { StatusCodes } from 'http-status-codes'
-    import { onMounted } from 'vue';
+    import { onMounted, computed } from 'vue';
 
     const profileStore = useProfileStore();
     const route = useRoute();
@@ -18,10 +18,10 @@
       }
     }
     const id = route.params.id as unknown as Guid;
-    //profileStore.setActiveProfile(id);
-    const formData = profileStore.getFormData;
+    profileStore.setActiveProfile(id);
+    const formData = computed(() => profileStore.getFormData);
     const solrApiRoot = config.solrApiRoot;
-
+    
     onMounted(() => {
       profileStore.loadApiKey()
     })

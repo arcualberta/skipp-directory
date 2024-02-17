@@ -6,7 +6,7 @@ import * as config from '../appsettings';
 import { baseState, fetchQuery } from './common';
 import type { SolrResultEntry, SolrSearchResult } from '@arc/arc-foundation/lib/solr/models';
 import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
-  import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
+import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 import type {LoginResult}  from '@arc/authorization'
 import { AuthProxy } from '@arc/arc-foundation/lib/api';
@@ -29,14 +29,19 @@ export const useProfileStore = defineStore('ProfileStore', {
         userLoginResult: null as LoginResult | null,
         userLoginToken: null as string | null, //jwt token return from auth proxy
         apiKey: null as string | null
+
   }),
     getters: {
         isAdmin(): boolean {
             return this.userInfo?.roles?.includes("SysAdmin") ? true : false;
         },
-        getFormData(): ArcFormData | CompositeFieldData {
-            const formData = toFormData(this.activeProfile as SolrResultEntry, JoinUsFormTemplate as unknown as FormTemplate);
-            return formData
+        getFormData(): ArcFormData | CompositeFieldData | null {
+            if(this.activeProfile){
+                return toFormData(this.activeProfile as SolrResultEntry, JoinUsFormTemplate as unknown as FormTemplate)  
+            }
+            else{
+                return null
+            }
         },
         getUserLoginResult(): LoginResult{
             return this.userLoginResult;
@@ -67,14 +72,15 @@ export const useProfileStore = defineStore('ProfileStore', {
                 })
                     .then(response => response.json())
                     .then(data => {
-                        this.activeProfile = data;                  
+                        this.activeProfile = data;  
                     })
                     .catch((error) => {
                         console.error('Solr get-document API error:', error);
                     });
             }
-            else
+            else{
                 this.activeProfile = null;
+            }
         },
         async loadApiKey(){
             const proxy = new AuthProxy(config.default.authorizationApiRoot, config.default.tenantId as unknown as Guid);
