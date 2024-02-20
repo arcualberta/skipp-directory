@@ -42,7 +42,7 @@ const logout = () => {
                 <a href=" https://www.ualberta.ca/provost/portfolio/indigenous-initiatives/index.html" target="_blank" class="navigation-menu-box">Contact</a>
       
           <span style="float: right;">
-              <router-link v-if="profileStore.isUserLoggedIn" :to="{}" @click="logout">Logout</router-link>
+              <router-link class="navigation-menu-box login" v-if="profileStore.isUserLoggedIn" :to="{}" @click="logout">Logout</router-link>
               <router-link class="navigation-menu-box login" v-else to="/login">Login</router-link>
           </span>  
                 </nav>

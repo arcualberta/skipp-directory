@@ -13,7 +13,7 @@
 import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 
   const profileStore = useProfileStore();
-
+  const isEditingAllowed = ref(false);
   const route = useRoute();
   const router = useRouter();
 
@@ -31,13 +31,16 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
-  const isEditingAllowed = ():boolean  => { 
-    if(profileStore.userLoginResult.emai == email){
-      return true;
+  
+    watch(() => email, async newEmail => {
+      if(profileStore.userLoginResult.email === newEmail){
+      isEditingAllowed.value = true;
     }else{
-    return false;
+      isEditingAllowed.value = false;
     }
-  }
+    })
+    
+  
   
   onMounted(()=>{
     window.scrollTo(0,0);
@@ -51,7 +54,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   </div>
   <div id="profile" class="container">
     <div class="profile-edit">
-      <button v-if="isEditingAllowed()" @click="editProfile(id)" class="profilr-edit-button">Edit</button>
+      <button v-if="isEditingAllowed" @click="editProfile(id)" class="profilr-edit-button">Edit</button>
     </div>
     <div class="row space-bottom">
       <div class="col-sm-4">
