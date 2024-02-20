@@ -31,8 +31,9 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
-  
-    watch(() => email, async newEmail => {
+
+
+    watch(() => email.value, async newEmail => {
       if(profileStore.userLoginResult.email === newEmail){
       isEditingAllowed.value = true;
     }else{
