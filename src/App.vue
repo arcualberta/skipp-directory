@@ -10,7 +10,7 @@ const router = useRouter();
 const profileStore = useProfileStore();
 
 const sessionAuthResult = sessionStorage.getItem("authResult");
-if(sessionAuthResult){
+if(sessionAuthResult && sessionAuthResult !== "undefined"){
   const authResult = JSON.parse(sessionAuthResult) as AuthorizationResult
   profileStore.userLoginResult = authResult.loginResult
   profileStore.userLoginToken = authResult.jwtToken

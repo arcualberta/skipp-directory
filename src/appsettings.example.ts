@@ -16,7 +16,6 @@ export default {
     
     //LOGIN component  settings
     googleLocalClientId: "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
-    googleProductionClientId: "589183038778-i21iod3d3obrmot5vk3ap59akglg5a9u.apps.googleusercontent.com",
    
     appId: "22edb968-b74c-4826-bef0-6fda9d6c349d" as unknown as Guid
 };
