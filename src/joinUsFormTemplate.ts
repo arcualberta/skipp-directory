@@ -4967,7 +4967,7 @@ export const JoinUsFormTemplate = {
 					{
 						"id": "9ecdf30e-967d-1677-8bc0-49e8108c5319",
 						"lang": "en",
-						"value": "Yes, I understand"
+						"value": "Yes, I understand."
 					},
 					{
 						"id": "d0db3266-c189-95ee-9749-7c8f67702693",
@@ -5081,7 +5081,7 @@ export const JoinUsFormTemplate = {
 				{
 					"id": "97d9b054-b226-f9d8-6c2a-9aefeacc883f",
 					"lang": "en",
-					"value": "I agree"
+					"value": "I agree."
 				},
 				{
 					"id": "40d35ef1-3606-20b9-08ca-2f79f110a8df",

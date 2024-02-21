@@ -66,7 +66,7 @@
     </div> 
     <div class="communities-org psh space-bottom" v-if="location">Recently Engaged Indigenous Communities / Nation(s) / organization(s): <span class="pronounce-value">{{ location }}</span></div>
     </div>
-    <div class=" container research-project">
+    <div v-if="projectList?.length > 0" class=" container research-project">
       Recent Indigenous-Engaged Research Projects
     </div>
     
