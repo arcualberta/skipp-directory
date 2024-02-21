@@ -32,13 +32,17 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
 
+  const isAdminRole = () =>{
+    return profileStore.userLoginResult.membership.tenancy!.find(tenant  => tenant.id == config.tenantId ).roles?.find(role => role.name == "Admin") ? true : false;
+  }
 
     watch(() => email.value, async newEmail => {
       if(profileStore.userLoginResult.email === newEmail){
       isEditingAllowed.value = true;
     }else{
-      isEditingAllowed.value = false;
+      isEditingAllowed.value = isAdminRole();
     }
+    //console.log("is admin ",isAdminRole());
     })
     
   
