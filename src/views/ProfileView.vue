@@ -9,11 +9,8 @@
   import * as itemHelper from '../helpers/itemHelper';
   import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
   import { toFormData } from '@arc/arc-foundation/lib/solr/helpers';
-  import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
-import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 
   const profileStore = useProfileStore();
-  const isEditingAllowed = ref(false);
   const route = useRoute();
   const router = useRouter();
 
@@ -32,21 +29,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
 
-  const isAdminRole = () =>{
-    return profileStore.userLoginResult.membership.tenancy!.find(tenant  => tenant.id == config.tenantId ).roles?.find(role => role.name == "Admin") ? true : false;
-  }
-
-    watch(() => email.value, async newEmail => {
-      if(profileStore.userLoginResult.email === newEmail){
-      isEditingAllowed.value = true;
-    }else{
-      isEditingAllowed.value = isAdminRole();
-    }
-    //console.log("is admin ",isAdminRole());
-    })
-    
-  
-  
+   
   onMounted(()=>{
     window.scrollTo(0,0);
   })
@@ -59,7 +42,7 @@ import type { FormTemplate } from '@arc/arc-foundation/lib/forms/models';
   </div>
   <div id="profile" class="container">
     <div class="profile-edit">
-      <button v-if="isEditingAllowed" @click="editProfile(id)" class="profilr-edit-button">Edit</button>
+      <button v-if="profileStore.isAdmin || email == profileStore.currentUserEmail" @click="editProfile(id)" class="profilr-edit-button">Edit</button>
     </div>
     <div class="row space-bottom">
       <div class="col-sm-4">

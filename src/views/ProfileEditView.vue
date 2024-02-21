@@ -19,6 +19,8 @@
     }
     const id = route.params.id as unknown as Guid;
     profileStore.setActiveProfile(id);
+    profileStore.formSubmissionMode = "UPDATE";
+
     const formData = computed(() => profileStore.getFormData);
     const solrApiRoot = config.solrApiRoot;
     

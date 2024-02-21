@@ -9,6 +9,7 @@
   import { StatusCodes } from 'http-status-codes'
 
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
+import { useProfileStore } from '@/stores/ProfileStore'
   
   const route = useRoute()
   const submissionId = route.params.submissionId as unknown as Guid
@@ -18,6 +19,10 @@
         router.push({name:'success'})
       }
   }
+
+  const store = useProfileStore()
+  store.formSubmissionMode = "CREATE";
+  
 </script>
 <template>
   <div class="container">

@@ -28,12 +28,21 @@ export const useProfileStore = defineStore('ProfileStore', {
         profileDeleteStatus: "",
         userLoginResult: null as LoginResult | null,
         userLoginToken: null as string | null, //jwt token return from auth proxy
-        apiKey: null as string | null
+        apiKey: null as string | null,
+        formSubmissionMode: null as null | "CREATE" | "UPDATE"
 
   }),
     getters: {
         isAdmin(): boolean {
-            return this.userInfo?.roles?.includes("SysAdmin") ? true : false;
+            if (this.userInfo?.roles?.includes("SysAdmin")){
+                return true;
+            }
+            else{
+                return this.userLoginResult?.membership?.tenancy?.find(tenant  => tenant.id == config.default.tenantId )?.roles?.find(role => role.name == "Admin") ? true : false;
+            }
+        },
+        currentUserEmail(): string | null {
+            return this.userLoginResult?.email;
         },
         getFormData(): ArcFormData | CompositeFieldData | null {
             if(this.activeProfile){

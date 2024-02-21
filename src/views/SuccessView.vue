@@ -1,7 +1,19 @@
+<script setup lang="ts">
+import { useProfileStore } from '@/stores/ProfileStore';
+import { onMounted } from 'vue';
+
+  const store = useProfileStore()
+  
+  onMounted(()=>{
+    window.scrollTo(0,0);
+  })
+  
+</script>
 <template>
     <div class="container">
         <div class="header">
-            Profile Created Successfully!
+            <span v-if="store.formSubmissionMode === 'CREATE'">Profile Created Successfully!</span>
+            <span v-else>Profile Updated Successfully!</span>
         </div>
         <div class="description">
             Thank you for submitting your response
