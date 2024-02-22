@@ -31,14 +31,14 @@ export function getConcatenatedStringValue(item: SolrResultEntry, solrFieldName:
     return getStringArrayValue(item, solrFieldName)?.join(", ");
 }
 
-export function getName(item: SolrResultEntry){
-    return getStringArrayValue(item, config.SearchResultFieldMapping.NAME).join(", ")
+export function getName(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.NAME) as string
 }
 export function getPosition(item: SolrResultEntry): string{
-    return getStringArrayValue(item, config.SearchResultFieldMapping.POSITION).join(", "); 
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.POSITION) as string
 }
 export function getEmail(item: SolrResultEntry): string {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.EMAIL).join(", "); 
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.EMAIL) as string; 
 }
 
 export function getKeywords(item: SolrResultEntry) {
@@ -47,17 +47,17 @@ export function getKeywords(item: SolrResultEntry) {
 export function getKeywordList(item: SolrResultEntry) {
     return getStringArrayValue(item, config.SearchResultFieldMapping.KEYWORDS);
 }
-export function getFaculty(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.FACULTY).join(", ");
+export function getFaculty(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.FACULTY) as string;
 }
-export function getPronouns(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.PRONOUNS).join(", ");
+export function getPronouns(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PRONOUNS) as string;
 }
-export function getWebsiteLinks(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.WEBSITELINKS);
+export function getWebsiteLinks(item: SolrResultEntry): string[] {
+    return [getSolrFieldValue(item, config.SearchResultFieldMapping.WEBSITELINKS) as string];
 }
-export function getIndigeniousCommunity(item: SolrResultEntry) {
-    return getConcatenatedStringValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY);
+export function getIndigeniousCommunity(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.NATIONORCOMMUNITY) as string;
 }
 export function getLocation(item: SolrResultEntry) {
     return getConcatenatedStringValue(item, config.SearchResultFieldMapping.LOCATION);
@@ -65,15 +65,15 @@ export function getLocation(item: SolrResultEntry) {
 export function getProjectList(item: SolrResultEntry) {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_LIST) as unknown as SolrResultEntry[];
 }
-export function getProjectTitle(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_TITLE).join(", ");
+export function getProjectTitle(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_TITLE) as string;
 }
-export function getProjectDescription(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_DESCRIPTION).join(", ");
+export function getProjectDescription(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_DESCRIPTION) as string;
 }
-export function getProjectInitiation(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_INITIATION).join(", ");
+export function getProjectInitiation(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_INITIATION) as string;
 }
-export function getProjectRole(item: SolrResultEntry) {
-    return getStringArrayValue(item, config.SearchResultFieldMapping.PROJECT_ROLE).join(", ");
+export function getProjectRole(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_ROLE) as string;
 }
