@@ -80,13 +80,12 @@ export const fetchQuery = (
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());
     formData.append("filterQuery", "");
-    formData.append("sortBy", "");
     formData.append("fieldList", "");
     formData.append("maxHiglightSnippets", "1");
     
     const apiRootsStore = useApiRootsStore();
    
-    const queryApiUrl = `${apiRootsStore.solrRoot}/api/SolrSearch`
+    const queryApiUrl = `${apiRootsStore.solrRoot}/api/SolrSearch?sortBy=${config.SearchResultFieldMapping.NAME}%20asc`
     const tenantId = `${config.default.tenantId}`
     fetch(queryApiUrl, {
         
