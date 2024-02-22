@@ -1,0 +1,797 @@
+<add>
+	<doc>
+		<field name="id">95f90f9f-1c45-4652-82dd-3f589c2f44a5</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">95f90f9f-1c45-4652-82dd-3f589c2f44a5</field>
+		<field name="TimeStamp_dt">2023-04-13T20:06:10Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">michaelf@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Michael Frishkopf</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Dept of Music, Canadian Centre for Ethnomusicology</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Egypt</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">northern Ghana</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">eastern Ghana</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">linguistic and cultural continuity</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">civil society</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">community building</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">health and wellness</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">m4ghd.org</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">ff81bd66-8a42-4ee7-a85d-7c6cac493e54</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">ff81bd66-8a42-4ee7-a85d-7c6cac493e54</field>
+		<field name="TimeStamp_dt">2023-04-13T20:35:32Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">jane.samson@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Jane Samson</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Arts</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">New Zealand</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous explorers</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous clergy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">colonialism</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">abe8d7f7-be5c-41dc-877f-c99c73016d14</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">abe8d7f7-be5c-41dc-877f-c99c73016d14</field>
+		<field name="TimeStamp_dt">2023-04-13T22:10:15Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">aalmond@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Amanda Almond</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Research Assistant</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Women's and Gender Studies</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Campus Saint-Jean</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Métis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Edmonton and Area</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Canada</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">youth</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">two-spirit</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">2e80e604-fc83-4d11-a06e-ef72eec58a03</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">2e80e604-fc83-4d11-a06e-ef72eec58a03</field>
+		<field name="TimeStamp_dt">2023-04-13T23:04:37Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">couture2@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Selena Couture</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Dept of Drama, Faculty of Arts</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Board Member - Solid State Community Industries and PuSh International Performing Arts Festival</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she / her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">(Baniwa) Itacoatiara-Mirim Community in the Amazonian peri-urban area of São Gabriel da Cachoeira</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">(Guajajra) Rio de Janeiro</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">(Musqueam &amp; Squamish) Coast Salish territories - Lower Mainland area of BC</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">performance</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">protection and maintenance of land and water relations</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">language revitalization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://hemisphericencounters.ca/</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">f3f00fc1-e715-487d-8c7a-84a88f4a8790</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">f3f00fc1-e715-487d-8c7a-84a88f4a8790</field>
+		<field name="TimeStamp_dt">2023-04-14T17:40:16Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">shannon.scott@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Shannon Scott</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Nursing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Winnipeg</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">knowledge translation</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">knowledge mobilization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">fe901997-b80c-4267-9d09-e9ee19086849</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">fe901997-b80c-4267-9d09-e9ee19086849</field>
+		<field name="TimeStamp_dt">2023-04-14T18:11:59Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">smacdon@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Shannon MacDonald</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Nursing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">School of Public Health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">vaccine</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">immunization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">aimmresearch.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">9d3737c0-db6a-40a5-8b54-613611374f43</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">9d3737c0-db6a-40a5-8b54-613611374f43</field>
+		<field name="TimeStamp_dt">2023-04-16T17:35:09Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">hadley.friedland@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Hadley Friedland</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Law</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Wahkohtowin Law and Governance Lodge</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/Her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta or national organization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous law revitalization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous law development</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous research methods</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">child and family wellbeing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">governance</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">land-based learning</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://www.ualberta.ca/wahkohtowin/index.html</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">2b1e9278-d33a-4876-b7be-bfbf06b91e7d</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">2b1e9278-d33a-4876-b7be-bfbf06b91e7d</field>
+		<field name="TimeStamp_dt">2023-04-17T03:23:05Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">davidd@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">David Deephouse</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Dept. of Strategy, Entrepreneurship, and Management; Faculty of Business</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Int'l Research Fellow, Oxford University Centre for Corporate Reputation</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">he/they</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Saskatoon, but people are distributed widely</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Decolonization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss"></field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">1eaa9619-e4db-43e2-8399-4e834c810763</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">1eaa9619-e4db-43e2-8399-4e834c810763</field>
+		<field name="TimeStamp_dt">2023-04-17T15:34:06Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">lewheele@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Laurel wheeler</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Assistant Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Arts, Department of Economics</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Center for Indian Country Development, Federal Reserve Bank of Minneapolis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Treaty 6 and Indian Country (US)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">economic development</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">local labor markets</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">natural resources</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">financial institutions</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://sites.google.com/view/laurelewheeler/about/</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">b8aacf5a-7691-4526-9335-e161bae0bff6</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">b8aacf5a-7691-4526-9335-e161bae0bff6</field>
+		<field name="TimeStamp_dt">2023-04-18T16:52:15Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">kdking@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Keith D King</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Nursing - University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Edmonton 2Spirit Society</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/They</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Métis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta, Ontario, BC</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous Health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Sexual &amp; Reproductive Health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Mental Health &amp; Substance Use</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://www.ualberta.ca/nursing/about/contact-us-and-people/assistant-teaching-professor/king.html</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">eb46dedf-ea6f-46ab-9800-7eb9d842de3f</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">eb46dedf-ea6f-46ab-9800-7eb9d842de3f</field>
+		<field name="TimeStamp_dt">2023-04-19T20:52:55Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">rdmcmaho@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Rob McMahon</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Arts </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Political Science / Media &amp; Technology Studies</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Different parts of Canada with a focus on rural, remote, Northern regions</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">digital and Internet technologies</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">digital literacy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">digital equity/inclusion</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">telecommunications policy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">community-based participatory action research</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">www.FirstMile.ca / www.DigitalNWT.ca / www.SweetgrassAR.ca </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">81047276-f4c8-439c-adf0-c77cffe62af0</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">81047276-f4c8-439c-adf0-c77cffe62af0</field>
+		<field name="TimeStamp_dt">2023-04-19T21:32:10Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">sean.robertson@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Sean Robertson</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Native Studies, U of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">he/him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Nunavut</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Inuit</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">emotion</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">community governance</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">resource extraction</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">masculinities</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://www.sean-robertson.com/</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">a16be97d-2f15-41c7-9915-da8f1154d693</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">a16be97d-2f15-41c7-9915-da8f1154d693</field>
+		<field name="TimeStamp_dt">2023-04-21T14:22:35Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">sharon.farnel@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Sharon Farnel</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Academic Teaching Staff</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Library &amp; Museums</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/Her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Inuvialuit Settlement Region</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">metadata</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">digital libraries</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">community-driven knowledge organization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">critical knowledge organization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">cultural heritage</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://inuvialuitdigitallibrary.ca/, https://sites.google.com/ualberta.ca/dln/home, https://sites.google.com/ualberta.ca/inuvialuitvoices/home</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">592b92f6-e3f9-4109-9d01-12b839f7af4f</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">592b92f6-e3f9-4109-9d01-12b839f7af4f</field>
+		<field name="TimeStamp_dt">2023-04-26T17:49:51Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">sjross@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Sue Ross</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor Emeritus</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Obstetrics and Gynecology, University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">WCHRI and Division of Reproductive Sciences</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Maskwacis, Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Aging Well</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Gender &amp; Wellness</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Menopause</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">Not applicable</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">e0a45651-ffaa-4246-81b1-1e9ee80602ba</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">e0a45651-ffaa-4246-81b1-1e9ee80602ba</field>
+		<field name="TimeStamp_dt">2023-04-26T17:56:35Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">tmonahan@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Tristan </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Research Assistant</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Macewan University, Math department </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">First Nation</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Edmonton</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Data science</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">statistics</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">computer science</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://ca.linkedin.com/in/tristan-monahan-1b7196223</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">2026cf3d-c8db-4881-b52b-d2f03e7ff02c</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">2026cf3d-c8db-4881-b52b-d2f03e7ff02c</field>
+		<field name="TimeStamp_dt">2023-04-26T18:22:10Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">cbuffalo@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Christina Buffalo</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Research Assistant</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Young Indigenous Women's Circle of Leadership, under Supporting Indigenous Language Revitalization and Elementary Education</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">First Nation</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta, Saskatchewan</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">language revitalization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Cree language</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">youth</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">mental health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">empowerment</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">cf679f23-e923-454f-9cfc-f59df5229da1</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">cf679f23-e923-454f-9cfc-f59df5229da1</field>
+		<field name="TimeStamp_dt">2023-04-26T18:33:07Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">wolfston@mts.net</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Irene Friesen Wolfstone</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Education</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Manitoba, where the Red River meets Lake Winnipeg</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">climate change adaptations</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">relating with Land and Kin</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">living the cosmology of the Land</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">regenerating</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">sharing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">welcoming difference</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">reMembering cultural memories.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">c2b38e82-3d93-42df-8b57-073637be56fd</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">c2b38e82-3d93-42df-8b57-073637be56fd</field>
+		<field name="TimeStamp_dt">2023-04-26T19:58:42Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">cmaste@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Centre for Mathematics, Science and Technology Education</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Education </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Centre for Mathematics, Science and Technology Education</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">N/A</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Various Locations</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">The educational system in Alberta (and across Canada) has been called to integrate Indigenous knowledges and teaching approaches in their classroom by the Truth and Reconciliation Commission. Many Alberta teachers have shown interest and willingness to participate and become allies with Indigenous Peoples to achieve this goal. However</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">in our experience as an educational research and outreach centre</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">teachers often find that</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">especially in the sciences</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">they feel they lack the ability to do this due to inexperience with pedagogical methods</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">the process of decolonization in general and the unique holistic environmental approaches of Indigenous Peoples. In partnership with a locally-based  Indigenous Knowledge-keeper CMASTE has offered a year long Land- based Learning experience for kindergarten to grade 12 science teachers.  The purpose of this study is to assess how Land-based Learning could be used as an effective teacher professional development model with a sample of science teachers in Alberta.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">N/A</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">002dc875-18a4-4d94-96f2-322dd65b73c3</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">002dc875-18a4-4d94-96f2-322dd65b73c3</field>
+		<field name="TimeStamp_dt">2023-04-26T22:54:28Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">tharnett@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Tanya Harnett</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Art and Design/ Faculty of Native Studies </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">First Nation</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Saskatchewan</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Art</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">I don't understand or I have concerns.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">I do not consent to my information being in the database.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">4e575e2b-5f9e-4592-adf0-1f3bc28b68b4</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">4e575e2b-5f9e-4592-adf0-1f3bc28b68b4</field>
+		<field name="TimeStamp_dt">2023-04-27T16:36:14Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">ames1@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Jillian Ames</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Science</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Earth &amp; Atmospheric Department / Human Geography </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she/they</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Métis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta (urban)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">housing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">community housing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous-led</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">decolonization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://www.linkedin.com/in/jillianames/</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">077241df-f909-49f2-b2b5-39e0146f5bc9</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">077241df-f909-49f2-b2b5-39e0146f5bc9</field>
+		<field name="TimeStamp_dt">2023-04-28T20:21:55Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">adeleon1@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Ann De Leon</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Arts</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Mexico</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Mexican Codices (Indigenous pictorial manuscripts)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Nahuatl language (Huasteca and classical)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Aztec history</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Nahua historians and intellectuals</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Transcription and Translation of Colonial Nahuatl Documents</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous video games</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">bfd1197a-8f54-4cf8-843e-0c1ed7d45600</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">bfd1197a-8f54-4cf8-843e-0c1ed7d45600</field>
+		<field name="TimeStamp_dt">2023-04-28T21:37:49Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">olefeldt@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">David Olefeldt</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Renewable Resources (ALES)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">High Level, Hay River, Fort Simpson</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">water quality</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">wetlands</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">peatlands</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">climate change</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">www.caws.ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">I don't understand or I have concerns.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">I do not consent to my information being in the database.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">9a57cda4-3dd2-46ba-a586-1ba816db6674</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">9a57cda4-3dd2-46ba-a586-1ba816db6674</field>
+		<field name="TimeStamp_dt">2023-04-28T22:46:09Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">d.barreda@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Daniel Barreda</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculties of ALES and Science</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">animal and environmental health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">3c8e46b2-81e5-416b-ac36-d8336052fe3f</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">3c8e46b2-81e5-416b-ac36-d8336052fe3f</field>
+		<field name="TimeStamp_dt">2023-04-29T15:12:03Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">rcobb@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Russell Cobb</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Arts-MLCS, Media Studies, WRITE </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Arts Rep to Native Studies </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">he, him </field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Muscogee Nation (eastern Oklahoma, US)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Land tenure</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">energy humanities</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">intersections of Native and African identity in cultural formations in U.S. Indian Country</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://russellcobb.pressfolios.com/</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">8d0182b6-d210-430d-b75f-7867a4721ce9</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">8d0182b6-d210-430d-b75f-7867a4721ce9</field>
+		<field name="TimeStamp_dt">2023-05-01T16:46:49Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">scottn@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Scott Nielsen</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">ALES, Department of Renewable Resources</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Fort McMurray</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">bison</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">buffalo</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">No</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">1a1212c0-15c5-4ac6-b700-7d347e5484fe</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">1a1212c0-15c5-4ac6-b700-7d347e5484fe</field>
+		<field name="TimeStamp_dt">2023-05-01T16:51:29Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">adam.gaudry@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Adam Gaudry</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Native Studies</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/Him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Métis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">AB and NWT</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Métis Studies</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Land-based Learning</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Métis Governance and History</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">e2d94498-7182-4b04-90e5-f616e39169ee</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">e2d94498-7182-4b04-90e5-f616e39169ee</field>
+		<field name="TimeStamp_dt">2023-05-01T19:38:01Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">rawleigh@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Garrett Rawleigh</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/Him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Northeastern Alberta, Canada</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Ecology</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Habitat Selection</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">18de3bef-3693-4d7e-bc8f-a46a2bbd25d0</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">18de3bef-3693-4d7e-bc8f-a46a2bbd25d0</field>
+		<field name="TimeStamp_dt">2023-05-03T15:35:29Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">eearmstr@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Emily Armstrong</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Research Assistant</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Rehabilitation Medicine</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/her/hers</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Close to Edmonton, and then south, near Lethbridge</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Telehealth</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">TeleRehab</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Virtual Care</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Technology</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">www.telerehabilitationcollaboration.com</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">a6a8278b-8567-4d86-bc91-ec94126a0e8a</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">a6a8278b-8567-4d86-bc91-ec94126a0e8a</field>
+		<field name="TimeStamp_dt">2023-05-03T17:33:55Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">gvillebr@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Gwendolyn Villebrun</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Assistant Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Counselling Psychology, Faculty of Education</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">First Nation</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Edmonton</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous women</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">wellness</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">historical/intergenerational trauma</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">mental health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">sexual violence</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">addressing TRC in organizations</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous psychology</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">traditional ways of healing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">I don't understand or I have concerns.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">I do not consent to my information being in the database.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">9fd54aa8-812a-4461-af5f-c5b5476656d3</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">9fd54aa8-812a-4461-af5f-c5b5476656d3</field>
+		<field name="TimeStamp_dt">2023-05-03T18:45:37Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">cherylas@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Cheryl Sadowski</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Pharmacy &amp; Pharmaceutical Sciences, University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">geriatrics</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">pharmacy practice</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">process of care</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">ae304c63-8f94-4d59-972b-fbde4da0a8b2</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">ae304c63-8f94-4d59-972b-fbde4da0a8b2</field>
+		<field name="TimeStamp_dt">2023-05-07T01:16:28Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">musman4@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Muhammad Usman</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Postdoctoral fellow</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">School of Civil and Environmental Engineering, University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/His/Him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Wastewater Treatment</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Renewable</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Green Energy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Reclamation and Waste utilization</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">38fa904a-7554-4c40-8c62-c20a7cecdd98</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">38fa904a-7554-4c40-8c62-c20a7cecdd98</field>
+		<field name="TimeStamp_dt">2023-05-07T20:47:51Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">dwishart@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">David Wishart</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Science (Dept. of Biological Sciences)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Pharmacy and Pharmaceutical Sciences</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/Him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Métis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta, Southern Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Ethnobotany</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Natural products</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">medicinal chemistry</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">drug discovery</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://en.wikipedia.org/wiki/David_S._Wishart</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">3456eae2-d79f-40b8-829f-2b578a9c2db5</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">3456eae2-d79f-40b8-829f-2b578a9c2db5</field>
+		<field name="TimeStamp_dt">2023-05-08T21:33:15Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">hongli7@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Hongli Liu</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Assistant Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Engineering</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Flood/drought prediction</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">reservoir/dam management</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://apps.ualberta.ca/directory/person/hongli7</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">a210677e-abcd-455a-ab34-670b54198c5e</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">a210677e-abcd-455a-ab34-670b54198c5e</field>
+		<field name="TimeStamp_dt">2023-05-09T03:40:33Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">mkd@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Melissa Tremblay</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Assistant Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Faculty of Education</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Métis</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Mostly in Alberta along with the Yukon and Nunavut</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">community-based participatory research</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">mental health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">early childhood</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">youth</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">mental health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://sites.google.com/ualberta.ca/care-lab/home</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">3fc34dff-f375-476c-ba1a-b023474106bb</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">3fc34dff-f375-476c-ba1a-b023474106bb</field>
+		<field name="TimeStamp_dt">2023-05-10T14:30:21Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">caluseri@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Dr. Oana Caluseriu</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she/her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Various communities across AB</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">rare disorders</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">genetics</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://www.ualberta.ca/medical-genetics/people/faculty/oana-caluseriu.html</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">d5aaa04c-f658-417a-a2bc-368094ae4118</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">d5aaa04c-f658-417a-a2bc-368094ae4118</field>
+		<field name="TimeStamp_dt">2023-05-10T16:42:32Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">kegould@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Kalene Gould</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Applied Conservation Ecology Lab - Renewable Resources</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">She/Her</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Fort Chipewyan, Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">wildlife management</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">wood bison</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">1ca62a82-13c3-4a94-b464-8b4da38ff0d2</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">1ca62a82-13c3-4a94-b464-8b4da38ff0d2</field>
+		<field name="TimeStamp_dt">2023-05-10T22:39:55Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">tiernan@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Keatton Tiernan</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">School of Public Health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">He/him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Indigenous (prefer not to specify)</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Alberta, Saskatchewan, Manitoba, and Quebec</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">youth</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">public health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">health promotion</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">(w)holistic health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">physical activity</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">94236b15-1731-4aef-aa7d-a09d1a9e04e1</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">94236b15-1731-4aef-aa7d-a09d1a9e04e1</field>
+		<field name="TimeStamp_dt">2023-05-15T15:53:29Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">jdevans@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Joshua Evans</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Associate Professor</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">Department of Earth and Atmospheric Sciences</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Faculty of Science</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">he/him</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Edmonton, Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">homelessness</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">housing</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">wellness</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">cultural adequacy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">https://communityhousingcanada.ca/area-of-inquiry-v/</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+	<doc>
+		<field name="id">a2508995-0357-4b7b-a3c6-525e38a97850</field>
+		<field name="tenant_id_s">a4a50d9f-fd20-4d74-8274-2acad28a6553</field>
+		<field name="root_document_id_s">a2508995-0357-4b7b-a3c6-525e38a97850</field>
+		<field name="TimeStamp_dt">2023-05-16T18:41:41Z</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_6c130003-7792-10c5-cdf5-372f8fe237bd_t">lroy@ualberta.ca</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_77ef4194-c2bf-686c-a05d-e3a63ab53750_t">Lilla Roy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_b0620da7-6bf1-5c9c-b70d-b96aadeb0413_s">Graduate Student</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_93f55bd0-8620-515e-411e-3abb2abf66e4_s">School of Public Health, University of Alberta</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_8f097f5a-d234-53e0-1399-968cf6ea2243_t">Cape Breton University</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_bf33b1ab-ebd5-2452-e313-46a3f0f8d5eb_t">she/her/hers/elle</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_3138944e-82e7-3ff0-831a-b17cc2c950fe_t">Non-Indigenous</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_be9ebb54-2971-0267-80b2-3d963b56b8a4_ss">Edmonton</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">health-related quality of life</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">preference-based measures</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">health policy</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">health economics</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_aeaf264c-06e0-7bec-1073-832cbdb88bca_ss">Indigenous health</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0b559321-498d-95b3-0734-2ae9ae876b93_t">Not yet!</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_0f688cc2-beaa-99bb-3611-d6f0ad811ff8_ss">Yes, I understand.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_22dbb2df-5af5-6be7-8e0c-6d36b723170f_ss">Yes, I consent.</field>
+		<field name="data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_292a1783-49e9-ae0d-26c7-fa2797d02cbf_ss">I agree.</field>
+	</doc>
+</add>
