@@ -21,6 +21,12 @@ export default {
         auth:  "https://auth-test.artsrn.ualberta.ca",
         solr: "https://solr-test.artsrn.ualberta.ca"
     },    
+    //Dev API Roots
+    dev: {
+        app:  "localhost:8080",
+        auth:  "https://auth-test.artsrn.ualberta.ca",
+        solr: "https://solr-test.artsrn.ualberta.ca"
+    },
     
     //LOGIN component  settings
     googleLocalClientId: "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",

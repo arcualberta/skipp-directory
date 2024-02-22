@@ -13,9 +13,13 @@ if(window.location?.host?.length > 0 && config.prod.app.indexOf(window.location.
   apiRootsStore._authRoot = config.prod.auth;
   apiRootsStore._solrRoot = config.prod.solr;
 }
-else {
+else if(window.location?.host?.length > 0 && config.test.app.indexOf(window.location.host) > 0){
   apiRootsStore._authRoot = config.test.auth;
   apiRootsStore._solrRoot = config.test.solr;
+}
+else {
+  apiRootsStore._authRoot = config.dev.auth;
+  apiRootsStore._solrRoot = config.dev.solr;
 }
 
 console.log("URL: ", window.location?.host);
