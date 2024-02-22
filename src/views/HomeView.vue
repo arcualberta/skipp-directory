@@ -6,6 +6,7 @@ import  NoDataFound  from '../components/NoDataFound.vue'
 import { ref, computed, watch} from 'vue';
 import type { SolrQuery } from '@arc/arc-foundation/lib/solr/models/solrQuery';
 import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
+import { useApiRootsStore } from '@/stores/apiRootsStore';
 
 const searchStore = useSearchStore();
 const selectedButtons = ref([] as string[]);

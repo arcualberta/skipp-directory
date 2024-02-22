@@ -7,10 +7,11 @@ import { useProfileStore } from '../stores/ProfileStore'
 import { LoginResult } from '@arc/authorization'
 import {AuthorizationResult} from '@arc/authorization'
 import { useRouter } from 'vue-router'
+import { useApiRootsStore } from '@/stores/apiRootsStore';
 
 const router = useRouter();
+const apiRootsStore = useApiRootsStore();
 const tenantId = config.tenantId;
-const authApiRoot = config.authorizationApiRoot;
 const profileStore = useProfileStore();
 
 const handleAuthorizationResult = ((authResult: AuthorizationResult)=>{
@@ -30,7 +31,7 @@ const handleAuthorizationResult = ((authResult: AuthorizationResult)=>{
         <div class="button-centre">
             <Login :pinia-instance="getActivePinia()"
             :tenantId="tenantId" 
-            :apiRoot="authApiRoot"
+            :apiRoot="apiRootsStore.authRoot"
             @authorizationResult="handleAuthorizationResult"
         />
         </div>

@@ -10,10 +10,11 @@
 
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import { useProfileStore } from '@/stores/ProfileStore'
+import { useApiRootsStore } from '@/stores/apiRootsStore'
   
   const route = useRoute()
   const submissionId = route.params.submissionId as unknown as Guid
-  const solrApiRoot = config.solrApiRoot;
+  const apiRootsStore = useApiRootsStore();
   const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
       if(submissionStatus == StatusCodes.OK){
         router.push({name:'success'})
@@ -46,7 +47,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
     </div>
     <div class="inner-container form-details">
       <FormSubmission 
-      :api-root = solrApiRoot
+      :api-root = apiRootsStore.solrRoot
       :data-store = "'Solr'"
       securityToken = ""
       :form-template = "JoinUsFormTemplate"

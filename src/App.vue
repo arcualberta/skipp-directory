@@ -1,12 +1,27 @@
 <script setup lang="ts">
 import { getActivePinia } from 'pinia';
 import { computed, onMounted, ref, watch } from 'vue';
-import { RouterLink, RouterView, useRouter } from 'vue-router'
+import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import Footer from './components/Footer.vue'
 import {AuthorizationResult} from '@arc/authorization'
 import {useProfileStore} from './stores/ProfileStore'
+import {default as config} from './appsettings'
+import { useApiRootsStore } from './stores/apiRootsStore';
 
-const router = useRouter();
+const apiRootsStore = useApiRootsStore();
+if(window.location?.host?.length > 0 && config.prod.app.indexOf(window.location.host) > 0){
+  apiRootsStore._authRoot = config.prod.auth;
+  apiRootsStore._solrRoot = config.prod.solr;
+}
+else {
+  apiRootsStore._authRoot = config.test.auth;
+  apiRootsStore._solrRoot = config.test.solr;
+}
+
+console.log("URL: ", window.location?.host);
+console.log("Auth: ", apiRootsStore.authRoot);
+console.log("Solr: ", apiRootsStore.solrRoot);
+
 const profileStore = useProfileStore();
 
 const sessionAuthResult = sessionStorage.getItem("authResult");

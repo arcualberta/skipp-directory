@@ -10,6 +10,7 @@ import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
 import type { ArcFormData, CompositeFieldData, FormTemplate } from '@arc/arc-foundation/lib/forms/models';
 import type {LoginResult}  from '@arc/authorization'
 import { AuthProxy } from '@arc/arc-foundation/lib/api';
+import { useApiRootsStore } from './apiRootsStore';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 
 //const searchStore = useSearchStore();
@@ -72,7 +73,8 @@ export const useProfileStore = defineStore('ProfileStore', {
     actions: {
         setActiveProfile(profileId: Guid) {
             if (profileId) {
-                const url = `${config.default.solrApiRoot}/api/SolrSearch/get-document/${profileId}`;
+                const apiRootsStore = useApiRootsStore();
+                const url = `${apiRootsStore.solrRoot}/api/SolrSearch/get-document/${profileId}`;
                 fetch(url, {
                     method: 'GET', 
                     headers: {
@@ -92,7 +94,8 @@ export const useProfileStore = defineStore('ProfileStore', {
             }
         },
         async loadApiKey(){
-            const proxy = new AuthProxy(config.default.authorizationApiRoot, config.default.tenantId as unknown as Guid);
+            const apiRootsStore = useApiRootsStore();
+            const proxy = new AuthProxy(apiRootsStore.authRoot, config.default.tenantId as unknown as Guid);
             this.apiKey = await proxy.getApiToken(config.default.appId, config.default.tenantId as unknown as Guid)
         }        
     }

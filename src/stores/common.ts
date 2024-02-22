@@ -1,6 +1,7 @@
 import { Guid } from 'guid-typescript';
 import * as config from '../appsettings';
 import type { SolrQuery, SolrSearchResult } from '@arc/arc-foundation/lib/solr/models';
+import { useApiRootsStore } from './apiRootsStore';
 
 export interface BaseState {
     searchWord: null | string;
@@ -83,8 +84,9 @@ export const fetchQuery = (
     formData.append("fieldList", "");
     formData.append("maxHiglightSnippets", "1");
     
+    const apiRootsStore = useApiRootsStore();
    
-    const queryApiUrl = `${config.default.solrApiRoot}/api/SolrSearch`
+    const queryApiUrl = `${apiRootsStore.solrRoot}/api/SolrSearch`
     const tenantId = `${config.default.tenantId}`
     fetch(queryApiUrl, {
         

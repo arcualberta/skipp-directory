@@ -8,11 +8,19 @@ export default {
     maxEvents: 10,
     initialView: 'dayGridMonth',
     googleLoginClientId:"589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
-    //authorizationApiRoot:"https://localhost:5010/",
-    dataRepositoryApiRoot: "https://localhost:5020",
-    authorizationApiRoot: "https://auth-test.artsrn.ualberta.ca",
-    solrApiRoot:  "https://solr-test.artsrn.ualberta.ca",
-
+    
+    //Production API Roots
+    prod: {
+        app:  "https://skipp.artsrn.ualberta.ca",
+        auth:  "https://auth.artsrn.ualberta.ca",
+        solr: "https://solr.artsrn.ualberta.ca"
+    },
+    //Test API Roots
+    test: {
+        app:  "https://skipp-test.artsrn.ualberta.ca",
+        auth:  "https://auth-test.artsrn.ualberta.ca",
+        solr: "https://solr-test.artsrn.ualberta.ca"
+    },    
     
     //LOGIN component  settings
     googleLocalClientId: "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",

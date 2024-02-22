@@ -9,6 +9,7 @@
     import router from '../router'
     import { StatusCodes } from 'http-status-codes'
     import { onMounted, computed } from 'vue';
+    import { useApiRootsStore } from '@/stores/apiRootsStore';
 
     const profileStore = useProfileStore();
     const route = useRoute();
@@ -22,7 +23,7 @@
     profileStore.formSubmissionMode = "UPDATE";
 
     const formData = computed(() => profileStore.getFormData);
-    const solrApiRoot = config.solrApiRoot;
+    const apiRootsStore = useApiRootsStore();
     
     onMounted(() => {
       profileStore.loadApiKey()
@@ -34,7 +35,7 @@
 <template>
     <div class="container">
         <FormSubmission 
-          :api-root = solrApiRoot
+          :api-root = apiRootsStore.solrRoot
           :data-store = "'Solr'"
           :securityToken = "profileStore.getApiKey"
           :form-template = "JoinUsFormTemplate"
