@@ -12,6 +12,7 @@ import type {LoginResult}  from '@arc/authorization'
 import { AuthProxy } from '@arc/arc-foundation/lib/api';
 import { useApiRootsStore } from './apiRootsStore';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
+import { getEmail } from '../helpers/itemHelper';
 
 //const searchStore = useSearchStore();
 interface UserInfo {
@@ -66,7 +67,15 @@ export const useProfileStore = defineStore('ProfileStore', {
             return this.userLoginResult?.username 
         },
         getApiKey(): string | null {
-            return this.userLoginResult ? this.apiKey : null
+            if(this.isAdmin){
+                return this.apiKey;
+            }
+            else if(this.userLoginResult && this.userLoginResult.email === getEmail(this.activeProfile as SolrResultEntry)){
+                return this.apiKey;
+            }
+            else{
+                return null;
+            }
         }
        
     },
