@@ -35,6 +35,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": false,
       "type": 12
     },
     {
@@ -70,6 +71,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 0,
+      "isMultiValued": false,
       "isRequired": true
     },
     {
@@ -143,6 +145,7 @@ export const JoinUsFormTemplate = {
       },
       "type": 11,
       "isRequired": true,
+      "isMultiValued": false,
       "options": [
         {
           "id": "0aa2aa00-5099-ac07-810a-9cab6dbcf87a",
@@ -379,6 +382,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 11,
+      "isMultiValued": false,
       "options": [
         {
           "id": "f06bfcab-d5cf-2eaf-ecea-20ff67e9c0dd",
@@ -774,7 +778,8 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
-      "type": 0
+      "type": 0,
+      "isMultiValued": false,
     },
     {
       "id": "0b559321-498d-95b3-0734-2ae9ae876b93",
@@ -808,7 +813,8 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
-      "type": 0
+      "type": 0,
+      "isMultiValued": false,
     },
     {
       "id": "05cebb18-843c-ec07-1a2a-d228780c9930",
@@ -842,6 +848,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": false,
       "type": 12
     },
     {
@@ -876,6 +883,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": false,
       "type": 11,
       "options": [
         {
@@ -1012,6 +1020,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": false,
       "type": 11,
       "options": [
         {
@@ -1188,6 +1197,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": false,
       "type": 0
     },
     {
@@ -1256,6 +1266,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": true,
       "type": 15,
       "options": [
         {
@@ -2732,6 +2743,7 @@ export const JoinUsFormTemplate = {
           }
         ]
       },
+      "isMultiValued": true,
       "type": 15,
       "isRequired": true,
       "options": [
@@ -4956,6 +4968,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 8,
+      "isMultiValued": true,
       "options": [
 		{
 			"id": "75311fce-1b48-d026-2e61-0bfa52f53fc8",
@@ -5013,6 +5026,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 8,
+      "isMultiValued": true,
       "options": [
 	{
 		"id": "54dc33a8-f8a5-b563-be82-27b0cae68e02",
@@ -5070,6 +5084,7 @@ export const JoinUsFormTemplate = {
         ]
       },
       "type": 8,
+      "isMultiValued": true,
       "options": [
 	{
 		"id": "40303531-c8dd-8fcc-f45e-883ef5da2285",
