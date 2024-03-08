@@ -13,7 +13,7 @@ export const createSearchQueryModel = () =>{
 
     //Communities constraint
     queryModel.appendNewFieldConstraint(
-        config.SearchResultFieldMapping.COMMUNITIESNATIONSORGANIZATIONS,
+        config.SearchResultFieldMapping.LOCATION,
         config.QueryCategoryValues.Communities,
         SolrQuery.AggregationOperator.OR,
         "communities");
