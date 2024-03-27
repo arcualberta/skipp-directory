@@ -112,6 +112,40 @@ export const JoinUsFormTemplate = {
       "allowCustomOptionValues": false
     },
     {
+      "id": "f3eb263e-4e0b-f79a-7b93-9b0103076312",
+      "title": {
+        "id": "031eb81a-b373-8411-37fc-c7da402c302a",
+        "values": [
+          {
+            "id": "6329b465-7c99-bdbf-bd6c-a336161b6efb",
+            "lang": "en",
+            "value": "Profile Picture"
+          },
+          {
+            "id": "98627751-8bb5-7076-e849-4aa8f3b3e90d",
+            "lang": "fr",
+            "value": ""
+          }
+        ]
+      },
+      "description": {
+        "id": "b0bc4448-4d6a-a346-e18a-f90f7591f1bb",
+        "values": [
+          {
+            "id": "25b1bb05-6368-452b-4a04-36674166234c",
+            "lang": "en",
+            "value": ""
+          },
+          {
+            "id": "eb9c1ef6-3113-9aad-99f9-ec92b1917ee9",
+            "lang": "fr",
+            "value": ""
+          }
+        ]
+      },
+      "type": 13
+    },
+    {
       "id": "b0620da7-6bf1-5c9c-b70d-b96aadeb0413",
       "title": {
         "id": "0137fc85-3095-0c6e-e605-5bde20e00a23",
