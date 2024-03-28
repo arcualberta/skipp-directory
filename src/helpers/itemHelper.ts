@@ -77,3 +77,6 @@ export function getProjectInitiation(item: SolrResultEntry): string {
 export function getProjectRole(item: SolrResultEntry): string {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_ROLE) as string;
 }
+export function getFileReferences(item: SolrResultEntry): string {
+    return getSolrFieldValue(item, config.SearchResultFieldMapping.FILE_REFERENCES) as string;
+}

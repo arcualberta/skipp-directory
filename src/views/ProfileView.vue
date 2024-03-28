@@ -27,9 +27,8 @@
   const IndigenousCommunity = computed(() => itemHelper.getIndigeniousCommunity(profileStore.activeProfile as SolrResultEntry));
   const location = computed(() => itemHelper.getLocation(profileStore.activeProfile as SolrResultEntry));
   const projectList = computed(() => itemHelper.getProjectList(profileStore.activeProfile as SolrResultEntry));
+  const fileReferences = computed(() => itemHelper.getFileReferences(profileStore.activeProfile as SolrResultEntry));
   const editProfile = (id: Guid) => {router.push({ path: "/edit-profile/" + id })}
-
-   
   onMounted(()=>{
     window.scrollTo(0,0);
   })
@@ -46,7 +45,7 @@
     </div>
     <div class="row space-bottom">
       <div class="col-sm-4">
-        <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
+        <img class="results-image" :src= "profileStore.getProfilePictureURL(fileReferences)"/>
       </div>
       <div class="col-sm-8">
         <div class="profile-name">{{ name }}</div>

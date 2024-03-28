@@ -61,6 +61,7 @@ export enum SearchResultFieldMapping {
     PROJECT_DESCRIPTION = "data_020e9f66-911d-55dd-3eff-3bb3aec182ee_21dc5652-296f-1149-9cb9-e914f9894978_t",
     PROJECT_INITIATION = "data_020e9f66-911d-55dd-3eff-3bb3aec182ee_bb85e648-5f85-293f-4b20-f8cdf70c86a6_t",
     PROJECT_ROLE = "data_020e9f66-911d-55dd-3eff-3bb3aec182ee_b1709fd6-6c12-6234-f20b-6ca96c96716e_t",
+    FILE_REFERENCES = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_f3eb263e-4e0b-f79a-7b93-9b0103076312_s",
     PROJECT_INDEX = "child_index_i",
     STATE = "status_s",
 };

@@ -5,23 +5,28 @@ import { useSearchStore } from './../stores/SearchStore'
 import {useRouter} from 'vue-router'
 import { Guid } from 'guid-typescript'
 import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models/solrResultEntry';
+import { useProfileStore } from '@/stores/ProfileStore';
 
 const props = defineProps<{ 
   model: SolrResultEntry | null
   }>();
   const router = useRouter();
   const searchStore = useSearchStore();
+  const profileStore = useProfileStore();
   const name = computed(() => itemHelper.getName(props.model as SolrResultEntry))
   const position = computed(() => itemHelper.getPosition(props.model as SolrResultEntry))
   const email = computed(() => itemHelper.getEmail(props.model as SolrResultEntry))
   const keywords = computed(() => itemHelper.getKeywords(props.model as SolrResultEntry))
+  const fileReferences = computed(() => itemHelper.getFileReferences(props.model as SolrResultEntry));
+  //const imageURL =profileStore.getProfilePictureURL(JSON.parse(fileReferences.value)?.fileName)
   const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })}
 </script>
 <template>
   <div class="profile-component">
     <div class="row">
       <div class="col-sm-3">
-        <img class="results-image" src="../assets/images/user-profile-icon.jpg" />
+        <img class="results-image" :src= "profileStore.getProfilePictureURL(fileReferences)"/>
+        <!-- <img class="results-image" src="../assets/images/user-profile-icon.jpg" /> -->
       </div>
       <div class="col-sm-5">
         <div class="profile-name"><a  @click="gotoProfile(model?.id as unknown as Guid)">{{ name }}</a></div>
@@ -31,7 +36,7 @@ const props = defineProps<{
       </div>
       <div class="col-sm-4">
         <div class="email">
-            <img src="../assets/images/email.png" />
+            <img src="../src/assets/images/email.png" />
           <span class="email-id">{{ email }}</span>
         </div>
       </div>

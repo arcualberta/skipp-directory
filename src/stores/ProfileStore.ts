@@ -13,7 +13,7 @@ import { AuthProxy } from '@arc/arc-foundation/lib/api';
 import { useApiRootsStore } from './apiRootsStore';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 import { getEmail } from '../helpers/itemHelper';
-
+import axios from 'axios';
 //const searchStore = useSearchStore();
 interface UserInfo {
     userName: string | null;
@@ -101,6 +101,17 @@ export const useProfileStore = defineStore('ProfileStore', {
             else{
                 this.activeProfile = null;
             }
+        },
+          getProfilePictureURL(fileName: string): string {
+            if (fileName) {
+                const apiRootsStore = useApiRootsStore();
+                const url = `${apiRootsStore.solrRoot}/api/solr/get-attachment?fileName=${fileName}&tenantId=${config.default.tenantId}`;
+                return url;
+            
+             }
+             else{
+                return "../assets/images/user-profile-icon.jpg"
+             }
         },
         async loadApiKey(){
             const apiRootsStore = useApiRootsStore();
