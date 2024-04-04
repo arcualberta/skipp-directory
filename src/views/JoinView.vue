@@ -47,9 +47,11 @@ For additional information, please visit the <a class="roots-of-change-url" href
     </div>
     <div class="inner-container form-details">
       <FormSubmission 
+      :solrCoreURL = "''"
       :api-root = apiRootsStore.solrRoot
       :data-store = "'Solr'"
       securityToken = ""
+      :is-update = "false"
       :form-template = "JoinUsFormTemplate"
       :pinia-instance = "getActivePinia()" 
       :tanent-id = "('a4a50d9f-fd20-4d74-8274-2acad28a6553' as unknown as Guid)"

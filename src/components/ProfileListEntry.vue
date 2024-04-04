@@ -18,7 +18,6 @@ const props = defineProps<{
   const email = computed(() => itemHelper.getEmail(props.model as SolrResultEntry))
   const keywords = computed(() => itemHelper.getKeywords(props.model as SolrResultEntry))
   const fileReferences = computed(() => itemHelper.getFileReferences(props.model as SolrResultEntry));
-  //const imageURL =profileStore.getProfilePictureURL(JSON.parse(fileReferences.value)?.fileName)
   const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })}
 </script>
 <template>
@@ -36,7 +35,7 @@ const props = defineProps<{
       </div>
       <div class="col-sm-4">
         <div class="email">
-            <img src="../src/assets/images/email.png" />
+            <img src="../assets/images/email.png" />
           <span class="email-id">{{ email }}</span>
         </div>
       </div>
