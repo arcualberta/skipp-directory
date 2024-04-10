@@ -36,6 +36,7 @@
     <div class="container">
         <FormSubmission 
           :api-root = apiRootsStore.solrRoot
+          :solr-core-url="''"
           :data-store = "'Solr'"
           :securityToken = "profileStore.getApiKey"
           :form-template = "JoinUsFormTemplate"

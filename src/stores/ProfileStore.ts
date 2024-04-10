@@ -14,6 +14,7 @@ import { useApiRootsStore } from './apiRootsStore';
 //import { createProfileQueryModel } from '../helpers/createSearchQueryModel';
 import { getEmail } from '../helpers/itemHelper';
 import axios from 'axios';
+import type { FileReference } from '@arc/arc-foundation/lib/forms/models/field';
 //const searchStore = useSearchStore();
 interface UserInfo {
     userName: string | null;
@@ -102,10 +103,13 @@ export const useProfileStore = defineStore('ProfileStore', {
                 this.activeProfile = null;
             }
         },
-          getProfilePictureURL(fileName: string): string {
-            if (fileName) {
+          getProfilePictureURL(fileReference: FileReference): string {
+            console.log("file", JSON.stringify(fileReference))
+            if (fileReference) {
+                console.log("fileName", fileReference.fileName)
                 const apiRootsStore = useApiRootsStore();
-                const url = `${apiRootsStore.solrRoot}/api/solr/get-attachment?fileName=${fileName}&tenantId=${config.default.tenantId}`;
+                const url = `${apiRootsStore.solrRoot}/api/solr/get-attachment?fileName=${fileReference.fileName}&tenantId=${config.default.tenantId}`;
+                console.log("url", url)
                 return url;
             
              }
