@@ -12,19 +12,19 @@ export default {
     //Production API Roots
     prod: {
         app:  "https://skipp.artsrn.ualberta.ca",
-        auth:  "https://auth.artsrn.ualberta.ca",
+        auth:  "https://auth.artsrn.ualberta.ca/v1",
         solr: "https://solr.artsrn.ualberta.ca"
     },
     //Test API Roots
     test: {
         app:  "https://skipp-test.artsrn.ualberta.ca",
-        auth:  "https://auth-test.artsrn.ualberta.ca",
+        auth:  "https://auth-test.artsrn.ualberta.ca/v1",
         solr: "https://solr-test.artsrn.ualberta.ca"
     },    
     //Dev API Roots
     dev: {
         app:  "localhost:8080",
-        auth:  "https://auth-test.artsrn.ualberta.ca",
+        auth:  "https://auth-test.artsrn.ualberta.ca/v1",
         solr: "https://solr-test.artsrn.ualberta.ca"
     },
     
