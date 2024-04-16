@@ -13,19 +13,23 @@ export default {
     prod: {
         app:  "https://skipp.artsrn.ualberta.ca",
         auth:  "https://auth.artsrn.ualberta.ca/v1",
-        solr: "https://solr.artsrn.ualberta.ca"
+        solr: "https://solr.artsrn.ualberta.ca",
+        solrCore: "http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr.artsrn.ualberta.ca",
     },
     //Test API Roots
     test: {
         app:  "https://skipp-test.artsrn.ualberta.ca",
         auth:  "https://auth-test.artsrn.ualberta.ca/v1",
-        solr: "https://solr-test.artsrn.ualberta.ca"
+        solr: "https://solr-test.artsrn.ualberta.ca",
+        solrCore: "http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr.artsrn.ualberta.ca",
     },    
     //Dev API Roots
     dev: {
         app:  "localhost:8080",
         auth:  "https://auth-test.artsrn.ualberta.ca/v1",
-        solr: "https://solr-test.artsrn.ualberta.ca"
+        // solr: "https://solr-test.artsrn.ualberta.ca",
+        solr: "https://localhost:7148",
+        solrCore: "http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr.artsrn.ualberta.ca",
     },
     
     //LOGIN component  settings

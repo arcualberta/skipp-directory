@@ -1,5 +1,7 @@
 import type { SolrResultEntry } from '@arc/arc-foundation/lib/solr/models';
 import * as config from '../appsettings';
+import type { FileReference } from '@arc/arc-foundation/lib/forms/models/field';
+import { useApiRootsStore } from '@/stores/apiRootsStore';
 
 type SolrFieldValueType = string | string[] | number | number[] | Date | Date[] | null
 
@@ -17,7 +19,7 @@ export function getSolrFieldValue(item: SolrResultEntry, solrFieldName: string):
             _dt => a single date
             _dts => array of dates.
         */
-        return item.data.find((entry: { key: string; }) => entry.key === solrFieldName)?.value
+        return item.data.find((entry: { key: string; }) => entry.key === solrFieldName)?.value;
     }
     return null;
 }
@@ -77,9 +79,41 @@ export function getProjectInitiation(item: SolrResultEntry): string {
 export function getProjectRole(item: SolrResultEntry): string {
     return getSolrFieldValue(item, config.SearchResultFieldMapping.PROJECT_ROLE) as string;
 }
-export function getFileReferences(item: SolrResultEntry): string {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.FILE_REFERENCES) as string;
+export function getFileReferences(item: SolrResultEntry): FileReference | null {
+    const val = getSolrFieldValue(item, config.SearchResultFieldMapping.FILE_REFERENCES);
+    if(val){
+        return JSON.parse(val.toString()) as FileReference
+    }
+    return null;
 }
-export function getProfileImage(item: SolrResultEntry): string {
-    return getSolrFieldValue(item, config.SearchResultFieldMapping.FILE_REFERENCES) as string;
-}
+// export function getProfileImage(item: SolrResultEntry): string {
+
+//     if(item){
+//         const fileReference = getFileReferences(item)
+//         if (fileReference) {
+//             console.log(fileReference.fileName)
+//             const apiRootsStore = useApiRootsStore();
+//             const url = `${apiRootsStore.solrRoot}/api/solr/get-attachment?fileName=${fileReference.fileName}&tenantId=${config.default.tenantId}`;
+//             console.log("url", url)
+//             return url;
+//         }
+
+//     }
+    
+//     return null!;
+
+//     // console.log("file", JSON.stringify(fileReference))
+//     // if (fileReference) {
+//     //     console.log("fileName", fileReference.fileName)
+//     //     const apiRootsStore = useApiRootsStore();
+//     //     const url = `${apiRootsStore.solrRoot}/api/solr/get-attachment?fileName=${fileReference.fileName}&tenantId=${config.default.tenantId}`;
+//     //     console.log("url", url)
+//     //     return url;
+    
+//     //  }
+//     //  else{
+//     //     return "../assets/images/user-profile-icon.jpg"
+//     //  }    
+//     //JSON.parse(itemHelper.getProfileImage(props.model as SolrResultEntry))
+//     // return getSolrFieldValue(item, config.SearchResultFieldMapping.FILE_REFERENCES) as string;
+// }

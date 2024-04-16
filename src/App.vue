@@ -12,14 +12,17 @@ const apiRootsStore = useApiRootsStore();
 if(window.location?.host?.length > 0 && config.prod.app.indexOf(window.location.host) > 0){
   apiRootsStore._authRoot = config.prod.auth;
   apiRootsStore._solrRoot = config.prod.solr;
+  apiRootsStore._solrCore = config.prod.solrCore;
 }
 else if(window.location?.host?.length > 0 && config.test.app.indexOf(window.location.host) > 0){
   apiRootsStore._authRoot = config.test.auth;
   apiRootsStore._solrRoot = config.test.solr;
+  apiRootsStore._solrCore = config.test.solrCore;
 }
 else {
   apiRootsStore._authRoot = config.dev.auth;
   apiRootsStore._solrRoot = config.dev.solr;
+  apiRootsStore._solrCore = config.dev.solrCore;
 }
 
 console.log("URL: ", window.location?.host);

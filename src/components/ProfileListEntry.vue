@@ -17,15 +17,16 @@ const props = defineProps<{
   const position = computed(() => itemHelper.getPosition(props.model as SolrResultEntry))
   const email = computed(() => itemHelper.getEmail(props.model as SolrResultEntry))
   const keywords = computed(() => itemHelper.getKeywords(props.model as SolrResultEntry))
-  const profileImage = computed(() => JSON.parse(itemHelper.getProfileImage(props.model as SolrResultEntry)));
+  const profileImage = computed(() => profileStore.getProfilePictureURL(itemHelper.getFileReferences(props.model as SolrResultEntry)));
   const gotoProfile = (id: Guid) => {router.push({ path: "/profile/" + id })}
 </script>
 <template>
   <div class="profile-component">
     <div class="row">
       <div class="col-sm-3">
-        <img class="results-image" :src= "profileStore.getProfilePictureURL(profileImage)"/>
-        <!-- <img class="results-image" src="../assets/images/user-profile-icon.jpg" /> -->
+        <!-- <img class="results-image" :src="profileImage"/> -->
+        <img v-if="profileImage" class="results-image" :src="profileImage" />
+        <img v-else class="results-image" src="../assets/images/user-profile-icon.jpg" />
       </div>
       <div class="col-sm-5">
         <div class="profile-name"><a  @click="gotoProfile(model?.id as unknown as Guid)">{{ name }}</a></div>

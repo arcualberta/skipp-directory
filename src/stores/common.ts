@@ -73,18 +73,15 @@ export const fetchQuery = (
     else{
         query = `(${modelString}) AND (${searchConstraint})`;
     }
-
-    
-    
+     
     formData.append("query", query);
     formData.append("offset", offset.toString());
     formData.append("max", pageSize.toString());
     formData.append("filterQuery", "");
     formData.append("fieldList", "");
     formData.append("maxHiglightSnippets", "1");
-    
+       
     const apiRootsStore = useApiRootsStore();
-   
     const queryApiUrl = `${apiRootsStore.solrRoot}/api/SolrSearch?sortBy=${config.SearchResultFieldMapping.NAME}%20asc`
     const tenantId = `${config.default.tenantId}`
     fetch(queryApiUrl, {
@@ -92,7 +89,8 @@ export const fetchQuery = (
         method: 'POST', // or 'PUT'
         body: formData,
         headers: {
-            'Tenant-Id': `${tenantId}`
+            'Tenant-Id': `${tenantId}`,
+            'solrCore': `${apiRootsStore.solrCore}`
         }
     })
         .then(response => response.json())

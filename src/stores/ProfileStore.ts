@@ -84,11 +84,13 @@ export const useProfileStore = defineStore('ProfileStore', {
         setActiveProfile(profileId: Guid) {
             if (profileId) {
                 const apiRootsStore = useApiRootsStore();
+
                 const url = `${apiRootsStore.solrRoot}/api/SolrSearch/get-document/${profileId}`;
                 fetch(url, {
                     method: 'GET', 
                     headers: {
-                        'Tenant-Id': `${config.default.tenantId}`
+                        'Tenant-Id': `${config.default.tenantId}`,
+                        'solrCore': `${apiRootsStore.solrCore}`
                     }
                 })
                     .then(response => response.json())
@@ -103,18 +105,14 @@ export const useProfileStore = defineStore('ProfileStore', {
                 this.activeProfile = null;
             }
         },
-          getProfilePictureURL(fileReference: FileReference): string {
-            console.log("file", JSON.stringify(fileReference))
+          getProfilePictureURL(fileReference: FileReference | null): string | null {
             if (fileReference) {
-                console.log("fileName", fileReference.fileName)
                 const apiRootsStore = useApiRootsStore();
                 const url = `${apiRootsStore.solrRoot}/api/solr/get-attachment?fileName=${fileReference.fileName}&tenantId=${config.default.tenantId}`;
-                console.log("url", url)
                 return url;
-            
              }
              else{
-                return "../assets/images/user-profile-icon.jpg"
+                return null
              }
         },
         async loadApiKey(){
