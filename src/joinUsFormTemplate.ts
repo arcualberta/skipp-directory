@@ -119,7 +119,7 @@ export const JoinUsFormTemplate = {
           {
             "id": "6329b465-7c99-bdbf-bd6c-a336161b6efb",
             "lang": "en",
-            "value": "Profile Picture"
+            "value": "Profile Picture (600px by 600px jpg)"
           },
           {
             "id": "98627751-8bb5-7076-e849-4aa8f3b3e90d",
