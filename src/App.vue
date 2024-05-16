@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { getActivePinia } from 'pinia';
-import { computed, onMounted, ref, watch } from 'vue';
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import Footer from './components/Footer.vue'
 import {AuthorizationResult} from '@arc/authorization'
@@ -9,21 +7,10 @@ import {default as config} from './appsettings'
 import { useApiRootsStore } from './stores/apiRootsStore';
 
 const apiRootsStore = useApiRootsStore();
-if(window.location?.host?.length > 0 && config.prod.app.indexOf(window.location.host) > 0){
-  apiRootsStore._authRoot = config.prod.auth;
-  apiRootsStore._solrRoot = config.prod.solr;
-  apiRootsStore._solrCore = config.prod.solrCore;
-}
-else if(window.location?.host?.length > 0 && config.test.app.indexOf(window.location.host) > 0){
-  apiRootsStore._authRoot = config.test.auth;
-  apiRootsStore._solrRoot = config.test.solr;
-  apiRootsStore._solrCore = config.test.solrCore;
-}
-else {
-  apiRootsStore._authRoot = config.dev.auth;
-  apiRootsStore._solrRoot = config.dev.solr;
-  apiRootsStore._solrCore = config.dev.solrCore;
-}
+
+apiRootsStore._authRoot = config.auth;
+apiRootsStore._solrRoot = config.solr;
+apiRootsStore._solrCore = config.solrCore;
 
 console.log("URL: ", window.location?.host);
 console.log("Auth: ", apiRootsStore.authRoot);

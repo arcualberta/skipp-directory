@@ -1,42 +1,89 @@
 import { Guid } from 'guid-typescript'
 
+
+let googleClientId = "";
+let app = "";
+let auth = "";
+let solr = "";
+let solrCore = "";
+if(window.location.host.indexOf("skipp.artsrn.ualberta.ca") >= 0){
+    //Prod Server
+    googleClientId = "589183038778-i21iod3d3obrmot5vk3ap59akglg5a9u.apps.googleusercontent.com";
+    app = "https://skipp.artsrn.ualberta.ca";
+    auth = "https://auth.artsrn.ualberta.ca/v1";
+    solr = "https://solr.artsrn.ualberta.ca";
+    solrCore = "http://arrw-db001.artsrn.ualberta.ca:8983/solr/skipp.artsrn.ualberta.ca"
+}
+else if(window.location.host.indexOf("skipp-test.artsrn.ualberta.ca") >= 0){
+   //Test Server
+   googleClientId = "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com";
+   app = "https://skipp-test.artsrn.ualberta.ca";
+   auth = "https://auth-test.artsrn.ualberta.ca/v1";
+   solr = "https://solr-test.artsrn.ualberta.ca";
+   solrCore = "";
+}
+else{
+   //Dev Server
+   googleClientId = "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com";
+   app = "http://localhost:8080";
+   auth = "https://auth-test.artsrn.ualberta.ca/v1";
+   solr = "https://solr-test.artsrn.ualberta.ca";
+   solrCore = "";
+}
+
 export default {
     dataServiceApiRoot: "/server/applets/api/",
     googleApiKey: "AIzaSyBgCnBy-LbHAqbB8PbQhNID68vZ8f8_j_Q",
-    tenantId:"a4a50d9f-fd20-4d74-8274-2acad28a6553",
     googleCalendarIds: ["ualberta.ca_kdp9enkplai8s5ipu2efknjels@group.calendar.google.com","c_1netqe2n16i5o9su69ft5c8f8c@group.calendar.google.com"],
     maxEvents: 10,
-    initialView: 'dayGridMonth',
-    googleLoginClientId:"589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
-    
-    //Production API Roots
-    prod: {
-        app:  "https://skipp.artsrn.ualberta.ca",
-        auth:  "https://auth.artsrn.ualberta.ca/v1",
-        solr: "https://solr.artsrn.ualberta.ca",
-        solrCore: "http://arrw-db001.artsrn.ualberta.ca:8983/solr/skipp.artsrn.ualberta.ca",
-    },
-    //Test API Roots
-    test: {
-        app:  "https://skipp-test.artsrn.ualberta.ca",
-        auth:  "https://auth-test.artsrn.ualberta.ca/v1",
-        solr: "https://solr-test.artsrn.ualberta.ca",
-        solrCore: "", //"http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr-test.artsrn.ualberta.ca",
-    },    
-    //Dev API Roots
-    dev: {
-        app:  "localhost:8080",
-        auth:  "https://auth-test.artsrn.ualberta.ca/v1",
-        solr: "https://solr-test.artsrn.ualberta.ca",
-        // solr: "https://localhost:7148",
-        solrCore: "", //"http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr-test.artsrn.ualberta.ca",
-    },
-    
-    //LOGIN component  settings
-    googleLocalClientId: "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
-   
+    tenantId:"a4a50d9f-fd20-4d74-8274-2acad28a6553",
+    googleLoginClientId:googleClientId,
+    app,
+    auth,
+    solr,
+    solrCore,
+
+     //on prod auth.api
     appId: "22edb968-b74c-4826-bef0-6fda9d6c349d" as unknown as Guid
 };
+
+// export default {
+//     dataServiceApiRoot: "/server/applets/api/",
+//     googleApiKey: "AIzaSyBgCnBy-LbHAqbB8PbQhNID68vZ8f8_j_Q",
+//     tenantId:"a4a50d9f-fd20-4d74-8274-2acad28a6553",
+//     googleCalendarIds: ["ualberta.ca_kdp9enkplai8s5ipu2efknjels@group.calendar.google.com","c_1netqe2n16i5o9su69ft5c8f8c@group.calendar.google.com"],
+//     maxEvents: 10,
+//     initialView: 'dayGridMonth',
+//     googleLoginClientId:"589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
+    
+//     //Production API Roots
+//     prod: {
+//         app:  "https://skipp.artsrn.ualberta.ca",
+//         auth:  "https://auth.artsrn.ualberta.ca/v1",
+//         solr: "https://solr.artsrn.ualberta.ca",
+//         solrCore: "http://arrw-db001.artsrn.ualberta.ca:8983/solr/skipp.artsrn.ualberta.ca",
+//     },
+//     //Test API Roots
+//     test: {
+//         app:  "https://skipp-test.artsrn.ualberta.ca",
+//         auth:  "https://auth-test.artsrn.ualberta.ca/v1",
+//         solr: "https://solr-test.artsrn.ualberta.ca",
+//         solrCore: "", //"http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr-test.artsrn.ualberta.ca",
+//     },    
+//     //Dev API Roots
+//     dev: {
+//         app:  "localhost:8080",
+//         auth:  "https://auth-test.artsrn.ualberta.ca/v1",
+//         solr: "https://solr-test.artsrn.ualberta.ca",
+//         // solr: "https://localhost:7148",
+//         solrCore: "", //"http://arrw-db001.artsrn.ualberta.ca:8983/solr/solr-test.artsrn.ualberta.ca",
+//     },
+    
+//     //LOGIN component  settings
+//     googleLocalClientId: "589183038778-u256nlels7v2443j3h1unvtp367f80s4.apps.googleusercontent.com",
+   
+//     appId: "22edb968-b74c-4826-bef0-6fda9d6c349d" as unknown as Guid
+// };
 
 export enum SearchResultFieldMapping {
     NATIONORCOMMUNITY = "data_8d9a6bc9-863d-2ee8-ea93-d5544778f090_af27cd1f-4df1-fc15-4ef4-286eb2002816_t",
