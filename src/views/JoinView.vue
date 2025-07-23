@@ -47,7 +47,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
     </div>
     <div class="inner-container form-details">
       <FormSubmission 
-      :solrCoreURL = "''"
+      :solrCoreURL = "apiRootsStore.solrCore"
       :api-root = apiRootsStore.solrRoot
       :data-store = "'Solr'"
       securityToken = ""
