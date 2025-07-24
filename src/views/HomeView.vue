@@ -357,5 +357,10 @@ color: #327D49 !important;
 .accordion-button>.collapsed{
   background-color: white !important;
 }
+.search-field {
+   
+    background: white;
+    padding: 15px;
+}
 </style>
 @/stores/searchStore

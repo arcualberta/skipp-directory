@@ -7,23 +7,32 @@
   import {default as config} from "@/appsettings";
   import { FormSubmission } from '@arc/form-submission'
   import { StatusCodes } from 'http-status-codes'
+  import {useFormSubmissionStore} from '@arc/form-submission'
 
   import { JoinUsFormTemplate } from '@/joinUsFormTemplate'
-import { useProfileStore } from '@/stores/ProfileStore'
-import { useApiRootsStore } from '@/stores/apiRootsStore'
+  import { useProfileStore } from '@/stores/ProfileStore'
+  import { useApiRootsStore } from '@/stores/apiRootsStore'
   
   const route = useRoute()
   const submissionId = route.params.submissionId as unknown as Guid
   const apiRootsStore = useApiRootsStore();
+  
+  
+//July 24 2025 --MR
+ // const formSubmissionStore = useFormSubmissionStore();
+  //formSubmissionStore.isCompleted = false; //To enable the "submit" button by default
   const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
       if(submissionStatus == StatusCodes.OK){
         router.push({name:'success'})
+      // formSubmissionStore.isCompleted = true;
       }
   }
 
   const store = useProfileStore()
   store.formSubmissionMode = "CREATE";
-  
+  const solrCore = apiRootsStore.solrCore;
+
+
 </script>
 <template>
   <div class="container">
@@ -46,6 +55,7 @@ For additional information, please visit the <a class="roots-of-change-url" href
       Protection of Privacy - Personal information provided is collected in accordance with Section 33(c) of the Alberta Freedom of Information and Protection of Privacy Act (the FOIP Act) and will be protected under Part 2 of that Act. it will be used for the purpose of the Indigenous-Engaged Researcher Database. Information collected will be used to administer and manage the database. Information will be used to highlight and identify Indigenous-engaged research at the University of Alberta. Any public disclosures of information from the director will be in aggregate form only. Should you require further information about collection, use, and disclosure of personal information please contact <a href="mailto:skipp@ualberta.ca" class="mail-to-link">skipp@ualberta.ca</a> 
     </div>
     <div class="inner-container form-details">
+     <!-- old FormSubmission -- version 0.1.87
       <FormSubmission 
       :solrCoreURL = "apiRootsStore.solrCore"
       :api-root = apiRootsStore.solrRoot
@@ -58,7 +68,21 @@ For additional information, please visit the <a class="roots-of-change-url" href
       :msg = "''" 
       @arc-form-submit = "formSubmissionCallback"
       >
-    </FormSubmission>
+    </FormSubmission> -->
+    /*formsubmission version 0.1.131 */
+     <FormSubmission 
+      :api-root="apiRootsStore.solrRoot"
+      :solr-core-url="apiRootsStore.solrCore"
+      :data-store="'Solr'"
+      security-token=""
+      :form-template="JoinUsFormTemplate"
+      
+      :is-update = "false"
+      :pinia-instance="getActivePinia()" 
+      :tanentId="('a4a50d9f-fd20-4d74-8274-2acad28a6553' as unknown as Guid)"
+      :msg="''" 
+      @arc-form-submit="formSubmissionCallback"
+    />
     </div>
     
       </div>
