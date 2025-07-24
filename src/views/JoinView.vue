@@ -19,8 +19,8 @@
   
   
 //July 24 2025 --MR
- // const formSubmissionStore = useFormSubmissionStore();
-  //formSubmissionStore.isCompleted = false; //To enable the "submit" button by default
+  //const formSubmissionStore = useFormSubmissionStore();
+ // formSubmissionStore.isCompleted = true; //To enable the "submit" button by default
   const formSubmissionCallback = (submissionStatus:StatusCodes): void => {
       if(submissionStatus == StatusCodes.OK){
         router.push({name:'success'})
