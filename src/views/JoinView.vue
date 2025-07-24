@@ -29,10 +29,8 @@
   const solrCore = apiRootsStore.solrCore;
 
 onMounted(()=>{
-   const btn = document.querySelector('.submit-button');
-  if (btn) {
-    btn.removeAttribute('disabled');
-  }
+   const buttons = document.getElementsByClassName('.submit-button');
+   Array.from(buttons).forEach(b => b.removeAttribute('disabled'));
 });
  
 </script>
@@ -73,7 +71,6 @@ For additional information, please visit the <a class="roots-of-change-url" href
       >
     </FormSubmission> -->
 
-    /*formsubmission version 0.1.131 */
      <FormSubmission 
       :api-root="apiRootsStore.solrRoot"
       :solr-core-url="apiRootsStore.solrCore"
