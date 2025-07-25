@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted,updated } from 'vue'
   import { getActivePinia } from 'pinia'
   import { useRoute } from 'vue-router'
   import router from '../router'
@@ -28,10 +28,18 @@
   store.formSubmissionMode = "CREATE";
   const solrCore = apiRootsStore.solrCore;
 
-onMounted(()=>{
-   const buttons = document.getElementsByClassName('.submit-button');
-   Array.from(buttons).forEach(b => b.removeAttribute('disabled'));
-});
+
+function removeDisabled() {
+  const buttons = document.querySelectorAll('.submit-button')
+  buttons.forEach((btn) => {
+    if (btn.hasAttribute('disabled')) {
+      btn.removeAttribute('disabled')
+    }
+  })
+}
+onMounted(() => {
+  removeDisabled();
+})
  
 </script>
 <template>

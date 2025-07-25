@@ -1002,8 +1002,8 @@ export const JoinUsFormTemplate = {
         },
         {
           "id": "81a0cdb0-b1aa-0e2e-71bb-e8c76eb555b5",
-          "isExtendedInput": true,
-          "isExtendedInputRequired": true,
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
           "optionText": {
             "id": "46076154-3d86-f047-de6d-0315823e2822",
             "values": [
@@ -2725,7 +2725,7 @@ export const JoinUsFormTemplate = {
         },
         {
           "id": "6cc4b6b9-a177-0082-8293-2832992d7c3b",
-          "isExtendedInput": true,
+          "isExtendedInput": false,
           "isExtendedInputRequired": false,
           "optionText": {
             "id": "396fcaed-ab31-17b1-6e71-540fda0c1dbe",
@@ -4703,8 +4703,8 @@ export const JoinUsFormTemplate = {
         },
         {
           "id": "355b4333-c696-10af-73f2-60db669f42d5",
-          "isExtendedInput": true,
-          "isExtendedInputRequired": true,
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
           "allowCustomOptionValues": true,
           "optionText": {
             "id": "6235181b-20cd-83fa-f9ed-222efe282a22",

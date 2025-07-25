@@ -24,9 +24,19 @@
 
     const formData = computed(() => profileStore.getFormData);
     const apiRootsStore = useApiRootsStore();
-    
+
+    function removeDisabled() {
+        const buttons = document.querySelectorAll('.submit-button')
+        buttons.forEach((btn) => {
+          if (btn.hasAttribute('disabled')) {
+            btn.removeAttribute('disabled')
+          }
+        })
+  }
+
     onMounted(() => {
-      profileStore.loadApiKey()
+      profileStore.loadApiKey();
+       removeDisabled();
     })
 
 
