@@ -960,8 +960,8 @@ export const JoinUsFormTemplate = {
         },
         {
           "id": "81a0cdb0-b1aa-0e2e-71bb-e8c76eb555b5",
-          "isExtendedInput": true,
-          "isExtendedInputRequired": true,
+          "isExtendedInput": false,
+          "isExtendedInputRequired": false,
           "optionText": {
             "id": "46076154-3d86-f047-de6d-0315823e2822",
             "values": [
